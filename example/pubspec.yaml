@@ -23,7 +23,7 @@ dependencies:
       path: pay
       ref: main
 
-  http: ^0.13.1
+  http: ^0.12.2
   
 
 dev_dependencies:
