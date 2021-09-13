@@ -194,7 +194,7 @@ class _NoWebhookPaymentScreenState extends State<NoWebhookPaymentScreen> {
     required bool useStripeSdk,
     required String paymentMethodId,
     required String currency,
-    List<Map<String, dynamic>>? items,
+    List<Map<String, dynamic>> items,
   }) async {
     final url = Uri.parse('$kApiUrl/pay-without-webhooks');
     final response = await http.post(

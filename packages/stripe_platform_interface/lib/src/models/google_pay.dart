@@ -19,7 +19,7 @@ class PresentGooglePayParams with _$PresentGooglePayParams {
     /// When forSetupIntent is `true` it is required to provide a currencyCode.
     ///
     /// For more details see: https://developers.google.com/pay/api/android/reference/request-objects#TransactionInfo .
-    String? currencyCode,
+    String currencyCode,
   }) = _PresentGooglePayParams;
 
   factory PresentGooglePayParams.fromJson(Map<String, dynamic> json) =>
@@ -64,7 +64,7 @@ class BillingAddressConfig with _$BillingAddressConfig {
   const factory BillingAddressConfig({
     /// If `true` Google pay requires a Billing address in order to process the
     /// payment.
-    bool? isRequired,
+    bool isRequired,
 
     /// Desired format
     BillingAddressFormat? format,
@@ -72,7 +72,7 @@ class BillingAddressConfig with _$BillingAddressConfig {
     /// If `true` customer needs to provide a phonenummer in order to process
     /// the transaction.
 
-    bool? isPhoneNumberRequired,
+    bool isPhoneNumberRequired,
   }) = _BillingAddressConfig;
 
   factory BillingAddressConfig.fromJson(Map<String, dynamic> json) =>

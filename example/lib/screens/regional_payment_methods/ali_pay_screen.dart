@@ -9,7 +9,7 @@ import 'package:stripe_example/widgets/loading_button.dart';
 import '../../config.dart';
 
 class AliPayScreen extends StatelessWidget {
-  const AliPayScreen({Key? key}) : super(key: key);
+  const AliPayScreen({Key key}) : super(key: key);
 
   Future<Map<String, dynamic>> _createPaymentIntent() async {
     final url = Uri.parse('$kApiUrl/create-payment-intent');

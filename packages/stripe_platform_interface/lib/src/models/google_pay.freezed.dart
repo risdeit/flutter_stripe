@@ -24,7 +24,7 @@ class _$PresentGooglePayParamsTearOff {
   _PresentGooglePayParams call(
       {required String clientSecret,
       bool forSetupIntent = false,
-      String? currencyCode}) {
+      String currencyCode}) {
     return _PresentGooglePayParams(
       clientSecret: clientSecret,
       forSetupIntent: forSetupIntent,
@@ -52,7 +52,7 @@ mixin _$PresentGooglePayParams {
   /// When forSetupIntent is `true` it is required to provide a currencyCode.
   ///
   /// For more details see: https://developers.google.com/pay/api/android/reference/request-objects#TransactionInfo .
-  String? get currencyCode => throw _privateConstructorUsedError;
+  String get currencyCode => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -65,7 +65,7 @@ abstract class $PresentGooglePayParamsCopyWith<$Res> {
   factory $PresentGooglePayParamsCopyWith(PresentGooglePayParams value,
           $Res Function(PresentGooglePayParams) then) =
       _$PresentGooglePayParamsCopyWithImpl<$Res>;
-  $Res call({String clientSecret, bool forSetupIntent, String? currencyCode});
+  $Res call({String clientSecret, bool forSetupIntent, String currencyCode});
 }
 
 /// @nodoc
@@ -79,9 +79,9 @@ class _$PresentGooglePayParamsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? clientSecret = freezed,
-    Object? forSetupIntent = freezed,
-    Object? currencyCode = freezed,
+    Object clientSecret = freezed,
+    Object forSetupIntent = freezed,
+    Object currencyCode = freezed,
   }) {
     return _then(_value.copyWith(
       clientSecret: clientSecret == freezed
@@ -95,7 +95,7 @@ class _$PresentGooglePayParamsCopyWithImpl<$Res>
       currencyCode: currencyCode == freezed
           ? _value.currencyCode
           : currencyCode // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -107,7 +107,7 @@ abstract class _$PresentGooglePayParamsCopyWith<$Res>
           $Res Function(_PresentGooglePayParams) then) =
       __$PresentGooglePayParamsCopyWithImpl<$Res>;
   @override
-  $Res call({String clientSecret, bool forSetupIntent, String? currencyCode});
+  $Res call({String clientSecret, bool forSetupIntent, String currencyCode});
 }
 
 /// @nodoc
@@ -123,9 +123,9 @@ class __$PresentGooglePayParamsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? clientSecret = freezed,
-    Object? forSetupIntent = freezed,
-    Object? currencyCode = freezed,
+    Object clientSecret = freezed,
+    Object forSetupIntent = freezed,
+    Object currencyCode = freezed,
   }) {
     return _then(_PresentGooglePayParams(
       clientSecret: clientSecret == freezed
@@ -139,7 +139,7 @@ class __$PresentGooglePayParamsCopyWithImpl<$Res>
       currencyCode: currencyCode == freezed
           ? _value.currencyCode
           : currencyCode // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -171,7 +171,7 @@ class _$_PresentGooglePayParams implements _PresentGooglePayParams {
   /// When forSetupIntent is `true` it is required to provide a currencyCode.
   ///
   /// For more details see: https://developers.google.com/pay/api/android/reference/request-objects#TransactionInfo .
-  final String? currencyCode;
+  final String currencyCode;
 
   @override
   String toString() {
@@ -216,7 +216,7 @@ abstract class _PresentGooglePayParams implements PresentGooglePayParams {
   const factory _PresentGooglePayParams(
       {required String clientSecret,
       bool forSetupIntent,
-      String? currencyCode}) = _$_PresentGooglePayParams;
+      String currencyCode}) = _$_PresentGooglePayParams;
 
   factory _PresentGooglePayParams.fromJson(Map<String, dynamic> json) =
       _$_PresentGooglePayParams.fromJson;
@@ -235,7 +235,7 @@ abstract class _PresentGooglePayParams implements PresentGooglePayParams {
   /// When forSetupIntent is `true` it is required to provide a currencyCode.
   ///
   /// For more details see: https://developers.google.com/pay/api/android/reference/request-objects#TransactionInfo .
-  String? get currencyCode => throw _privateConstructorUsedError;
+  String get currencyCode => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PresentGooglePayParamsCopyWith<_PresentGooglePayParams> get copyWith =>
@@ -330,12 +330,12 @@ class _$GooglePayInitParamsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? merchantName = freezed,
-    Object? countryCode = freezed,
-    Object? testEnv = freezed,
-    Object? billingAddressConfig = freezed,
-    Object? isEmailRequired = freezed,
-    Object? existingPaymentMethodRequired = freezed,
+    Object merchantName = freezed,
+    Object countryCode = freezed,
+    Object testEnv = freezed,
+    Object billingAddressConfig = freezed,
+    Object isEmailRequired = freezed,
+    Object existingPaymentMethodRequired = freezed,
   }) {
     return _then(_value.copyWith(
       merchantName: merchantName == freezed
@@ -410,12 +410,12 @@ class __$GooglePayInitParamsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? merchantName = freezed,
-    Object? countryCode = freezed,
-    Object? testEnv = freezed,
-    Object? billingAddressConfig = freezed,
-    Object? isEmailRequired = freezed,
-    Object? existingPaymentMethodRequired = freezed,
+    Object merchantName = freezed,
+    Object countryCode = freezed,
+    Object testEnv = freezed,
+    Object billingAddressConfig = freezed,
+    Object isEmailRequired = freezed,
+    Object existingPaymentMethodRequired = freezed,
   }) {
     return _then(_GooglePayInitParams(
       merchantName: merchantName == freezed
@@ -596,9 +596,9 @@ class _$BillingAddressConfigTearOff {
   const _$BillingAddressConfigTearOff();
 
   _BillingAddressConfig call(
-      {bool? isRequired,
+      {bool isRequired,
       BillingAddressFormat? format,
-      bool? isPhoneNumberRequired}) {
+      bool isPhoneNumberRequired}) {
     return _BillingAddressConfig(
       isRequired: isRequired,
       format: format,
@@ -618,14 +618,14 @@ const $BillingAddressConfig = _$BillingAddressConfigTearOff();
 mixin _$BillingAddressConfig {
   /// If `true` Google pay requires a Billing address in order to process the
   /// payment.
-  bool? get isRequired => throw _privateConstructorUsedError;
+  bool get isRequired => throw _privateConstructorUsedError;
 
   /// Desired format
   BillingAddressFormat? get format => throw _privateConstructorUsedError;
 
   /// If `true` customer needs to provide a phonenummer in order to process
   /// the transaction.
-  bool? get isPhoneNumberRequired => throw _privateConstructorUsedError;
+  bool get isPhoneNumberRequired => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -639,9 +639,9 @@ abstract class $BillingAddressConfigCopyWith<$Res> {
           $Res Function(BillingAddressConfig) then) =
       _$BillingAddressConfigCopyWithImpl<$Res>;
   $Res call(
-      {bool? isRequired,
+      {bool isRequired,
       BillingAddressFormat? format,
-      bool? isPhoneNumberRequired});
+      bool isPhoneNumberRequired});
 }
 
 /// @nodoc
@@ -655,15 +655,15 @@ class _$BillingAddressConfigCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? isRequired = freezed,
-    Object? format = freezed,
-    Object? isPhoneNumberRequired = freezed,
+    Object isRequired = freezed,
+    Object format = freezed,
+    Object isPhoneNumberRequired = freezed,
   }) {
     return _then(_value.copyWith(
       isRequired: isRequired == freezed
           ? _value.isRequired
           : isRequired // ignore: cast_nullable_to_non_nullable
-              as bool?,
+              as bool,
       format: format == freezed
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
@@ -671,7 +671,7 @@ class _$BillingAddressConfigCopyWithImpl<$Res>
       isPhoneNumberRequired: isPhoneNumberRequired == freezed
           ? _value.isPhoneNumberRequired
           : isPhoneNumberRequired // ignore: cast_nullable_to_non_nullable
-              as bool?,
+              as bool,
     ));
   }
 }
@@ -684,9 +684,9 @@ abstract class _$BillingAddressConfigCopyWith<$Res>
       __$BillingAddressConfigCopyWithImpl<$Res>;
   @override
   $Res call(
-      {bool? isRequired,
+      {bool isRequired,
       BillingAddressFormat? format,
-      bool? isPhoneNumberRequired});
+      bool isPhoneNumberRequired});
 }
 
 /// @nodoc
@@ -702,15 +702,15 @@ class __$BillingAddressConfigCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? isRequired = freezed,
-    Object? format = freezed,
-    Object? isPhoneNumberRequired = freezed,
+    Object isRequired = freezed,
+    Object format = freezed,
+    Object isPhoneNumberRequired = freezed,
   }) {
     return _then(_BillingAddressConfig(
       isRequired: isRequired == freezed
           ? _value.isRequired
           : isRequired // ignore: cast_nullable_to_non_nullable
-              as bool?,
+              as bool,
       format: format == freezed
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
@@ -718,7 +718,7 @@ class __$BillingAddressConfigCopyWithImpl<$Res>
       isPhoneNumberRequired: isPhoneNumberRequired == freezed
           ? _value.isPhoneNumberRequired
           : isPhoneNumberRequired // ignore: cast_nullable_to_non_nullable
-              as bool?,
+              as bool,
     ));
   }
 }
@@ -737,7 +737,7 @@ class _$_BillingAddressConfig implements _BillingAddressConfig {
 
   /// If `true` Google pay requires a Billing address in order to process the
   /// payment.
-  final bool? isRequired;
+  final bool isRequired;
   @override
 
   /// Desired format
@@ -746,7 +746,7 @@ class _$_BillingAddressConfig implements _BillingAddressConfig {
 
   /// If `true` customer needs to provide a phonenummer in order to process
   /// the transaction.
-  final bool? isPhoneNumberRequired;
+  final bool isPhoneNumberRequired;
 
   @override
   String toString() {
@@ -788,9 +788,9 @@ class _$_BillingAddressConfig implements _BillingAddressConfig {
 
 abstract class _BillingAddressConfig implements BillingAddressConfig {
   const factory _BillingAddressConfig(
-      {bool? isRequired,
+      {bool isRequired,
       BillingAddressFormat? format,
-      bool? isPhoneNumberRequired}) = _$_BillingAddressConfig;
+      bool isPhoneNumberRequired}) = _$_BillingAddressConfig;
 
   factory _BillingAddressConfig.fromJson(Map<String, dynamic> json) =
       _$_BillingAddressConfig.fromJson;
@@ -799,7 +799,7 @@ abstract class _BillingAddressConfig implements BillingAddressConfig {
 
   /// If `true` Google pay requires a Billing address in order to process the
   /// payment.
-  bool? get isRequired => throw _privateConstructorUsedError;
+  bool get isRequired => throw _privateConstructorUsedError;
   @override
 
   /// Desired format
@@ -808,7 +808,7 @@ abstract class _BillingAddressConfig implements BillingAddressConfig {
 
   /// If `true` customer needs to provide a phonenummer in order to process
   /// the transaction.
-  bool? get isPhoneNumberRequired => throw _privateConstructorUsedError;
+  bool get isPhoneNumberRequired => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$BillingAddressConfigCopyWith<_BillingAddressConfig> get copyWith =>
@@ -879,8 +879,8 @@ class _$CreateGooglePayPaymentParamsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? currencyCode = freezed,
-    Object? amount = freezed,
+    Object currencyCode = freezed,
+    Object amount = freezed,
   }) {
     return _then(_value.copyWith(
       currencyCode: currencyCode == freezed
@@ -921,8 +921,8 @@ class __$CreateGooglePayPaymentParamsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? currencyCode = freezed,
-    Object? amount = freezed,
+    Object currencyCode = freezed,
+    Object amount = freezed,
   }) {
     return _then(_CreateGooglePayPaymentParams(
       currencyCode: currencyCode == freezed

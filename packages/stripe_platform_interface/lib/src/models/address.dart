@@ -10,22 +10,22 @@ class Address with _$Address {
   @JsonSerializable(explicitToJson: true)
   const factory Address({
     /// City, town or district.
-    required String? city,
+     String city,
 
     /// Country
-    required String? country,
+     String country,
 
     /// Address line1 (e.g. Street, C/O , PO Box).
-    required String? line1,
+     String line1,
 
     /// Address line2 (e.g. building, appartment or unit).
-    required String? line2,
+     String line2,
 
     /// ZIP or postal code.
-    required String? postalCode,
+     String postalCode,
 
     /// State or province.
-    required String? state,
+     String state,
   }) = _Address;
 
   factory Address.fromJson(Map<String, dynamic> json) =>

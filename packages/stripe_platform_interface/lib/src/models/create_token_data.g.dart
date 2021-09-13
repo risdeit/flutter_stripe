@@ -25,7 +25,7 @@ Map<String, dynamic> _$_$_CreateTokenParamsToJson(
 
 K _$enumDecode<K, V>(
   Map<K, V> enumValues,
-  Object? source, {
+  Object source, {
   K? unknownValue,
 }) {
   if (source == null) {
@@ -92,13 +92,13 @@ Map<String, dynamic> _$_$_TokenDataToJson(_$_TokenData instance) =>
 _$_CardData _$_$_CardDataFromJson(Map<String, dynamic> json) {
   return _$_CardData(
     brand: json['brand'] as String,
-    country: json['country'] as String?,
-    currency: json['currency'] as String?,
-    expYear: json['expYear'] as int?,
-    expMonth: json['expMonth'] as int?,
-    name: json['name'] as String?,
-    funding: json['funding'] as String?,
-    last4: json['last4'] as String?,
+    country: json['country'] as String,
+    currency: json['currency'] as String,
+    expYear: json['expYear'] as int,
+    expMonth: json['expMonth'] as int,
+    name: json['name'] as String,
+    funding: json['funding'] as String,
+    last4: json['last4'] as String,
     address: json['address'] == null
         ? null
         : Address.fromJson(json['address'] as Map<String, dynamic>),
@@ -123,11 +123,11 @@ _$_BankAccount _$_$_BankAccountFromJson(Map<String, dynamic> json) {
     accountHolderType:
         _$enumDecode(_$BankAccountHolderTypeEnumMap, json['accountHolderType']),
     status: _$enumDecode(_$BankAccountStatusEnumMap, json['status']),
-    bankName: json['bankName'] as String?,
-    accountHolderName: json['accountHolderName'] as String?,
-    country: json['country'] as String?,
-    currency: json['currency'] as String?,
-    routingNumber: json['routingNumber'] as String?,
+    bankName: json['bankName'] as String,
+    accountHolderName: json['accountHolderName'] as String,
+    country: json['country'] as String,
+    currency: json['currency'] as String,
+    routingNumber: json['routingNumber'] as String,
   );
 }
 

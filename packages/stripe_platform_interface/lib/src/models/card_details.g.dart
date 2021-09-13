@@ -9,10 +9,10 @@ part of 'card_details.dart';
 _$_CardDetailsConstructor _$_$_CardDetailsConstructorFromJson(
     Map<String, dynamic> json) {
   return _$_CardDetailsConstructor(
-    number: json['number'] as String?,
-    expirationYear: json['expirationYear'] as int?,
-    expirationMonth: json['expirationMonth'] as int?,
-    cvc: json['cvc'] as String?,
+    number: json['number'] as String,
+    expirationYear: json['expirationYear'] as int,
+    expirationMonth: json['expirationMonth'] as int,
+    cvc: json['cvc'] as String,
   );
 }
 

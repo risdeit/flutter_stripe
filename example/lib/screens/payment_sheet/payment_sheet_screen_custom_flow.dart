@@ -173,7 +173,7 @@ class _PaymentSheetScreenState extends State<PaymentSheetScreenWithCustomFlow> {
 
 final ControlsWidgetBuilder emptyControlBuilder = (
   _, {
-  VoidCallback? onStepContinue,
-  VoidCallback? onStepCancel,
+  VoidCallback onStepContinue,
+  VoidCallback onStepCancel,
 }) =>
     Container();

@@ -19,32 +19,32 @@ class SetupPaymentSheetParameters with _$SetupPaymentSheetParameters {
 
     /// The identifier of the Stripe Customer object.
     /// See https://stripe.com/docs/api/customers/object#customer_object-id
-    String? customerId,
+    String customerId,
 
     ///A temp key can be used for API operations that require a secret key.
-    String? customerEphemeralKeySecret,
+    String customerEphemeralKeySecret,
 
     /// Secret used for client-side retrieval using a publishable key.
     ///
     /// If this value is null make sure to add a [setupIntentClientSecret]
-    String? paymentIntentClientSecret,
+    String paymentIntentClientSecret,
 
     /// The client secret of this SetupIntent
     ///
     /// If this value is null make sure to add a [paymentIntentClientSecret]
 
-    String? setupIntentClientSecret,
+    String setupIntentClientSecret,
 
     /// Display name of the merchant
-    String? merchantDisplayName,
+    String merchantDisplayName,
 
     /// ISO country code of the country where the merchant is located
-    String? merchantCountryCode,
+    String merchantCountryCode,
 
     /// Configuration related to Apple Pay
     /// If set, PaymentSheet displays Apple Pay as a payment option
-    /// A merchantCountryCode would then be required
-    bool? applePay,
+    /// A merchantCountryCode would then be 
+    bool applePay,
 
     /// Style options for colors in PaymentSheet
     @JsonKey(toJson: UserInterfaceStyleKey.toJson) ThemeMode? style,
@@ -52,7 +52,7 @@ class SetupPaymentSheetParameters with _$SetupPaymentSheetParameters {
     /// Configuration related to Google Pay
     /// If set, PaymentSheet displays Google Pay as a payment option
     /// A merchantCountryCode would then be required
-    bool? googlePay,
+    bool googlePay,
 
     /// Flag for using the test environment
     @Default(false) bool testEnv,
@@ -65,7 +65,7 @@ class SetupPaymentSheetParameters with _$SetupPaymentSheetParameters {
 class UserInterfaceStyleKey {
   const UserInterfaceStyleKey();
 
-  static String? toJson(ThemeMode? style) {
+  static String toJson(ThemeMode? style) {
     switch (style) {
       case ThemeMode.light:
         return 'alwaysLight';
@@ -88,7 +88,7 @@ class UserInterfaceStyleKey {
 class PresentPaymentSheetParameters with _$PresentPaymentSheetParameters {
   const factory PresentPaymentSheetParameters({
     /// Key used for client-side retrieval using a publishable key.
-    required String clientSecret,
+     String clientSecret,
 
     /// Flag that determines whether or not to present payment options or
     /// directly goes to confirm payment.

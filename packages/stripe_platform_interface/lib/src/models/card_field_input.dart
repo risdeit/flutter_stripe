@@ -12,7 +12,7 @@ class CardStyle with _$CardStyle {
   @JsonSerializable(explicitToJson: true)
   factory CardStyle({
     /// Width for the border.
-    double? borderWidth,
+    double borderWidth,
     @JsonKey(toJson: ColorKey.toJson, fromJson: ColorKey.fromJson)
 
         /// Background color of the cardfield
@@ -25,7 +25,7 @@ class CardStyle with _$CardStyle {
         Color? borderColor,
 
     /// Borderradius that can give the Cardfield rounded corners.
-    double? borderRadius,
+    double borderRadius,
     @JsonKey(toJson: ColorKey.toJson, fromJson: ColorKey.fromJson)
 
         /// Cursor color when the card has focus.
@@ -36,10 +36,10 @@ class CardStyle with _$CardStyle {
         Color? textColor,
 
     /// Font size.
-    double? fontSize,
+    double fontSize,
 
     /// Font family
-    String? fontFamily,
+    String fontFamily,
 
     /// Color of the input in case incorrect data is entered.
     @JsonKey(toJson: ColorKey.toJson, fromJson: ColorKey.fromJson)
@@ -76,16 +76,16 @@ class CardPlaceholder with _$CardPlaceholder {
   @JsonSerializable(explicitToJson: true)
   factory CardPlaceholder({
     /// Localized placeholder for card number field.
-    String? number,
+    String number,
 
     /// Localized placeholder for expiration field.
-    String? expiration,
+    String expiration,
 
     /// Localized placeholder for cvc field.
-    String? cvc,
+    String cvc,
 
     /// Localized placeholder for postal code field.
-    String? postalCode,
+    String postalCode,
   }) = _CardPlaceholderConstructor;
 
   factory CardPlaceholder.fromJson(Map<String, dynamic> json) =>
@@ -110,7 +110,7 @@ class CardPlaceholder with _$CardPlaceholder {
 class ColorKey {
   const ColorKey();
 
-  static String? toJson(Color? color) {
+  static String toJson(Color? color) {
     if (color != null) {
       // ignore: lines_longer_than_80_chars
       return '#${color.value.toRadixString(16).padLeft(8, '0').toUpperCase()}';
@@ -134,27 +134,27 @@ class CardFieldInputDetails with _$CardFieldInputDetails {
     required bool complete,
 
     /// Last 4 digits of the entered card number.
-    String? last4,
+    String last4,
 
     /// Month of the entered expiry date of the card.
-    int? expiryMonth,
+    int expiryMonth,
 
     /// Year of the entered expiry date of the card.
-    int? expiryYear,
+    int expiryYear,
 
     /// Entered postcal code.
-    String? postalCode,
+    String postalCode,
 
     /// Brand of the card.
-    String? brand,
+    String brand,
 
     /// Card number.
     /// This information is not available by default to comply with the PCI compliance
-    String? number,
+    String number,
 
     /// CVC code.
     /// This information is not available by default to comply with the PCI compliance
-    String? cvc,
+    String cvc,
   }) = _CardFieldInputDetails;
 
   factory CardFieldInputDetails.fromJson(Map<String, dynamic> json) =>

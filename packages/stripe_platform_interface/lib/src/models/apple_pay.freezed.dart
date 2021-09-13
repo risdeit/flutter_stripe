@@ -22,11 +22,11 @@ class _$ApplePayShippingMethodTearOff {
   const _$ApplePayShippingMethodTearOff();
 
   _ApplePayShippingMethod call(
-      {required String label,
-      required String amount,
-      required String identifier,
+      { String label,
+       String amount,
+       String identifier,
       ApplePayShippingMethodType? type,
-      String? detail}) {
+      String detail}) {
     return _ApplePayShippingMethod(
       label: label,
       amount: amount,
@@ -50,7 +50,7 @@ mixin _$ApplePayShippingMethod {
   String get amount => throw _privateConstructorUsedError;
   String get identifier => throw _privateConstructorUsedError;
   ApplePayShippingMethodType? get type => throw _privateConstructorUsedError;
-  String? get detail => throw _privateConstructorUsedError;
+  String get detail => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -68,7 +68,7 @@ abstract class $ApplePayShippingMethodCopyWith<$Res> {
       String amount,
       String identifier,
       ApplePayShippingMethodType? type,
-      String? detail});
+      String detail});
 }
 
 /// @nodoc
@@ -82,11 +82,11 @@ class _$ApplePayShippingMethodCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? label = freezed,
-    Object? amount = freezed,
-    Object? identifier = freezed,
-    Object? type = freezed,
-    Object? detail = freezed,
+    Object label = freezed,
+    Object amount = freezed,
+    Object identifier = freezed,
+    Object type = freezed,
+    Object detail = freezed,
   }) {
     return _then(_value.copyWith(
       label: label == freezed
@@ -108,7 +108,7 @@ class _$ApplePayShippingMethodCopyWithImpl<$Res>
       detail: detail == freezed
           ? _value.detail
           : detail // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -125,7 +125,7 @@ abstract class _$ApplePayShippingMethodCopyWith<$Res>
       String amount,
       String identifier,
       ApplePayShippingMethodType? type,
-      String? detail});
+      String detail});
 }
 
 /// @nodoc
@@ -141,11 +141,11 @@ class __$ApplePayShippingMethodCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? label = freezed,
-    Object? amount = freezed,
-    Object? identifier = freezed,
-    Object? type = freezed,
-    Object? detail = freezed,
+    Object label = freezed,
+    Object amount = freezed,
+    Object identifier = freezed,
+    Object type = freezed,
+    Object detail = freezed,
   }) {
     return _then(_ApplePayShippingMethod(
       label: label == freezed
@@ -167,7 +167,7 @@ class __$ApplePayShippingMethodCopyWithImpl<$Res>
       detail: detail == freezed
           ? _value.detail
           : detail // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -177,9 +177,9 @@ class __$ApplePayShippingMethodCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_ApplePayShippingMethod implements _ApplePayShippingMethod {
   const _$_ApplePayShippingMethod(
-      {required this.label,
-      required this.amount,
-      required this.identifier,
+      { this.label,
+       this.amount,
+       this.identifier,
       this.type,
       this.detail});
 
@@ -195,7 +195,7 @@ class _$_ApplePayShippingMethod implements _ApplePayShippingMethod {
   @override
   final ApplePayShippingMethodType? type;
   @override
-  final String? detail;
+  final String detail;
 
   @override
   String toString() {
@@ -242,11 +242,11 @@ class _$_ApplePayShippingMethod implements _ApplePayShippingMethod {
 
 abstract class _ApplePayShippingMethod implements ApplePayShippingMethod {
   const factory _ApplePayShippingMethod(
-      {required String label,
-      required String amount,
-      required String identifier,
+      { String label,
+       String amount,
+       String identifier,
       ApplePayShippingMethodType? type,
-      String? detail}) = _$_ApplePayShippingMethod;
+      String detail}) = _$_ApplePayShippingMethod;
 
   factory _ApplePayShippingMethod.fromJson(Map<String, dynamic> json) =
       _$_ApplePayShippingMethod.fromJson;
@@ -260,7 +260,7 @@ abstract class _ApplePayShippingMethod implements ApplePayShippingMethod {
   @override
   ApplePayShippingMethodType? get type => throw _privateConstructorUsedError;
   @override
-  String? get detail => throw _privateConstructorUsedError;
+  String get detail => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ApplePayShippingMethodCopyWith<_ApplePayShippingMethod> get copyWith =>
@@ -277,7 +277,7 @@ class _$ApplePayCartSummaryItemTearOff {
   const _$ApplePayCartSummaryItemTearOff();
 
   _ApplePayCartSummaryItem call(
-      {required String label, required String amount}) {
+      { String label,  String amount}) {
     return _ApplePayCartSummaryItem(
       label: label,
       amount: amount,
@@ -325,8 +325,8 @@ class _$ApplePayCartSummaryItemCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? label = freezed,
-    Object? amount = freezed,
+    Object label = freezed,
+    Object amount = freezed,
   }) {
     return _then(_value.copyWith(
       label: label == freezed
@@ -365,8 +365,8 @@ class __$ApplePayCartSummaryItemCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? label = freezed,
-    Object? amount = freezed,
+    Object label = freezed,
+    Object amount = freezed,
   }) {
     return _then(_ApplePayCartSummaryItem(
       label: label == freezed
@@ -544,12 +544,12 @@ class _$ApplePayPresentParamsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? cartItems = freezed,
-    Object? country = freezed,
-    Object? currency = freezed,
-    Object? requiredShippingAddressFields = freezed,
-    Object? requiredBillingContactFields = freezed,
-    Object? shippingMethods = freezed,
+    Object cartItems = freezed,
+    Object country = freezed,
+    Object currency = freezed,
+    Object requiredShippingAddressFields = freezed,
+    Object requiredBillingContactFields = freezed,
+    Object shippingMethods = freezed,
   }) {
     return _then(_value.copyWith(
       cartItems: cartItems == freezed
@@ -609,12 +609,12 @@ class __$ApplePayPresentParamsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? cartItems = freezed,
-    Object? country = freezed,
-    Object? currency = freezed,
-    Object? requiredShippingAddressFields = freezed,
-    Object? requiredBillingContactFields = freezed,
-    Object? shippingMethods = freezed,
+    Object cartItems = freezed,
+    Object country = freezed,
+    Object currency = freezed,
+    Object requiredShippingAddressFields = freezed,
+    Object requiredBillingContactFields = freezed,
+    Object shippingMethods = freezed,
   }) {
     return _then(_ApplePayPresentParams(
       cartItems: cartItems == freezed

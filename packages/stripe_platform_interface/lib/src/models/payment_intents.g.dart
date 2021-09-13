@@ -18,10 +18,10 @@ _$_PaymentIntent _$_$_PaymentIntentFromJson(Map<String, dynamic> json) {
     captureMethod: _$enumDecode(_$CaptureMethodEnumMap, json['captureMethod']),
     confirmationMethod:
         _$enumDecode(_$ConfirmationMethodEnumMap, json['confirmationMethod']),
-    paymentMethodId: json['paymentMethodId'] as String?,
-    description: json['description'] as String?,
-    receiptEmail: json['receiptEmail'] as String?,
-    canceledAt: json['canceledAt'] as String?,
+    paymentMethodId: json['paymentMethodId'] as String,
+    description: json['description'] as String,
+    receiptEmail: json['receiptEmail'] as String,
+    canceledAt: json['canceledAt'] as String,
     shipping: json['shipping'] == null
         ? null
         : ShippingDetails.fromJson(json['shipping'] as Map<String, dynamic>),
@@ -49,7 +49,7 @@ Map<String, dynamic> _$_$_PaymentIntentToJson(_$_PaymentIntent instance) =>
 
 K _$enumDecode<K, V>(
   Map<K, V> enumValues,
-  Object? source, {
+  Object source, {
   K? unknownValue,
 }) {
   if (source == null) {

@@ -16,7 +16,7 @@ _$_CardStyleConstructor _$_$_CardStyleConstructorFromJson(
     cursorColor: ColorKey.fromJson(json['cursorColor']),
     textColor: ColorKey.fromJson(json['textColor']),
     fontSize: (json['fontSize'] as num?)?.toDouble(),
-    fontFamily: json['fontFamily'] as String?,
+    fontFamily: json['fontFamily'] as String,
     textErrorColor: ColorKey.fromJson(json['textErrorColor']),
     placeholderColor: ColorKey.fromJson(json['placeholderColor']),
   );
@@ -40,10 +40,10 @@ Map<String, dynamic> _$_$_CardStyleConstructorToJson(
 _$_CardPlaceholderConstructor _$_$_CardPlaceholderConstructorFromJson(
     Map<String, dynamic> json) {
   return _$_CardPlaceholderConstructor(
-    number: json['number'] as String?,
-    expiration: json['expiration'] as String?,
-    cvc: json['cvc'] as String?,
-    postalCode: json['postalCode'] as String?,
+    number: json['number'] as String,
+    expiration: json['expiration'] as String,
+    cvc: json['cvc'] as String,
+    postalCode: json['postalCode'] as String,
   );
 }
 
@@ -60,13 +60,13 @@ _$_CardFieldInputDetails _$_$_CardFieldInputDetailsFromJson(
     Map<String, dynamic> json) {
   return _$_CardFieldInputDetails(
     complete: json['complete'] as bool,
-    last4: json['last4'] as String?,
-    expiryMonth: json['expiryMonth'] as int?,
-    expiryYear: json['expiryYear'] as int?,
-    postalCode: json['postalCode'] as String?,
-    brand: json['brand'] as String?,
-    number: json['number'] as String?,
-    cvc: json['cvc'] as String?,
+    last4: json['last4'] as String,
+    expiryMonth: json['expiryMonth'] as int,
+    expiryYear: json['expiryYear'] as int,
+    postalCode: json['postalCode'] as String,
+    brand: json['brand'] as String,
+    number: json['number'] as String,
+    cvc: json['cvc'] as String,
   );
 }
 
@@ -99,7 +99,7 @@ Map<String, dynamic> _$_$_CardFieldFocusNameToJson(
 
 K _$enumDecode<K, V>(
   Map<K, V> enumValues,
-  Object? source, {
+  Object source, {
   K? unknownValue,
 }) {
   if (source == null) {

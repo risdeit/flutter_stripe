@@ -42,7 +42,7 @@ internal fun mapConfirmationMethod(captureMethod: PaymentIntent.ConfirmationMeth
   }
 }
 
-internal fun mapToReturnURL(urlScheme: String?): String? {
+internal fun mapToReturnURL(urlScheme: String): String {
   if (urlScheme != null) {
     return "$urlScheme://safepay"
   }
@@ -107,7 +107,7 @@ internal fun mapPaymentMethodType(type: PaymentMethod.Type?): String {
   }
 }
 
-internal fun mapToPaymentMethodType(type: String?): PaymentMethod.Type? {
+internal fun mapToPaymentMethodType(type: String): PaymentMethod.Type? {
   return when (type) {
     "Card" -> PaymentMethod.Type.Card
     "Ideal" -> PaymentMethod.Type.Ideal
@@ -364,7 +364,7 @@ internal fun mapFromPaymentIntentResult(paymentIntent: PaymentIntent): WritableM
   return map
 }
 
-internal fun mapFromPaymentIntentLastErrorType(errorType: PaymentIntent.Error.Type?): String? {
+internal fun mapFromPaymentIntentLastErrorType(errorType: PaymentIntent.Error.Type?): String {
   return when (errorType) {
     PaymentIntent.Error.Type.ApiConnectionError -> "api_connection_error"
     PaymentIntent.Error.Type.AuthenticationError -> "authentication_error"
@@ -377,7 +377,7 @@ internal fun mapFromPaymentIntentLastErrorType(errorType: PaymentIntent.Error.Ty
   }
 }
 
-internal fun mapFromSetupIntentLastErrorType(errorType: SetupIntent.Error.Type?): String? {
+internal fun mapFromSetupIntentLastErrorType(errorType: SetupIntent.Error.Type?): String {
   return when (errorType) {
     SetupIntent.Error.Type.ApiConnectionError -> "api_connection_error"
     SetupIntent.Error.Type.AuthenticationError -> "authentication_error"
@@ -390,7 +390,7 @@ internal fun mapFromSetupIntentLastErrorType(errorType: SetupIntent.Error.Type?)
   }
 }
 
-fun getValOr(map: ReadableMap, key: String, default: String? = ""): String? {
+fun getValOr(map: ReadableMap, key: String, default: String = ""): String {
   return if (map.hasKey(key)) map.getString(key) else default
 }
 
@@ -465,11 +465,11 @@ internal fun mapToShippingDetails(shippingDetails: ReadableMap?): ConfirmPayment
   )
 }
 
-private fun getStringOrNull(map: ReadableMap?, key: String): String? {
+private fun getStringOrNull(map: ReadableMap?, key: String): String {
   return if (map?.hasKey(key) == true) map.getString(key) else null
 }
 
-fun getIntOrNull(map: ReadableMap?, key: String): Int? {
+fun getIntOrNull(map: ReadableMap?, key: String): int {
   return if (map?.hasKey(key) == true) map.getInt(key) else null
 }
 
@@ -715,7 +715,7 @@ internal fun mapSetupIntentUsage(type: StripeIntent.Usage?): String {
   }
 }
 
-fun mapToPaymentIntentFutureUsage(type: String?): ConfirmPaymentIntentParams.SetupFutureUsage? {
+fun mapToPaymentIntentFutureUsage(type: String): ConfirmPaymentIntentParams.SetupFutureUsage? {
   return when (type) {
     "OffSession" ->  ConfirmPaymentIntentParams.SetupFutureUsage.OffSession
     "OnSession" ->  ConfirmPaymentIntentParams.SetupFutureUsage.OnSession

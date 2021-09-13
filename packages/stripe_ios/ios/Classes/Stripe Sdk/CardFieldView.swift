@@ -10,7 +10,7 @@ public class CardFieldView: UIView, STPPaymentCardTextFieldDelegate {
     internal var cardField = STPPaymentCardTextField()
     
     public var cardParams: STPPaymentMethodCardParams? = nil
-    public var cardPostalCode: String? = nil
+    public var cardPostalCode: String = nil
 
     @objc var postalCodeEnabled: Bool = true {
         didSet {

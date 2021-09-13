@@ -4,7 +4,7 @@ import com.facebook.react.bridge.WritableMap
 import com.facebook.react.uimanager.events.Event
 import com.facebook.react.uimanager.events.RCTEventEmitter
 
-internal class CardFocusEvent constructor(viewTag: Int, private val focusField: String?) : Event<CardFocusEvent>(viewTag) {
+internal class CardFocusEvent constructor(viewTag: Int, private val focusField: String) : Event<CardFocusEvent>(viewTag) {
   override fun getEventName(): String {
     return EVENT_NAME
   }

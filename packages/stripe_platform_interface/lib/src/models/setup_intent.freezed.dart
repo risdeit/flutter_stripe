@@ -21,15 +21,15 @@ class _$SetupIntentTearOff {
   const _$SetupIntentTearOff();
 
   _SetupIntent call(
-      {required String id,
-      required String status,
-      required bool livemode,
-      required String clientSecret,
-      required String paymentMethodId,
-      required String usage,
-      required List<PaymentMethodType> paymentMethodTypes,
-      String? description,
-      String? created,
+      { String id,
+       String status,
+       bool livemode,
+       String clientSecret,
+       String paymentMethodId,
+       String usage,
+       List<PaymentMethodType> paymentMethodTypes,
+      String description,
+      String created,
       LastSetupError? lastSetupError}) {
     return _SetupIntent(
       id: id,
@@ -80,10 +80,10 @@ mixin _$SetupIntent {
       throw _privateConstructorUsedError;
 
   /// Localized description that provides additional context to users.
-  String? get description => throw _privateConstructorUsedError;
+  String get description => throw _privateConstructorUsedError;
 
   /// Timestamp since epoch that represents the time the intent is created.
-  String? get created => throw _privateConstructorUsedError;
+  String get created => throw _privateConstructorUsedError;
 
   /// Error encountered since last configmration.
   LastSetupError? get lastSetupError => throw _privateConstructorUsedError;
@@ -107,8 +107,8 @@ abstract class $SetupIntentCopyWith<$Res> {
       String paymentMethodId,
       String usage,
       List<PaymentMethodType> paymentMethodTypes,
-      String? description,
-      String? created,
+      String description,
+      String created,
       LastSetupError? lastSetupError});
 
   $LastSetupErrorCopyWith<$Res>? get lastSetupError;
@@ -124,16 +124,16 @@ class _$SetupIntentCopyWithImpl<$Res> implements $SetupIntentCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? id = freezed,
-    Object? status = freezed,
-    Object? livemode = freezed,
-    Object? clientSecret = freezed,
-    Object? paymentMethodId = freezed,
-    Object? usage = freezed,
-    Object? paymentMethodTypes = freezed,
-    Object? description = freezed,
-    Object? created = freezed,
-    Object? lastSetupError = freezed,
+    Object id = freezed,
+    Object status = freezed,
+    Object livemode = freezed,
+    Object clientSecret = freezed,
+    Object paymentMethodId = freezed,
+    Object usage = freezed,
+    Object paymentMethodTypes = freezed,
+    Object description = freezed,
+    Object created = freezed,
+    Object lastSetupError = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -167,11 +167,11 @@ class _$SetupIntentCopyWithImpl<$Res> implements $SetupIntentCopyWith<$Res> {
       description: description == freezed
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       created: created == freezed
           ? _value.created
           : created // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       lastSetupError: lastSetupError == freezed
           ? _value.lastSetupError
           : lastSetupError // ignore: cast_nullable_to_non_nullable
@@ -206,8 +206,8 @@ abstract class _$SetupIntentCopyWith<$Res>
       String paymentMethodId,
       String usage,
       List<PaymentMethodType> paymentMethodTypes,
-      String? description,
-      String? created,
+      String description,
+      String created,
       LastSetupError? lastSetupError});
 
   @override
@@ -226,16 +226,16 @@ class __$SetupIntentCopyWithImpl<$Res> extends _$SetupIntentCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? id = freezed,
-    Object? status = freezed,
-    Object? livemode = freezed,
-    Object? clientSecret = freezed,
-    Object? paymentMethodId = freezed,
-    Object? usage = freezed,
-    Object? paymentMethodTypes = freezed,
-    Object? description = freezed,
-    Object? created = freezed,
-    Object? lastSetupError = freezed,
+    Object id = freezed,
+    Object status = freezed,
+    Object livemode = freezed,
+    Object clientSecret = freezed,
+    Object paymentMethodId = freezed,
+    Object usage = freezed,
+    Object paymentMethodTypes = freezed,
+    Object description = freezed,
+    Object created = freezed,
+    Object lastSetupError = freezed,
   }) {
     return _then(_SetupIntent(
       id: id == freezed
@@ -269,11 +269,11 @@ class __$SetupIntentCopyWithImpl<$Res> extends _$SetupIntentCopyWithImpl<$Res>
       description: description == freezed
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       created: created == freezed
           ? _value.created
           : created // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       lastSetupError: lastSetupError == freezed
           ? _value.lastSetupError
           : lastSetupError // ignore: cast_nullable_to_non_nullable
@@ -287,13 +287,13 @@ class __$SetupIntentCopyWithImpl<$Res> extends _$SetupIntentCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_SetupIntent implements _SetupIntent {
   const _$_SetupIntent(
-      {required this.id,
-      required this.status,
-      required this.livemode,
-      required this.clientSecret,
-      required this.paymentMethodId,
-      required this.usage,
-      required this.paymentMethodTypes,
+      { this.id,
+       this.status,
+       this.livemode,
+       this.clientSecret,
+       this.paymentMethodId,
+       this.usage,
+       this.paymentMethodTypes,
       this.description,
       this.created,
       this.lastSetupError});
@@ -334,11 +334,11 @@ class _$_SetupIntent implements _SetupIntent {
   @override
 
   /// Localized description that provides additional context to users.
-  final String? description;
+  final String description;
   @override
 
   /// Timestamp since epoch that represents the time the intent is created.
-  final String? created;
+  final String created;
   @override
 
   /// Error encountered since last configmration.
@@ -416,8 +416,8 @@ abstract class _SetupIntent implements SetupIntent {
       required String paymentMethodId,
       required String usage,
       required List<PaymentMethodType> paymentMethodTypes,
-      String? description,
-      String? created,
+      String description,
+      String created,
       LastSetupError? lastSetupError}) = _$_SetupIntent;
 
   factory _SetupIntent.fromJson(Map<String, dynamic> json) =
@@ -457,11 +457,11 @@ abstract class _SetupIntent implements SetupIntent {
   @override
 
   /// Localized description that provides additional context to users.
-  String? get description => throw _privateConstructorUsedError;
+  String get description => throw _privateConstructorUsedError;
   @override
 
   /// Timestamp since epoch that represents the time the intent is created.
-  String? get created => throw _privateConstructorUsedError;
+  String get created => throw _privateConstructorUsedError;
   @override
 
   /// Error encountered since last configmration.
@@ -528,8 +528,8 @@ class _$LastSetupErrorCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? code = freezed,
-    Object? message = freezed,
+    Object code = freezed,
+    Object message = freezed,
   }) {
     return _then(_value.copyWith(
       code: code == freezed
@@ -567,8 +567,8 @@ class __$LastSetupErrorCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? code = freezed,
-    Object? message = freezed,
+    Object code = freezed,
+    Object message = freezed,
   }) {
     return _then(_LastSetupError(
       code: code == freezed

@@ -21,7 +21,7 @@ class StripeSdkCardFormPlatformView(
         private val context: Context,
         private val channel: MethodChannel,
         id: Int,
-        private val creationParams: Map<String?, Any?>?,
+        private val creationParams: Map<String, Any?>?,
         private val cardFormViewManager: CardFormViewManager,
         private val sdkAccessor: () -> StripeSdkModule
 ) : PlatformView, MethodChannel.MethodCallHandler {

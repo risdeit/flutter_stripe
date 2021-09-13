@@ -17,9 +17,9 @@ class WebhookPaymentScreen extends StatefulWidget {
 }
 
 class _WebhookPaymentScreenState extends State<WebhookPaymentScreen> {
-  CardFieldInputDetails? _card;
+  CardFieldInputDetails _card;
   String _email = 'email@stripe.com';
-  bool? _saveCard = false;
+  bool _saveCard = false;
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +56,7 @@ class _WebhookPaymentScreenState extends State<WebhookPaymentScreen> {
           title: Text('Save card during payment'),
         ),
         LoadingButton(
-          onPressed: _card?.complete == true ? _handlePayPress : null,
+          onPressed: _card.complete == true ? _handlePayPress : null,
           text: 'Pay',
         ),
         SizedBox(height: 20),

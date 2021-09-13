@@ -30,10 +30,10 @@ class _$PaymentIntentTearOff {
       required bool livemode,
       required CaptureMethod captureMethod,
       required ConfirmationMethod confirmationMethod,
-      String? paymentMethodId,
-      String? description,
-      String? receiptEmail,
-      String? canceledAt,
+      String paymentMethodId,
+      String description,
+      String receiptEmail,
+      String canceledAt,
       ShippingDetails? shipping}) {
     return _PaymentIntent(
       id: id,
@@ -92,16 +92,16 @@ mixin _$PaymentIntent {
       throw _privateConstructorUsedError;
 
   /// Id of the payment method used in this intent.
-  String? get paymentMethodId => throw _privateConstructorUsedError;
+  String get paymentMethodId => throw _privateConstructorUsedError;
 
   /// Localized description that provides additional context to users.
-  String? get description => throw _privateConstructorUsedError;
+  String get description => throw _privateConstructorUsedError;
 
   /// Email address where the receipt will be send to.
-  String? get receiptEmail => throw _privateConstructorUsedError;
+  String get receiptEmail => throw _privateConstructorUsedError;
 
   /// Timestamp since epoch when the intent is cancelled.
-  String? get canceledAt => throw _privateConstructorUsedError;
+  String get canceledAt => throw _privateConstructorUsedError;
 
   /// Shipping information of the payment intent.
   ShippingDetails? get shipping => throw _privateConstructorUsedError;
@@ -127,10 +127,10 @@ abstract class $PaymentIntentCopyWith<$Res> {
       bool livemode,
       CaptureMethod captureMethod,
       ConfirmationMethod confirmationMethod,
-      String? paymentMethodId,
-      String? description,
-      String? receiptEmail,
-      String? canceledAt,
+      String paymentMethodId,
+      String description,
+      String receiptEmail,
+      String canceledAt,
       ShippingDetails? shipping});
 
   $ShippingDetailsCopyWith<$Res>? get shipping;
@@ -147,20 +147,20 @@ class _$PaymentIntentCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? id = freezed,
-    Object? amount = freezed,
-    Object? created = freezed,
-    Object? currency = freezed,
-    Object? status = freezed,
-    Object? clientSecret = freezed,
-    Object? livemode = freezed,
-    Object? captureMethod = freezed,
-    Object? confirmationMethod = freezed,
-    Object? paymentMethodId = freezed,
-    Object? description = freezed,
-    Object? receiptEmail = freezed,
-    Object? canceledAt = freezed,
-    Object? shipping = freezed,
+    Object id = freezed,
+    Object amount = freezed,
+    Object created = freezed,
+    Object currency = freezed,
+    Object status = freezed,
+    Object clientSecret = freezed,
+    Object livemode = freezed,
+    Object captureMethod = freezed,
+    Object confirmationMethod = freezed,
+    Object paymentMethodId = freezed,
+    Object description = freezed,
+    Object receiptEmail = freezed,
+    Object canceledAt = freezed,
+    Object shipping = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -202,19 +202,19 @@ class _$PaymentIntentCopyWithImpl<$Res>
       paymentMethodId: paymentMethodId == freezed
           ? _value.paymentMethodId
           : paymentMethodId // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       description: description == freezed
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       receiptEmail: receiptEmail == freezed
           ? _value.receiptEmail
           : receiptEmail // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       canceledAt: canceledAt == freezed
           ? _value.canceledAt
           : canceledAt // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       shipping: shipping == freezed
           ? _value.shipping
           : shipping // ignore: cast_nullable_to_non_nullable
@@ -251,10 +251,10 @@ abstract class _$PaymentIntentCopyWith<$Res>
       bool livemode,
       CaptureMethod captureMethod,
       ConfirmationMethod confirmationMethod,
-      String? paymentMethodId,
-      String? description,
-      String? receiptEmail,
-      String? canceledAt,
+      String paymentMethodId,
+      String description,
+      String receiptEmail,
+      String canceledAt,
       ShippingDetails? shipping});
 
   @override
@@ -274,20 +274,20 @@ class __$PaymentIntentCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? id = freezed,
-    Object? amount = freezed,
-    Object? created = freezed,
-    Object? currency = freezed,
-    Object? status = freezed,
-    Object? clientSecret = freezed,
-    Object? livemode = freezed,
-    Object? captureMethod = freezed,
-    Object? confirmationMethod = freezed,
-    Object? paymentMethodId = freezed,
-    Object? description = freezed,
-    Object? receiptEmail = freezed,
-    Object? canceledAt = freezed,
-    Object? shipping = freezed,
+    Object id = freezed,
+    Object amount = freezed,
+    Object created = freezed,
+    Object currency = freezed,
+    Object status = freezed,
+    Object clientSecret = freezed,
+    Object livemode = freezed,
+    Object captureMethod = freezed,
+    Object confirmationMethod = freezed,
+    Object paymentMethodId = freezed,
+    Object description = freezed,
+    Object receiptEmail = freezed,
+    Object canceledAt = freezed,
+    Object shipping = freezed,
   }) {
     return _then(_PaymentIntent(
       id: id == freezed
@@ -329,19 +329,19 @@ class __$PaymentIntentCopyWithImpl<$Res>
       paymentMethodId: paymentMethodId == freezed
           ? _value.paymentMethodId
           : paymentMethodId // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       description: description == freezed
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       receiptEmail: receiptEmail == freezed
           ? _value.receiptEmail
           : receiptEmail // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       canceledAt: canceledAt == freezed
           ? _value.canceledAt
           : canceledAt // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       shipping: shipping == freezed
           ? _value.shipping
           : shipping // ignore: cast_nullable_to_non_nullable
@@ -412,19 +412,19 @@ class _$_PaymentIntent implements _PaymentIntent {
   @override
 
   /// Id of the payment method used in this intent.
-  final String? paymentMethodId;
+  final String paymentMethodId;
   @override
 
   /// Localized description that provides additional context to users.
-  final String? description;
+  final String description;
   @override
 
   /// Email address where the receipt will be send to.
-  final String? receiptEmail;
+  final String receiptEmail;
   @override
 
   /// Timestamp since epoch when the intent is cancelled.
-  final String? canceledAt;
+  final String canceledAt;
   @override
 
   /// Shipping information of the payment intent.
@@ -520,10 +520,10 @@ abstract class _PaymentIntent implements PaymentIntent {
       required bool livemode,
       required CaptureMethod captureMethod,
       required ConfirmationMethod confirmationMethod,
-      String? paymentMethodId,
-      String? description,
-      String? receiptEmail,
-      String? canceledAt,
+      String paymentMethodId,
+      String description,
+      String receiptEmail,
+      String canceledAt,
       ShippingDetails? shipping}) = _$_PaymentIntent;
 
   factory _PaymentIntent.fromJson(Map<String, dynamic> json) =
@@ -569,19 +569,19 @@ abstract class _PaymentIntent implements PaymentIntent {
   @override
 
   /// Id of the payment method used in this intent.
-  String? get paymentMethodId => throw _privateConstructorUsedError;
+  String get paymentMethodId => throw _privateConstructorUsedError;
   @override
 
   /// Localized description that provides additional context to users.
-  String? get description => throw _privateConstructorUsedError;
+  String get description => throw _privateConstructorUsedError;
   @override
 
   /// Email address where the receipt will be send to.
-  String? get receiptEmail => throw _privateConstructorUsedError;
+  String get receiptEmail => throw _privateConstructorUsedError;
   @override
 
   /// Timestamp since epoch when the intent is cancelled.
-  String? get canceledAt => throw _privateConstructorUsedError;
+  String get canceledAt => throw _privateConstructorUsedError;
   @override
 
   /// Shipping information of the payment intent.
@@ -673,11 +673,11 @@ class _$ShippingDetailsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? address = freezed,
-    Object? name = freezed,
-    Object? carrier = freezed,
-    Object? phone = freezed,
-    Object? trackingNumber = freezed,
+    Object address = freezed,
+    Object name = freezed,
+    Object carrier = freezed,
+    Object phone = freezed,
+    Object trackingNumber = freezed,
   }) {
     return _then(_value.copyWith(
       address: address == freezed
@@ -742,11 +742,11 @@ class __$ShippingDetailsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? address = freezed,
-    Object? name = freezed,
-    Object? carrier = freezed,
-    Object? phone = freezed,
-    Object? trackingNumber = freezed,
+    Object address = freezed,
+    Object name = freezed,
+    Object carrier = freezed,
+    Object phone = freezed,
+    Object trackingNumber = freezed,
   }) {
     return _then(_ShippingDetails(
       address: address == freezed

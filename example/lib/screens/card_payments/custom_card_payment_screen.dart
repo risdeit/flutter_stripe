@@ -15,7 +15,7 @@ class CustomCardPaymentScreen extends StatefulWidget {
 
 class _CustomCardPaymentScreenState extends State<CustomCardPaymentScreen> {
   CardDetails _card = CardDetails();
-  bool? _saveCard = false;
+  bool _saveCard = false;
 
   @override
   Widget build(BuildContext context) {
@@ -207,7 +207,7 @@ class _CustomCardPaymentScreenState extends State<CustomCardPaymentScreen> {
   }
 
   Future<Map<String, dynamic>> callNoWebhookPayEndpointIntentId({
-    required String paymentIntentId,
+     String paymentIntentId,
   }) async {
     final url = Uri.parse('$kApiUrl/charge-card-off-session');
     final response = await http.post(
@@ -221,9 +221,9 @@ class _CustomCardPaymentScreenState extends State<CustomCardPaymentScreen> {
   }
 
   Future<Map<String, dynamic>> callNoWebhookPayEndpointMethodId({
-    required bool useStripeSdk,
-    required String paymentMethodId,
-    required String currency,
+     bool useStripeSdk,
+     String paymentMethodId,
+     String currency,
     List<Map<String, dynamic>>? items,
   }) async {
     final url = Uri.parse('$kApiUrl/pay-without-webhooks');

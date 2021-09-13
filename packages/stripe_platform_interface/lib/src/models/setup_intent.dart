@@ -17,37 +17,37 @@ class SetupIntent with _$SetupIntent {
   const factory SetupIntent({
     /// Unique identifier.
 
-    required String id,
+     String id,
 
     /// Status of the intent.
     ///
     /// See https://stripe.com/docs/payments/intents#intent-statuses.
-    required String status,
+     String status,
 
     /// Determines whether the intent is in live mode or in test mode.
 
-    required bool livemode,
+     bool livemode,
 
     /// The client is secret is used for handling the payment from the Client side.
 
-    required String clientSecret,
+     String clientSecret,
 
     /// Id of the payment method used in this intent.
 
-    required String paymentMethodId,
+     String paymentMethodId,
 
     /// Indicates how the intent is used in the future.
-    required String usage,
+     String usage,
 
     /// List of payment method types associated with this intent.
-    required List<PaymentMethodType> paymentMethodTypes,
+     List<PaymentMethodType> paymentMethodTypes,
 
     /// Localized description that provides additional context to users.
 
-    String? description,
+    String description,
 
     /// Timestamp since epoch that represents the time the intent is created.
-    String? created,
+    String created,
 
     /// Error encountered since last configmration.
     LastSetupError? lastSetupError,
@@ -64,10 +64,10 @@ class LastSetupError with _$LastSetupError {
   @JsonSerializable(explicitToJson: true)
   const factory LastSetupError({
     /// Code.
-    required String code,
+     String code,
 
     /// Message.
-    required String message,
+     String message,
   }) = _LastSetupError;
 
   factory LastSetupError.fromJson(Map<String, dynamic> json) =>

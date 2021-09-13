@@ -21,18 +21,18 @@ class _$CardStyleTearOff {
   const _$CardStyleTearOff();
 
   _CardStyleConstructor call(
-      {double? borderWidth,
+      {double borderWidth,
       @JsonKey(toJson: ColorKey.toJson, fromJson: ColorKey.fromJson)
           Color? backgroundColor,
       @JsonKey(toJson: ColorKey.toJson, fromJson: ColorKey.fromJson)
           Color? borderColor,
-      double? borderRadius,
+      double borderRadius,
       @JsonKey(toJson: ColorKey.toJson, fromJson: ColorKey.fromJson)
           Color? cursorColor,
       @JsonKey(toJson: ColorKey.toJson, fromJson: ColorKey.fromJson)
           Color? textColor,
-      double? fontSize,
-      String? fontFamily,
+      double fontSize,
+      String fontFamily,
       @JsonKey(toJson: ColorKey.toJson, fromJson: ColorKey.fromJson)
           Color? textErrorColor,
       @JsonKey(toJson: ColorKey.toJson, fromJson: ColorKey.fromJson)
@@ -62,24 +62,24 @@ const $CardStyle = _$CardStyleTearOff();
 /// @nodoc
 mixin _$CardStyle {
   /// Width for the border.
-  double? get borderWidth => throw _privateConstructorUsedError;
+  double get borderWidth => throw _privateConstructorUsedError;
   @JsonKey(toJson: ColorKey.toJson, fromJson: ColorKey.fromJson)
   Color? get backgroundColor => throw _privateConstructorUsedError;
   @JsonKey(toJson: ColorKey.toJson, fromJson: ColorKey.fromJson)
   Color? get borderColor => throw _privateConstructorUsedError;
 
   /// Borderradius that can give the Cardfield rounded corners.
-  double? get borderRadius => throw _privateConstructorUsedError;
+  double get borderRadius => throw _privateConstructorUsedError;
   @JsonKey(toJson: ColorKey.toJson, fromJson: ColorKey.fromJson)
   Color? get cursorColor => throw _privateConstructorUsedError;
   @JsonKey(toJson: ColorKey.toJson, fromJson: ColorKey.fromJson)
   Color? get textColor => throw _privateConstructorUsedError;
 
   /// Font size.
-  double? get fontSize => throw _privateConstructorUsedError;
+  double get fontSize => throw _privateConstructorUsedError;
 
   /// Font family
-  String? get fontFamily => throw _privateConstructorUsedError;
+  String get fontFamily => throw _privateConstructorUsedError;
 
   /// Color of the input in case incorrect data is entered.
   @JsonKey(toJson: ColorKey.toJson, fromJson: ColorKey.fromJson)
@@ -98,18 +98,18 @@ abstract class $CardStyleCopyWith<$Res> {
   factory $CardStyleCopyWith(CardStyle value, $Res Function(CardStyle) then) =
       _$CardStyleCopyWithImpl<$Res>;
   $Res call(
-      {double? borderWidth,
+      {double borderWidth,
       @JsonKey(toJson: ColorKey.toJson, fromJson: ColorKey.fromJson)
           Color? backgroundColor,
       @JsonKey(toJson: ColorKey.toJson, fromJson: ColorKey.fromJson)
           Color? borderColor,
-      double? borderRadius,
+      double borderRadius,
       @JsonKey(toJson: ColorKey.toJson, fromJson: ColorKey.fromJson)
           Color? cursorColor,
       @JsonKey(toJson: ColorKey.toJson, fromJson: ColorKey.fromJson)
           Color? textColor,
-      double? fontSize,
-      String? fontFamily,
+      double fontSize,
+      String fontFamily,
       @JsonKey(toJson: ColorKey.toJson, fromJson: ColorKey.fromJson)
           Color? textErrorColor,
       @JsonKey(toJson: ColorKey.toJson, fromJson: ColorKey.fromJson)
@@ -126,22 +126,22 @@ class _$CardStyleCopyWithImpl<$Res> implements $CardStyleCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? borderWidth = freezed,
-    Object? backgroundColor = freezed,
-    Object? borderColor = freezed,
-    Object? borderRadius = freezed,
-    Object? cursorColor = freezed,
-    Object? textColor = freezed,
-    Object? fontSize = freezed,
-    Object? fontFamily = freezed,
-    Object? textErrorColor = freezed,
-    Object? placeholderColor = freezed,
+    Object borderWidth = freezed,
+    Object backgroundColor = freezed,
+    Object borderColor = freezed,
+    Object borderRadius = freezed,
+    Object cursorColor = freezed,
+    Object textColor = freezed,
+    Object fontSize = freezed,
+    Object fontFamily = freezed,
+    Object textErrorColor = freezed,
+    Object placeholderColor = freezed,
   }) {
     return _then(_value.copyWith(
       borderWidth: borderWidth == freezed
           ? _value.borderWidth
           : borderWidth // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as double,
       backgroundColor: backgroundColor == freezed
           ? _value.backgroundColor
           : backgroundColor // ignore: cast_nullable_to_non_nullable
@@ -153,7 +153,7 @@ class _$CardStyleCopyWithImpl<$Res> implements $CardStyleCopyWith<$Res> {
       borderRadius: borderRadius == freezed
           ? _value.borderRadius
           : borderRadius // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as double,
       cursorColor: cursorColor == freezed
           ? _value.cursorColor
           : cursorColor // ignore: cast_nullable_to_non_nullable
@@ -165,11 +165,11 @@ class _$CardStyleCopyWithImpl<$Res> implements $CardStyleCopyWith<$Res> {
       fontSize: fontSize == freezed
           ? _value.fontSize
           : fontSize // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as double,
       fontFamily: fontFamily == freezed
           ? _value.fontFamily
           : fontFamily // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       textErrorColor: textErrorColor == freezed
           ? _value.textErrorColor
           : textErrorColor // ignore: cast_nullable_to_non_nullable
@@ -190,18 +190,18 @@ abstract class _$CardStyleConstructorCopyWith<$Res>
       __$CardStyleConstructorCopyWithImpl<$Res>;
   @override
   $Res call(
-      {double? borderWidth,
+      {double borderWidth,
       @JsonKey(toJson: ColorKey.toJson, fromJson: ColorKey.fromJson)
           Color? backgroundColor,
       @JsonKey(toJson: ColorKey.toJson, fromJson: ColorKey.fromJson)
           Color? borderColor,
-      double? borderRadius,
+      double borderRadius,
       @JsonKey(toJson: ColorKey.toJson, fromJson: ColorKey.fromJson)
           Color? cursorColor,
       @JsonKey(toJson: ColorKey.toJson, fromJson: ColorKey.fromJson)
           Color? textColor,
-      double? fontSize,
-      String? fontFamily,
+      double fontSize,
+      String fontFamily,
       @JsonKey(toJson: ColorKey.toJson, fromJson: ColorKey.fromJson)
           Color? textErrorColor,
       @JsonKey(toJson: ColorKey.toJson, fromJson: ColorKey.fromJson)
@@ -221,22 +221,22 @@ class __$CardStyleConstructorCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? borderWidth = freezed,
-    Object? backgroundColor = freezed,
-    Object? borderColor = freezed,
-    Object? borderRadius = freezed,
-    Object? cursorColor = freezed,
-    Object? textColor = freezed,
-    Object? fontSize = freezed,
-    Object? fontFamily = freezed,
-    Object? textErrorColor = freezed,
-    Object? placeholderColor = freezed,
+    Object borderWidth = freezed,
+    Object backgroundColor = freezed,
+    Object borderColor = freezed,
+    Object borderRadius = freezed,
+    Object cursorColor = freezed,
+    Object textColor = freezed,
+    Object fontSize = freezed,
+    Object fontFamily = freezed,
+    Object textErrorColor = freezed,
+    Object placeholderColor = freezed,
   }) {
     return _then(_CardStyleConstructor(
       borderWidth: borderWidth == freezed
           ? _value.borderWidth
           : borderWidth // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as double,
       backgroundColor: backgroundColor == freezed
           ? _value.backgroundColor
           : backgroundColor // ignore: cast_nullable_to_non_nullable
@@ -248,7 +248,7 @@ class __$CardStyleConstructorCopyWithImpl<$Res>
       borderRadius: borderRadius == freezed
           ? _value.borderRadius
           : borderRadius // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as double,
       cursorColor: cursorColor == freezed
           ? _value.cursorColor
           : cursorColor // ignore: cast_nullable_to_non_nullable
@@ -260,11 +260,11 @@ class __$CardStyleConstructorCopyWithImpl<$Res>
       fontSize: fontSize == freezed
           ? _value.fontSize
           : fontSize // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as double,
       fontFamily: fontFamily == freezed
           ? _value.fontFamily
           : fontFamily // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       textErrorColor: textErrorColor == freezed
           ? _value.textErrorColor
           : textErrorColor // ignore: cast_nullable_to_non_nullable
@@ -306,7 +306,7 @@ class _$_CardStyleConstructor extends _CardStyleConstructor {
   @override
 
   /// Width for the border.
-  final double? borderWidth;
+  final double borderWidth;
   @override
   @JsonKey(toJson: ColorKey.toJson, fromJson: ColorKey.fromJson)
   final Color? backgroundColor;
@@ -316,7 +316,7 @@ class _$_CardStyleConstructor extends _CardStyleConstructor {
   @override
 
   /// Borderradius that can give the Cardfield rounded corners.
-  final double? borderRadius;
+  final double borderRadius;
   @override
   @JsonKey(toJson: ColorKey.toJson, fromJson: ColorKey.fromJson)
   final Color? cursorColor;
@@ -326,11 +326,11 @@ class _$_CardStyleConstructor extends _CardStyleConstructor {
   @override
 
   /// Font size.
-  final double? fontSize;
+  final double fontSize;
   @override
 
   /// Font family
-  final String? fontFamily;
+  final String fontFamily;
   @override
 
   /// Color of the input in case incorrect data is entered.
@@ -409,18 +409,18 @@ class _$_CardStyleConstructor extends _CardStyleConstructor {
 
 abstract class _CardStyleConstructor extends CardStyle {
   factory _CardStyleConstructor(
-      {double? borderWidth,
+      {double borderWidth,
       @JsonKey(toJson: ColorKey.toJson, fromJson: ColorKey.fromJson)
           Color? backgroundColor,
       @JsonKey(toJson: ColorKey.toJson, fromJson: ColorKey.fromJson)
           Color? borderColor,
-      double? borderRadius,
+      double borderRadius,
       @JsonKey(toJson: ColorKey.toJson, fromJson: ColorKey.fromJson)
           Color? cursorColor,
       @JsonKey(toJson: ColorKey.toJson, fromJson: ColorKey.fromJson)
           Color? textColor,
-      double? fontSize,
-      String? fontFamily,
+      double fontSize,
+      String fontFamily,
       @JsonKey(toJson: ColorKey.toJson, fromJson: ColorKey.fromJson)
           Color? textErrorColor,
       @JsonKey(toJson: ColorKey.toJson, fromJson: ColorKey.fromJson)
@@ -433,7 +433,7 @@ abstract class _CardStyleConstructor extends CardStyle {
   @override
 
   /// Width for the border.
-  double? get borderWidth => throw _privateConstructorUsedError;
+  double get borderWidth => throw _privateConstructorUsedError;
   @override
   @JsonKey(toJson: ColorKey.toJson, fromJson: ColorKey.fromJson)
   Color? get backgroundColor => throw _privateConstructorUsedError;
@@ -443,7 +443,7 @@ abstract class _CardStyleConstructor extends CardStyle {
   @override
 
   /// Borderradius that can give the Cardfield rounded corners.
-  double? get borderRadius => throw _privateConstructorUsedError;
+  double get borderRadius => throw _privateConstructorUsedError;
   @override
   @JsonKey(toJson: ColorKey.toJson, fromJson: ColorKey.fromJson)
   Color? get cursorColor => throw _privateConstructorUsedError;
@@ -453,11 +453,11 @@ abstract class _CardStyleConstructor extends CardStyle {
   @override
 
   /// Font size.
-  double? get fontSize => throw _privateConstructorUsedError;
+  double get fontSize => throw _privateConstructorUsedError;
   @override
 
   /// Font family
-  String? get fontFamily => throw _privateConstructorUsedError;
+  String get fontFamily => throw _privateConstructorUsedError;
   @override
 
   /// Color of the input in case incorrect data is entered.
@@ -481,7 +481,7 @@ class _$CardPlaceholderTearOff {
   const _$CardPlaceholderTearOff();
 
   _CardPlaceholderConstructor call(
-      {String? number, String? expiration, String? cvc, String? postalCode}) {
+      {String number, String expiration, String cvc, String postalCode}) {
     return _CardPlaceholderConstructor(
       number: number,
       expiration: expiration,
@@ -501,16 +501,16 @@ const $CardPlaceholder = _$CardPlaceholderTearOff();
 /// @nodoc
 mixin _$CardPlaceholder {
   /// Localized placeholder for card number field.
-  String? get number => throw _privateConstructorUsedError;
+  String get number => throw _privateConstructorUsedError;
 
   /// Localized placeholder for expiration field.
-  String? get expiration => throw _privateConstructorUsedError;
+  String get expiration => throw _privateConstructorUsedError;
 
   /// Localized placeholder for cvc field.
-  String? get cvc => throw _privateConstructorUsedError;
+  String get cvc => throw _privateConstructorUsedError;
 
   /// Localized placeholder for postal code field.
-  String? get postalCode => throw _privateConstructorUsedError;
+  String get postalCode => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -524,7 +524,7 @@ abstract class $CardPlaceholderCopyWith<$Res> {
           CardPlaceholder value, $Res Function(CardPlaceholder) then) =
       _$CardPlaceholderCopyWithImpl<$Res>;
   $Res call(
-      {String? number, String? expiration, String? cvc, String? postalCode});
+      {String number, String expiration, String cvc, String postalCode});
 }
 
 /// @nodoc
@@ -538,28 +538,28 @@ class _$CardPlaceholderCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? number = freezed,
-    Object? expiration = freezed,
-    Object? cvc = freezed,
-    Object? postalCode = freezed,
+    Object number = freezed,
+    Object expiration = freezed,
+    Object cvc = freezed,
+    Object postalCode = freezed,
   }) {
     return _then(_value.copyWith(
       number: number == freezed
           ? _value.number
           : number // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       expiration: expiration == freezed
           ? _value.expiration
           : expiration // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       cvc: cvc == freezed
           ? _value.cvc
           : cvc // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       postalCode: postalCode == freezed
           ? _value.postalCode
           : postalCode // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -573,7 +573,7 @@ abstract class _$CardPlaceholderConstructorCopyWith<$Res>
       __$CardPlaceholderConstructorCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String? number, String? expiration, String? cvc, String? postalCode});
+      {String number, String expiration, String cvc, String postalCode});
 }
 
 /// @nodoc
@@ -590,28 +590,28 @@ class __$CardPlaceholderConstructorCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? number = freezed,
-    Object? expiration = freezed,
-    Object? cvc = freezed,
-    Object? postalCode = freezed,
+    Object number = freezed,
+    Object expiration = freezed,
+    Object cvc = freezed,
+    Object postalCode = freezed,
   }) {
     return _then(_CardPlaceholderConstructor(
       number: number == freezed
           ? _value.number
           : number // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       expiration: expiration == freezed
           ? _value.expiration
           : expiration // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       cvc: cvc == freezed
           ? _value.cvc
           : cvc // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       postalCode: postalCode == freezed
           ? _value.postalCode
           : postalCode // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -630,19 +630,19 @@ class _$_CardPlaceholderConstructor extends _CardPlaceholderConstructor {
   @override
 
   /// Localized placeholder for card number field.
-  final String? number;
+  final String number;
   @override
 
   /// Localized placeholder for expiration field.
-  final String? expiration;
+  final String expiration;
   @override
 
   /// Localized placeholder for cvc field.
-  final String? cvc;
+  final String cvc;
   @override
 
   /// Localized placeholder for postal code field.
-  final String? postalCode;
+  final String postalCode;
 
   @override
   String toString() {
@@ -687,10 +687,10 @@ class _$_CardPlaceholderConstructor extends _CardPlaceholderConstructor {
 
 abstract class _CardPlaceholderConstructor extends CardPlaceholder {
   factory _CardPlaceholderConstructor(
-      {String? number,
-      String? expiration,
-      String? cvc,
-      String? postalCode}) = _$_CardPlaceholderConstructor;
+      {String number,
+      String expiration,
+      String cvc,
+      String postalCode}) = _$_CardPlaceholderConstructor;
   _CardPlaceholderConstructor._() : super._();
 
   factory _CardPlaceholderConstructor.fromJson(Map<String, dynamic> json) =
@@ -699,19 +699,19 @@ abstract class _CardPlaceholderConstructor extends CardPlaceholder {
   @override
 
   /// Localized placeholder for card number field.
-  String? get number => throw _privateConstructorUsedError;
+  String get number => throw _privateConstructorUsedError;
   @override
 
   /// Localized placeholder for expiration field.
-  String? get expiration => throw _privateConstructorUsedError;
+  String get expiration => throw _privateConstructorUsedError;
   @override
 
   /// Localized placeholder for cvc field.
-  String? get cvc => throw _privateConstructorUsedError;
+  String get cvc => throw _privateConstructorUsedError;
   @override
 
   /// Localized placeholder for postal code field.
-  String? get postalCode => throw _privateConstructorUsedError;
+  String get postalCode => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CardPlaceholderConstructorCopyWith<_CardPlaceholderConstructor>
@@ -729,13 +729,13 @@ class _$CardFieldInputDetailsTearOff {
 
   _CardFieldInputDetails call(
       {required bool complete,
-      String? last4,
-      int? expiryMonth,
-      int? expiryYear,
-      String? postalCode,
-      String? brand,
-      String? number,
-      String? cvc}) {
+      String last4,
+      int expiryMonth,
+      int expiryYear,
+      String postalCode,
+      String brand,
+      String number,
+      String cvc}) {
     return _CardFieldInputDetails(
       complete: complete,
       last4: last4,
@@ -762,27 +762,27 @@ mixin _$CardFieldInputDetails {
   bool get complete => throw _privateConstructorUsedError;
 
   /// Last 4 digits of the entered card number.
-  String? get last4 => throw _privateConstructorUsedError;
+  String get last4 => throw _privateConstructorUsedError;
 
   /// Month of the entered expiry date of the card.
-  int? get expiryMonth => throw _privateConstructorUsedError;
+  int get expiryMonth => throw _privateConstructorUsedError;
 
   /// Year of the entered expiry date of the card.
-  int? get expiryYear => throw _privateConstructorUsedError;
+  int get expiryYear => throw _privateConstructorUsedError;
 
   /// Entered postcal code.
-  String? get postalCode => throw _privateConstructorUsedError;
+  String get postalCode => throw _privateConstructorUsedError;
 
   /// Brand of the card.
-  String? get brand => throw _privateConstructorUsedError;
+  String get brand => throw _privateConstructorUsedError;
 
   /// Card number.
   /// This information is not available by default to comply with the PCI compliance
-  String? get number => throw _privateConstructorUsedError;
+  String get number => throw _privateConstructorUsedError;
 
   /// CVC code.
   /// This information is not available by default to comply with the PCI compliance
-  String? get cvc => throw _privateConstructorUsedError;
+  String get cvc => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -797,13 +797,13 @@ abstract class $CardFieldInputDetailsCopyWith<$Res> {
       _$CardFieldInputDetailsCopyWithImpl<$Res>;
   $Res call(
       {bool complete,
-      String? last4,
-      int? expiryMonth,
-      int? expiryYear,
-      String? postalCode,
-      String? brand,
-      String? number,
-      String? cvc});
+      String last4,
+      int expiryMonth,
+      int expiryYear,
+      String postalCode,
+      String brand,
+      String number,
+      String cvc});
 }
 
 /// @nodoc
@@ -817,14 +817,14 @@ class _$CardFieldInputDetailsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? complete = freezed,
-    Object? last4 = freezed,
-    Object? expiryMonth = freezed,
-    Object? expiryYear = freezed,
-    Object? postalCode = freezed,
-    Object? brand = freezed,
-    Object? number = freezed,
-    Object? cvc = freezed,
+    Object complete = freezed,
+    Object last4 = freezed,
+    Object expiryMonth = freezed,
+    Object expiryYear = freezed,
+    Object postalCode = freezed,
+    Object brand = freezed,
+    Object number = freezed,
+    Object cvc = freezed,
   }) {
     return _then(_value.copyWith(
       complete: complete == freezed
@@ -834,31 +834,31 @@ class _$CardFieldInputDetailsCopyWithImpl<$Res>
       last4: last4 == freezed
           ? _value.last4
           : last4 // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       expiryMonth: expiryMonth == freezed
           ? _value.expiryMonth
           : expiryMonth // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       expiryYear: expiryYear == freezed
           ? _value.expiryYear
           : expiryYear // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       postalCode: postalCode == freezed
           ? _value.postalCode
           : postalCode // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       brand: brand == freezed
           ? _value.brand
           : brand // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       number: number == freezed
           ? _value.number
           : number // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       cvc: cvc == freezed
           ? _value.cvc
           : cvc // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -872,13 +872,13 @@ abstract class _$CardFieldInputDetailsCopyWith<$Res>
   @override
   $Res call(
       {bool complete,
-      String? last4,
-      int? expiryMonth,
-      int? expiryYear,
-      String? postalCode,
-      String? brand,
-      String? number,
-      String? cvc});
+      String last4,
+      int expiryMonth,
+      int expiryYear,
+      String postalCode,
+      String brand,
+      String number,
+      String cvc});
 }
 
 /// @nodoc
@@ -894,14 +894,14 @@ class __$CardFieldInputDetailsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? complete = freezed,
-    Object? last4 = freezed,
-    Object? expiryMonth = freezed,
-    Object? expiryYear = freezed,
-    Object? postalCode = freezed,
-    Object? brand = freezed,
-    Object? number = freezed,
-    Object? cvc = freezed,
+    Object complete = freezed,
+    Object last4 = freezed,
+    Object expiryMonth = freezed,
+    Object expiryYear = freezed,
+    Object postalCode = freezed,
+    Object brand = freezed,
+    Object number = freezed,
+    Object cvc = freezed,
   }) {
     return _then(_CardFieldInputDetails(
       complete: complete == freezed
@@ -911,31 +911,31 @@ class __$CardFieldInputDetailsCopyWithImpl<$Res>
       last4: last4 == freezed
           ? _value.last4
           : last4 // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       expiryMonth: expiryMonth == freezed
           ? _value.expiryMonth
           : expiryMonth // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       expiryYear: expiryYear == freezed
           ? _value.expiryYear
           : expiryYear // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       postalCode: postalCode == freezed
           ? _value.postalCode
           : postalCode // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       brand: brand == freezed
           ? _value.brand
           : brand // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       number: number == freezed
           ? _value.number
           : number // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       cvc: cvc == freezed
           ? _value.cvc
           : cvc // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -965,33 +965,33 @@ class _$_CardFieldInputDetails extends _CardFieldInputDetails {
   @override
 
   /// Last 4 digits of the entered card number.
-  final String? last4;
+  final String last4;
   @override
 
   /// Month of the entered expiry date of the card.
-  final int? expiryMonth;
+  final int expiryMonth;
   @override
 
   /// Year of the entered expiry date of the card.
-  final int? expiryYear;
+  final int expiryYear;
   @override
 
   /// Entered postcal code.
-  final String? postalCode;
+  final String postalCode;
   @override
 
   /// Brand of the card.
-  final String? brand;
+  final String brand;
   @override
 
   /// Card number.
   /// This information is not available by default to comply with the PCI compliance
-  final String? number;
+  final String number;
   @override
 
   /// CVC code.
   /// This information is not available by default to comply with the PCI compliance
-  final String? cvc;
+  final String cvc;
 
   @override
   String toString() {
@@ -1051,13 +1051,13 @@ class _$_CardFieldInputDetails extends _CardFieldInputDetails {
 abstract class _CardFieldInputDetails extends CardFieldInputDetails {
   const factory _CardFieldInputDetails(
       {required bool complete,
-      String? last4,
-      int? expiryMonth,
-      int? expiryYear,
-      String? postalCode,
-      String? brand,
-      String? number,
-      String? cvc}) = _$_CardFieldInputDetails;
+      String last4,
+      int expiryMonth,
+      int expiryYear,
+      String postalCode,
+      String brand,
+      String number,
+      String cvc}) = _$_CardFieldInputDetails;
   const _CardFieldInputDetails._() : super._();
 
   factory _CardFieldInputDetails.fromJson(Map<String, dynamic> json) =
@@ -1070,33 +1070,33 @@ abstract class _CardFieldInputDetails extends CardFieldInputDetails {
   @override
 
   /// Last 4 digits of the entered card number.
-  String? get last4 => throw _privateConstructorUsedError;
+  String get last4 => throw _privateConstructorUsedError;
   @override
 
   /// Month of the entered expiry date of the card.
-  int? get expiryMonth => throw _privateConstructorUsedError;
+  int get expiryMonth => throw _privateConstructorUsedError;
   @override
 
   /// Year of the entered expiry date of the card.
-  int? get expiryYear => throw _privateConstructorUsedError;
+  int get expiryYear => throw _privateConstructorUsedError;
   @override
 
   /// Entered postcal code.
-  String? get postalCode => throw _privateConstructorUsedError;
+  String get postalCode => throw _privateConstructorUsedError;
   @override
 
   /// Brand of the card.
-  String? get brand => throw _privateConstructorUsedError;
+  String get brand => throw _privateConstructorUsedError;
   @override
 
   /// Card number.
   /// This information is not available by default to comply with the PCI compliance
-  String? get number => throw _privateConstructorUsedError;
+  String get number => throw _privateConstructorUsedError;
   @override
 
   /// CVC code.
   /// This information is not available by default to comply with the PCI compliance
-  String? get cvc => throw _privateConstructorUsedError;
+  String get cvc => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CardFieldInputDetailsCopyWith<_CardFieldInputDetails> get copyWith =>
@@ -1154,7 +1154,7 @@ class _$CardFieldFocusNameCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? focusedField = freezed,
+    Object focusedField = freezed,
   }) {
     return _then(_value.copyWith(
       focusedField: focusedField == freezed
@@ -1188,7 +1188,7 @@ class __$CardFieldFocusNameCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? focusedField = freezed,
+    Object focusedField = freezed,
   }) {
     return _then(_CardFieldFocusName(
       focusedField: focusedField == freezed

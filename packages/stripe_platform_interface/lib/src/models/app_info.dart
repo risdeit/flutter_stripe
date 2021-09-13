@@ -7,10 +7,10 @@ part 'app_info.g.dart';
 class AppInfo with _$AppInfo {
   @JsonSerializable(explicitToJson: true)
   const factory AppInfo({
-    String? name,
-    String? partnerId,
-    String? url,
-    String? version,
+    String name,
+    String partnerId,
+    String url,
+    String version,
   }) = _AppInfo;
 
   factory AppInfo.fromJson(Map<String, dynamic> json) =>

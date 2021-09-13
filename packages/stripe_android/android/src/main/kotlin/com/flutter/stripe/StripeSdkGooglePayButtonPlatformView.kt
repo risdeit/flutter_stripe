@@ -14,7 +14,7 @@ class StripeSdkGooglePayButtonPlatformView(
         context: Context,
         private val channel: MethodChannel,
         id: Int,
-        creationParams: Map<String?, Any?>?,
+        creationParams: Map<String, Any?>?,
         private val googlePayButtonManager: GooglePayButtonManager,
         sdkAccessor: () -> StripeSdkModule
 ) : PlatformView {

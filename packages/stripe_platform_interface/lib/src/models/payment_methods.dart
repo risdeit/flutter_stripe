@@ -16,50 +16,50 @@ class PaymentMethod with _$PaymentMethod {
   @JsonSerializable(explicitToJson: true)
   const factory PaymentMethod({
     /// Unique identifier.
-    required String id,
+     String id,
 
     /// Whether or not the object exists in livemode.
-    required bool livemode,
+     bool livemode,
 
     /// The type of the paymentmethod.
-    required String type,
+     String type,
 
     /// Billing information related to the payment method.
-    required BillingDetails billingDetails,
+     BillingDetails billingDetails,
 
     /// Containing additional data in case paymentmethod type is card.
-    @JsonKey(name: 'Card') required Card card,
+    @JsonKey(name: 'Card')  Card card,
 
     /// Containing additional data in case paymentmethod type is sepa.
 
-    @JsonKey(name: 'SepaDebit') required SepaDebit sepaDebit,
+    @JsonKey(name: 'SepaDebit')  SepaDebit sepaDebit,
 
     /// Containing additional data in case paymentmethod type is Bacs debit.
 
-    @JsonKey(name: 'BacsDebit') required BacsDebit bacsDebit,
+    @JsonKey(name: 'BacsDebit')  BacsDebit bacsDebit,
 
     /// Containing additional data in case paymentmethod type is Aubecs debit.
 
-    @JsonKey(name: 'AuBecsDebit') required AuBecsDebit auBecsDebit,
+    @JsonKey(name: 'AuBecsDebit')  AuBecsDebit auBecsDebit,
 
     /// Containing additional data in case paymentmethod type is sofort.
 
-    @JsonKey(name: 'Sofort') required Sofort sofort,
+    @JsonKey(name: 'Sofort')  Sofort sofort,
 
     /// Containing additional data in case paymentmethod type is Ideal.
 
-    @JsonKey(name: 'Ideal') required Ideal ideal,
+    @JsonKey(name: 'Ideal')  Ideal ideal,
 
     /// Containing additional data in case paymentmethod type is FPX.
 
-    @JsonKey(name: 'Fpx') required Fpx fpx,
+    @JsonKey(name: 'Fpx')  Fpx fpx,
 
     /// Containing additional data in case paymentmethod type is UPI.
 
-    @JsonKey(name: 'Upi') required Upi upi,
+    @JsonKey(name: 'Upi')  Upi upi,
 
     /// Id related to the customer to which this paymentmethod has been saved.
-    String? customerId,
+    String customerId,
   }) = _PaymentMethod;
 
   factory PaymentMethod.fromJson(Map<String, dynamic> json) =>
@@ -72,16 +72,16 @@ class BillingDetails with _$BillingDetails {
   @JsonSerializable(explicitToJson: true)
   const factory BillingDetails({
     /// Email address.
-    String? email,
+    String email,
 
     /// Billing address.
     Address? address,
 
     /// Billing phone number.
-    String? phone,
+    String phone,
 
     /// Full name.
-    String? name,
+    String name,
   }) = _BillingDetails;
   factory BillingDetails.fromJson(Map<String, dynamic> json) =>
       _$BillingDetailsFromJson(json);
@@ -95,13 +95,13 @@ class AuBecsDebit with _$AuBecsDebit {
   @JsonSerializable(explicitToJson: true)
   const factory AuBecsDebit({
     /// Unique identifier for the bankaccount.
-    String? fingerprint,
+    String fingerprint,
 
     /// Last 4 digits of the bankaccount number.
-    String? last4,
+    String last4,
 
     /// Siz digit number identifying the bank or branch for this account.
-    String? bsbNumber,
+    String bsbNumber,
   }) = _AuBecsDebit;
 
   factory AuBecsDebit.fromJson(Map<String, dynamic> json) =>
@@ -115,14 +115,14 @@ class BacsDebit with _$BacsDebit {
   @JsonSerializable(explicitToJson: true)
   const factory BacsDebit({
     /// Sort code of the bankaccount.
-    String? sortCode,
+    String sortCode,
 
     /// Unique identifier for the bankaccount.
 
-    String? fingerprint,
+    String fingerprint,
 
     /// Last 4 digits of the bank account.
-    String? last4,
+    String last4,
   }) = _BacsDebit;
   factory BacsDebit.fromJson(Map<String, dynamic> json) =>
       _$BacsDebitFromJson(json);
@@ -135,22 +135,22 @@ class Card with _$Card {
   @JsonSerializable(explicitToJson: true)
   const factory Card({
     /// The brand associated to the card e.g. (visa, amex).
-    String? brand,
+    String brand,
 
     /// Two letter iso code.
-    String? country,
+    String country,
 
     /// four digit number representing the year of expiry of the card.
-    int? expYear,
+    int expYear,
 
     /// two digit number representing the month of expire of the card.
-    int? expMonth,
+    int expMonth,
 
     /// card funding type e.g. (credit, debit).
-    String? funding,
+    String funding,
 
     /// last four digits of the card.
-    String? last4,
+    String last4,
   }) = _Card;
 
   factory Card.fromJson(Map<String, dynamic> json) => _$CardFromJson(json);
@@ -163,10 +163,10 @@ class Fpx with _$Fpx {
   @JsonSerializable(explicitToJson: true)
   const factory Fpx({
     /// the customer bank
-    String? bank,
+    String bank,
 
     /// accountholder type
-    String? accountHolderType,
+    String accountHolderType,
   }) = _Fpx;
 
   factory Fpx.fromJson(Map<String, dynamic> json) => _$FpxFromJson(json);
@@ -179,10 +179,10 @@ class Ideal with _$Ideal {
   @JsonSerializable(explicitToJson: true)
   const factory Ideal({
     /// The BIC code of the bank
-    String? bankIdentifierCode,
+    String bankIdentifierCode,
 
     /// The bank of the customer
-    String? bank,
+    String bank,
   }) = _Ideal;
   factory Ideal.fromJson(Map<String, dynamic> json) => _$IdealFromJson(json);
 }
@@ -195,16 +195,16 @@ class SepaDebit with _$SepaDebit {
   @JsonSerializable(explicitToJson: true)
   const factory SepaDebit({
     /// Two letter ISO code representing the country of the bank account.
-    String? country,
+    String country,
 
     /// Bank code associated with the bankaccount.
-    String? bankCode,
+    String bankCode,
 
     /// Unique ID for the bank account.
-    String? fingerprint,
+    String fingerprint,
 
     /// Last four characters of IBAN.
-    String? last4,
+    String last4,
   }) = _SepaDebit;
 
   factory SepaDebit.fromJson(Map<String, dynamic> json) =>
@@ -219,7 +219,7 @@ class Sofort with _$Sofort {
   @JsonSerializable(explicitToJson: true)
   const factory Sofort({
     /// Two letter ISO code representing the country of the bank account.
-    String? country,
+    String country,
   }) = _Sofort;
 
   factory Sofort.fromJson(Map<String, dynamic> json) => _$SofortFromJson(json);
@@ -233,7 +233,7 @@ class Upi with _$Upi {
   @JsonSerializable(explicitToJson: true)
   const factory Upi({
     /// The customer's vpa.
-    String? vpa,
+    String vpa,
   }) = _Upi;
 
   factory Upi.fromJson(Map<String, dynamic> json) => _$UpiFromJson(json);
@@ -300,7 +300,7 @@ class PaymentMethodParams with _$PaymentMethodParams {
     required String paymentMethodId,
 
     /// cvc of the cart
-    String? cvc,
+    String cvc,
   }) = _PaymentMethodParamsCardWithMethodId;
 
   @JsonSerializable(explicitToJson: true)
@@ -320,7 +320,7 @@ class PaymentMethodParams with _$PaymentMethodParams {
     BillingDetails? billingDetails,
 
     /// The name of bank.
-    String? bankName,
+    String bankName,
   }) = _PaymentMethodParamsIdeal;
 
   @JsonSerializable(explicitToJson: true)
@@ -423,7 +423,7 @@ class PaymentMethodParams with _$PaymentMethodParams {
   @JsonSerializable(explicitToJson: true)
   @FreezedUnionValue('WeChatPay')
    const factory PaymentMethodParams.weChatPay({
-    String? appId,
+    String appId,
   }) = _PaymentMethodParamsWechat;
 
   factory PaymentMethodParams.fromJson(Map<String, dynamic> json) =>

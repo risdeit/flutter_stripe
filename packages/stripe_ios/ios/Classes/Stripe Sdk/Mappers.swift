@@ -16,7 +16,7 @@ class Mappers {
         }
     }
     
-    class func mapToPaymentSummaryItemType(type: String?) -> PKPaymentSummaryItemType {
+    class func mapToPaymentSummaryItemType(type: String) -> PKPaymentSummaryItemType {
         if let type = type {
             switch type {
             case "pending": return PKPaymentSummaryItemType.pending
@@ -27,7 +27,7 @@ class Mappers {
         return PKPaymentSummaryItemType.final
     }
     
-    class func mapFromBankAccountHolderType(_ type: STPBankAccountHolderType?) -> String? {
+    class func mapFromBankAccountHolderType(_ type: STPBankAccountHolderType?) -> String {
         if let type = type {
             switch type {
             case STPBankAccountHolderType.company: return "Company"
@@ -38,7 +38,7 @@ class Mappers {
         return nil
     }
     
-    class func mapFromBankAccountStatus(_ status: STPBankAccountStatus?) -> String? {
+    class func mapFromBankAccountStatus(_ status: STPBankAccountStatus?) -> String {
         if let status = status {
             switch status {
             case STPBankAccountStatus.errored: return "Errored"
@@ -112,7 +112,7 @@ class Mappers {
         return result
     }
     
-    class func mapFromFunding(_ funding: STPCardFundingType?) -> String? {
+    class func mapFromFunding(_ funding: STPCardFundingType?) -> String {
         if let funding = funding {
             switch funding {
             case STPCardFundingType.credit: return "Credit"
@@ -126,7 +126,7 @@ class Mappers {
         return nil
     }
     
-    class func mapFromTokenType(_ type: STPTokenType?) -> String? {
+    class func mapFromTokenType(_ type: STPTokenType?) -> String {
         if let type = type {
             switch type {
             case STPTokenType.PII: return "Pii"
@@ -276,7 +276,7 @@ class Mappers {
         }
     }
     
-    class func mapToPaymentMethodType(type: String?) -> STPPaymentMethodType? {
+    class func mapToPaymentMethodType(type: String) -> STPPaymentMethodType? {
         if let type = type {
             switch type {
             case "Card": return STPPaymentMethodType.card
@@ -388,7 +388,7 @@ class Mappers {
         return intent;
     }
     
-    class func mapFromPaymentIntentLastPaymentErrorType(_ errorType: STPPaymentIntentLastPaymentErrorType?) -> String? {
+    class func mapFromPaymentIntentLastPaymentErrorType(_ errorType: STPPaymentIntentLastPaymentErrorType?) -> String {
         if let errorType = errorType {
             switch errorType {
             case STPPaymentIntentLastPaymentErrorType.apiConnection: return "api_connection_error"
@@ -405,7 +405,7 @@ class Mappers {
         return nil
     }
     
-    class func mapFromSetupIntentLastPaymentErrorType(_ errorType: STPSetupIntentLastSetupErrorType?) -> String? {
+    class func mapFromSetupIntentLastPaymentErrorType(_ errorType: STPSetupIntentLastSetupErrorType?) -> String {
         if let errorType = errorType {
             switch errorType {
             case STPSetupIntentLastSetupErrorType.apiConnection: return "api_connection_error"
@@ -481,7 +481,7 @@ class Mappers {
         return billing
     }
     
-    class func mapCardBrand(_ brand: STPCardBrand?) -> String? {
+    class func mapCardBrand(_ brand: STPCardBrand?) -> String {
         if let brand = brand {
             switch brand {
             case STPCardBrand.visa: return "Visa"
@@ -583,7 +583,7 @@ class Mappers {
         return "Unknown"
     }
     
-    class func mapToPaymentIntentFutureUsage(usage: String?) -> STPPaymentIntentSetupFutureUsage {
+    class func mapToPaymentIntentFutureUsage(usage: String) -> STPPaymentIntentSetupFutureUsage {
         if let usage = usage {
             switch usage {
             case "None": return STPPaymentIntentSetupFutureUsage.none
@@ -822,7 +822,7 @@ class Mappers {
         return uiCustomization
     }
     
-    class func convertDateToUnixTimestamp(date: Date?) -> String? {
+    class func convertDateToUnixTimestamp(date: Date?) -> String {
         if let date = date {
             let value = date.timeIntervalSince1970 * 1000.0
             return String(format: "%.0f", value)

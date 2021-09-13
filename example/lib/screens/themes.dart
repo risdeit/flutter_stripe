@@ -8,7 +8,7 @@ class ThemeCardExample extends StatefulWidget {
 }
 
 class _ThemeCardExampleState extends State<ThemeCardExample> {
-  late String _index = 'Filled Green';
+  String _index = 'Filled Green';
   bool postalCodeEnabled = false;
 
   Map<String, ThemeData> get themes => {

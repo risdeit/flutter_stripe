@@ -33,7 +33,7 @@ enum CreateTokenErrorType: String {
 }
 
 class Errors {
-    class func createError (_ code: String, _ message: String?) -> NSDictionary {
+    class func createError (_ code: String, _ message: String) -> NSDictionary {
         let value: NSDictionary = [
             "code": code,
             "message": message ?? NSNull(),

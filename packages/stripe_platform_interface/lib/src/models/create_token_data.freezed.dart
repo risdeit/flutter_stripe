@@ -70,8 +70,8 @@ class _$CreateTokenParamsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? type = freezed,
-    Object? address = freezed,
+    Object type = freezed,
+    Object address = freezed,
   }) {
     return _then(_value.copyWith(
       type: type == freezed
@@ -123,8 +123,8 @@ class __$CreateTokenParamsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? type = freezed,
-    Object? address = freezed,
+    Object type = freezed,
+    Object address = freezed,
   }) {
     return _then(_CreateTokenParams(
       type: type == freezed
@@ -219,10 +219,10 @@ class _$TokenDataTearOff {
   const _$TokenDataTearOff();
 
   _TokenData call(
-      {required String id,
-      @JsonKey(name: 'created') required String createdDateTime,
-      required TokenType type,
-      required bool livemode,
+      { String id,
+      @JsonKey(name: 'created')  String createdDateTime,
+       TokenType type,
+       bool livemode,
       BankAccount? bankAccount,
       CardData? card}) {
     return _TokenData(
@@ -296,12 +296,12 @@ class _$TokenDataCopyWithImpl<$Res> implements $TokenDataCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? id = freezed,
-    Object? createdDateTime = freezed,
-    Object? type = freezed,
-    Object? livemode = freezed,
-    Object? bankAccount = freezed,
-    Object? card = freezed,
+    Object id = freezed,
+    Object createdDateTime = freezed,
+    Object type = freezed,
+    Object livemode = freezed,
+    Object bankAccount = freezed,
+    Object card = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -385,12 +385,12 @@ class __$TokenDataCopyWithImpl<$Res> extends _$TokenDataCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? id = freezed,
-    Object? createdDateTime = freezed,
-    Object? type = freezed,
-    Object? livemode = freezed,
-    Object? bankAccount = freezed,
-    Object? card = freezed,
+    Object id = freezed,
+    Object createdDateTime = freezed,
+    Object type = freezed,
+    Object livemode = freezed,
+    Object bankAccount = freezed,
+    Object card = freezed,
   }) {
     return _then(_TokenData(
       id: id == freezed
@@ -425,10 +425,10 @@ class __$TokenDataCopyWithImpl<$Res> extends _$TokenDataCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_TokenData implements _TokenData {
   const _$_TokenData(
-      {required this.id,
-      @JsonKey(name: 'created') required this.createdDateTime,
-      required this.type,
-      required this.livemode,
+      { this.id,
+      @JsonKey(name: 'created')  this.createdDateTime,
+       this.type,
+       this.livemode,
       this.bankAccount,
       this.card});
 
@@ -510,10 +510,10 @@ class _$_TokenData implements _TokenData {
 
 abstract class _TokenData implements TokenData {
   const factory _TokenData(
-      {required String id,
-      @JsonKey(name: 'created') required String createdDateTime,
-      required TokenType type,
-      required bool livemode,
+      { String id,
+      @JsonKey(name: 'created')  String createdDateTime,
+       TokenType type,
+       bool livemode,
       BankAccount? bankAccount,
       CardData? card}) = _$_TokenData;
 
@@ -560,14 +560,14 @@ class _$CardDataTearOff {
   const _$CardDataTearOff();
 
   _CardData call(
-      {required String brand,
-      String? country,
-      String? currency,
-      int? expYear,
-      int? expMonth,
-      String? name,
-      String? funding,
-      String? last4,
+      { String brand,
+      String country,
+      String currency,
+      int expYear,
+      int expMonth,
+      String name,
+      String funding,
+      String last4,
       Address? address}) {
     return _CardData(
       brand: brand,
@@ -596,25 +596,25 @@ mixin _$CardData {
   String get brand => throw _privateConstructorUsedError;
 
   /// Two letter iso code.
-  String? get country => throw _privateConstructorUsedError;
+  String get country => throw _privateConstructorUsedError;
 
   /// The three letter ISO 4217 code for the currency.
-  String? get currency => throw _privateConstructorUsedError;
+  String get currency => throw _privateConstructorUsedError;
 
   /// four digit number representing the year of expiry of the card.
-  int? get expYear => throw _privateConstructorUsedError;
+  int get expYear => throw _privateConstructorUsedError;
 
   /// two digit number representing the month of expire of the card.
-  int? get expMonth => throw _privateConstructorUsedError;
+  int get expMonth => throw _privateConstructorUsedError;
 
   /// Fullname of the cardholder
-  String? get name => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
 
   /// card funding type e.g. (credit, debit).
-  String? get funding => throw _privateConstructorUsedError;
+  String get funding => throw _privateConstructorUsedError;
 
   /// last four digits of the card.
-  String? get last4 => throw _privateConstructorUsedError;
+  String get last4 => throw _privateConstructorUsedError;
 
   /// Address of the cardholder
   Address? get address => throw _privateConstructorUsedError;
@@ -631,13 +631,13 @@ abstract class $CardDataCopyWith<$Res> {
       _$CardDataCopyWithImpl<$Res>;
   $Res call(
       {String brand,
-      String? country,
-      String? currency,
-      int? expYear,
-      int? expMonth,
-      String? name,
-      String? funding,
-      String? last4,
+      String country,
+      String currency,
+      int expYear,
+      int expMonth,
+      String name,
+      String funding,
+      String last4,
       Address? address});
 
   $AddressCopyWith<$Res>? get address;
@@ -653,15 +653,15 @@ class _$CardDataCopyWithImpl<$Res> implements $CardDataCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? brand = freezed,
-    Object? country = freezed,
-    Object? currency = freezed,
-    Object? expYear = freezed,
-    Object? expMonth = freezed,
-    Object? name = freezed,
-    Object? funding = freezed,
-    Object? last4 = freezed,
-    Object? address = freezed,
+    Object brand = freezed,
+    Object country = freezed,
+    Object currency = freezed,
+    Object expYear = freezed,
+    Object expMonth = freezed,
+    Object name = freezed,
+    Object funding = freezed,
+    Object last4 = freezed,
+    Object address = freezed,
   }) {
     return _then(_value.copyWith(
       brand: brand == freezed
@@ -671,31 +671,31 @@ class _$CardDataCopyWithImpl<$Res> implements $CardDataCopyWith<$Res> {
       country: country == freezed
           ? _value.country
           : country // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       currency: currency == freezed
           ? _value.currency
           : currency // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       expYear: expYear == freezed
           ? _value.expYear
           : expYear // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       expMonth: expMonth == freezed
           ? _value.expMonth
           : expMonth // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       funding: funding == freezed
           ? _value.funding
           : funding // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       last4: last4 == freezed
           ? _value.last4
           : last4 // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       address: address == freezed
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
@@ -722,13 +722,13 @@ abstract class _$CardDataCopyWith<$Res> implements $CardDataCopyWith<$Res> {
   @override
   $Res call(
       {String brand,
-      String? country,
-      String? currency,
-      int? expYear,
-      int? expMonth,
-      String? name,
-      String? funding,
-      String? last4,
+      String country,
+      String currency,
+      int expYear,
+      int expMonth,
+      String name,
+      String funding,
+      String last4,
       Address? address});
 
   @override
@@ -746,15 +746,15 @@ class __$CardDataCopyWithImpl<$Res> extends _$CardDataCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? brand = freezed,
-    Object? country = freezed,
-    Object? currency = freezed,
-    Object? expYear = freezed,
-    Object? expMonth = freezed,
-    Object? name = freezed,
-    Object? funding = freezed,
-    Object? last4 = freezed,
-    Object? address = freezed,
+    Object brand = freezed,
+    Object country = freezed,
+    Object currency = freezed,
+    Object expYear = freezed,
+    Object expMonth = freezed,
+    Object name = freezed,
+    Object funding = freezed,
+    Object last4 = freezed,
+    Object address = freezed,
   }) {
     return _then(_CardData(
       brand: brand == freezed
@@ -764,31 +764,31 @@ class __$CardDataCopyWithImpl<$Res> extends _$CardDataCopyWithImpl<$Res>
       country: country == freezed
           ? _value.country
           : country // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       currency: currency == freezed
           ? _value.currency
           : currency // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       expYear: expYear == freezed
           ? _value.expYear
           : expYear // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       expMonth: expMonth == freezed
           ? _value.expMonth
           : expMonth // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       funding: funding == freezed
           ? _value.funding
           : funding // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       last4: last4 == freezed
           ? _value.last4
           : last4 // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       address: address == freezed
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
@@ -822,31 +822,31 @@ class _$_CardData implements _CardData {
   @override
 
   /// Two letter iso code.
-  final String? country;
+  final String country;
   @override
 
   /// The three letter ISO 4217 code for the currency.
-  final String? currency;
+  final String currency;
   @override
 
   /// four digit number representing the year of expiry of the card.
-  final int? expYear;
+  final int expYear;
   @override
 
   /// two digit number representing the month of expire of the card.
-  final int? expMonth;
+  final int expMonth;
   @override
 
   /// Fullname of the cardholder
-  final String? name;
+  final String name;
   @override
 
   /// card funding type e.g. (credit, debit).
-  final String? funding;
+  final String funding;
   @override
 
   /// last four digits of the card.
-  final String? last4;
+  final String last4;
   @override
 
   /// Address of the cardholder
@@ -913,13 +913,13 @@ class _$_CardData implements _CardData {
 abstract class _CardData implements CardData {
   const factory _CardData(
       {required String brand,
-      String? country,
-      String? currency,
-      int? expYear,
-      int? expMonth,
-      String? name,
-      String? funding,
-      String? last4,
+      String country,
+      String currency,
+      int expYear,
+      int expMonth,
+      String name,
+      String funding,
+      String last4,
       Address? address}) = _$_CardData;
 
   factory _CardData.fromJson(Map<String, dynamic> json) = _$_CardData.fromJson;
@@ -931,31 +931,31 @@ abstract class _CardData implements CardData {
   @override
 
   /// Two letter iso code.
-  String? get country => throw _privateConstructorUsedError;
+  String get country => throw _privateConstructorUsedError;
   @override
 
   /// The three letter ISO 4217 code for the currency.
-  String? get currency => throw _privateConstructorUsedError;
+  String get currency => throw _privateConstructorUsedError;
   @override
 
   /// four digit number representing the year of expiry of the card.
-  int? get expYear => throw _privateConstructorUsedError;
+  int get expYear => throw _privateConstructorUsedError;
   @override
 
   /// two digit number representing the month of expire of the card.
-  int? get expMonth => throw _privateConstructorUsedError;
+  int get expMonth => throw _privateConstructorUsedError;
   @override
 
   /// Fullname of the cardholder
-  String? get name => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
   @override
 
   /// card funding type e.g. (credit, debit).
-  String? get funding => throw _privateConstructorUsedError;
+  String get funding => throw _privateConstructorUsedError;
   @override
 
   /// last four digits of the card.
-  String? get last4 => throw _privateConstructorUsedError;
+  String get last4 => throw _privateConstructorUsedError;
   @override
 
   /// Address of the cardholder
@@ -977,11 +977,11 @@ class _$BankAccountTearOff {
   _BankAccount call(
       {required BankAccountHolderType accountHolderType,
       required BankAccountStatus status,
-      String? bankName,
-      String? accountHolderName,
-      String? country,
-      String? currency,
-      String? routingNumber}) {
+      String bankName,
+      String accountHolderName,
+      String country,
+      String currency,
+      String routingNumber}) {
     return _BankAccount(
       accountHolderType: accountHolderType,
       status: status,
@@ -1011,19 +1011,19 @@ mixin _$BankAccount {
   BankAccountStatus get status => throw _privateConstructorUsedError;
 
   /// Name of the bank where the account is registered.
-  String? get bankName => throw _privateConstructorUsedError;
+  String get bankName => throw _privateConstructorUsedError;
 
   /// Full name of the account holder
-  String? get accountHolderName => throw _privateConstructorUsedError;
+  String get accountHolderName => throw _privateConstructorUsedError;
 
   /// 2 letter code of the country where the account is located
-  String? get country => throw _privateConstructorUsedError;
+  String get country => throw _privateConstructorUsedError;
 
   /// The three letter ISO 4217 code for the currency.
-  String? get currency => throw _privateConstructorUsedError;
+  String get currency => throw _privateConstructorUsedError;
 
   /// The routing number of the bank account (e.g. needer for US accounts).
-  String? get routingNumber => throw _privateConstructorUsedError;
+  String get routingNumber => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1039,11 +1039,11 @@ abstract class $BankAccountCopyWith<$Res> {
   $Res call(
       {BankAccountHolderType accountHolderType,
       BankAccountStatus status,
-      String? bankName,
-      String? accountHolderName,
-      String? country,
-      String? currency,
-      String? routingNumber});
+      String bankName,
+      String accountHolderName,
+      String country,
+      String currency,
+      String routingNumber});
 }
 
 /// @nodoc
@@ -1056,13 +1056,13 @@ class _$BankAccountCopyWithImpl<$Res> implements $BankAccountCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? accountHolderType = freezed,
-    Object? status = freezed,
-    Object? bankName = freezed,
-    Object? accountHolderName = freezed,
-    Object? country = freezed,
-    Object? currency = freezed,
-    Object? routingNumber = freezed,
+    Object accountHolderType = freezed,
+    Object status = freezed,
+    Object bankName = freezed,
+    Object accountHolderName = freezed,
+    Object country = freezed,
+    Object currency = freezed,
+    Object routingNumber = freezed,
   }) {
     return _then(_value.copyWith(
       accountHolderType: accountHolderType == freezed
@@ -1076,23 +1076,23 @@ class _$BankAccountCopyWithImpl<$Res> implements $BankAccountCopyWith<$Res> {
       bankName: bankName == freezed
           ? _value.bankName
           : bankName // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       accountHolderName: accountHolderName == freezed
           ? _value.accountHolderName
           : accountHolderName // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       country: country == freezed
           ? _value.country
           : country // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       currency: currency == freezed
           ? _value.currency
           : currency // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       routingNumber: routingNumber == freezed
           ? _value.routingNumber
           : routingNumber // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -1107,11 +1107,11 @@ abstract class _$BankAccountCopyWith<$Res>
   $Res call(
       {BankAccountHolderType accountHolderType,
       BankAccountStatus status,
-      String? bankName,
-      String? accountHolderName,
-      String? country,
-      String? currency,
-      String? routingNumber});
+      String bankName,
+      String accountHolderName,
+      String country,
+      String currency,
+      String routingNumber});
 }
 
 /// @nodoc
@@ -1126,13 +1126,13 @@ class __$BankAccountCopyWithImpl<$Res> extends _$BankAccountCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? accountHolderType = freezed,
-    Object? status = freezed,
-    Object? bankName = freezed,
-    Object? accountHolderName = freezed,
-    Object? country = freezed,
-    Object? currency = freezed,
-    Object? routingNumber = freezed,
+    Object accountHolderType = freezed,
+    Object status = freezed,
+    Object bankName = freezed,
+    Object accountHolderName = freezed,
+    Object country = freezed,
+    Object currency = freezed,
+    Object routingNumber = freezed,
   }) {
     return _then(_BankAccount(
       accountHolderType: accountHolderType == freezed
@@ -1146,23 +1146,23 @@ class __$BankAccountCopyWithImpl<$Res> extends _$BankAccountCopyWithImpl<$Res>
       bankName: bankName == freezed
           ? _value.bankName
           : bankName // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       accountHolderName: accountHolderName == freezed
           ? _value.accountHolderName
           : accountHolderName // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       country: country == freezed
           ? _value.country
           : country // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       currency: currency == freezed
           ? _value.currency
           : currency // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       routingNumber: routingNumber == freezed
           ? _value.routingNumber
           : routingNumber // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -1193,23 +1193,23 @@ class _$_BankAccount implements _BankAccount {
   @override
 
   /// Name of the bank where the account is registered.
-  final String? bankName;
+  final String bankName;
   @override
 
   /// Full name of the account holder
-  final String? accountHolderName;
+  final String accountHolderName;
   @override
 
   /// 2 letter code of the country where the account is located
-  final String? country;
+  final String country;
   @override
 
   /// The three letter ISO 4217 code for the currency.
-  final String? currency;
+  final String currency;
   @override
 
   /// The routing number of the bank account (e.g. needer for US accounts).
-  final String? routingNumber;
+  final String routingNumber;
 
   @override
   String toString() {
@@ -1268,11 +1268,11 @@ abstract class _BankAccount implements BankAccount {
   const factory _BankAccount(
       {required BankAccountHolderType accountHolderType,
       required BankAccountStatus status,
-      String? bankName,
-      String? accountHolderName,
-      String? country,
-      String? currency,
-      String? routingNumber}) = _$_BankAccount;
+      String bankName,
+      String accountHolderName,
+      String country,
+      String currency,
+      String routingNumber}) = _$_BankAccount;
 
   factory _BankAccount.fromJson(Map<String, dynamic> json) =
       _$_BankAccount.fromJson;
@@ -1289,23 +1289,23 @@ abstract class _BankAccount implements BankAccount {
   @override
 
   /// Name of the bank where the account is registered.
-  String? get bankName => throw _privateConstructorUsedError;
+  String get bankName => throw _privateConstructorUsedError;
   @override
 
   /// Full name of the account holder
-  String? get accountHolderName => throw _privateConstructorUsedError;
+  String get accountHolderName => throw _privateConstructorUsedError;
   @override
 
   /// 2 letter code of the country where the account is located
-  String? get country => throw _privateConstructorUsedError;
+  String get country => throw _privateConstructorUsedError;
   @override
 
   /// The three letter ISO 4217 code for the currency.
-  String? get currency => throw _privateConstructorUsedError;
+  String get currency => throw _privateConstructorUsedError;
   @override
 
   /// The routing number of the bank account (e.g. needer for US accounts).
-  String? get routingNumber => throw _privateConstructorUsedError;
+  String get routingNumber => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$BankAccountCopyWith<_BankAccount> get copyWith =>

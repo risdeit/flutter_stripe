@@ -21,7 +21,7 @@ class _$AppInfoTearOff {
   const _$AppInfoTearOff();
 
   _AppInfo call(
-      {String? name, String? partnerId, String? url, String? version}) {
+      {String name, String partnerId, String url, String version}) {
     return _AppInfo(
       name: name,
       partnerId: partnerId,
@@ -40,10 +40,10 @@ const $AppInfo = _$AppInfoTearOff();
 
 /// @nodoc
 mixin _$AppInfo {
-  String? get name => throw _privateConstructorUsedError;
-  String? get partnerId => throw _privateConstructorUsedError;
-  String? get url => throw _privateConstructorUsedError;
-  String? get version => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
+  String get partnerId => throw _privateConstructorUsedError;
+  String get url => throw _privateConstructorUsedError;
+  String get version => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -54,7 +54,7 @@ mixin _$AppInfo {
 abstract class $AppInfoCopyWith<$Res> {
   factory $AppInfoCopyWith(AppInfo value, $Res Function(AppInfo) then) =
       _$AppInfoCopyWithImpl<$Res>;
-  $Res call({String? name, String? partnerId, String? url, String? version});
+  $Res call({String name, String partnerId, String url, String version});
 }
 
 /// @nodoc
@@ -67,28 +67,28 @@ class _$AppInfoCopyWithImpl<$Res> implements $AppInfoCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? name = freezed,
-    Object? partnerId = freezed,
-    Object? url = freezed,
-    Object? version = freezed,
+    Object name = freezed,
+    Object partnerId = freezed,
+    Object url = freezed,
+    Object version = freezed,
   }) {
     return _then(_value.copyWith(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       partnerId: partnerId == freezed
           ? _value.partnerId
           : partnerId // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       version: version == freezed
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -98,7 +98,7 @@ abstract class _$AppInfoCopyWith<$Res> implements $AppInfoCopyWith<$Res> {
   factory _$AppInfoCopyWith(_AppInfo value, $Res Function(_AppInfo) then) =
       __$AppInfoCopyWithImpl<$Res>;
   @override
-  $Res call({String? name, String? partnerId, String? url, String? version});
+  $Res call({String name, String partnerId, String url, String version});
 }
 
 /// @nodoc
@@ -112,28 +112,28 @@ class __$AppInfoCopyWithImpl<$Res> extends _$AppInfoCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? name = freezed,
-    Object? partnerId = freezed,
-    Object? url = freezed,
-    Object? version = freezed,
+    Object name = freezed,
+    Object partnerId = freezed,
+    Object url = freezed,
+    Object version = freezed,
   }) {
     return _then(_AppInfo(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       partnerId: partnerId == freezed
           ? _value.partnerId
           : partnerId // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       version: version == freezed
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -148,13 +148,13 @@ class _$_AppInfo implements _AppInfo {
       _$_$_AppInfoFromJson(json);
 
   @override
-  final String? name;
+  final String name;
   @override
-  final String? partnerId;
+  final String partnerId;
   @override
-  final String? url;
+  final String url;
   @override
-  final String? version;
+  final String version;
 
   @override
   String toString() {
@@ -197,21 +197,21 @@ class _$_AppInfo implements _AppInfo {
 
 abstract class _AppInfo implements AppInfo {
   const factory _AppInfo(
-      {String? name,
-      String? partnerId,
-      String? url,
-      String? version}) = _$_AppInfo;
+      {String name,
+      String partnerId,
+      String url,
+      String version}) = _$_AppInfo;
 
   factory _AppInfo.fromJson(Map<String, dynamic> json) = _$_AppInfo.fromJson;
 
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
   @override
-  String? get partnerId => throw _privateConstructorUsedError;
+  String get partnerId => throw _privateConstructorUsedError;
   @override
-  String? get url => throw _privateConstructorUsedError;
+  String get url => throw _privateConstructorUsedError;
   @override
-  String? get version => throw _privateConstructorUsedError;
+  String get version => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$AppInfoCopyWith<_AppInfo> get copyWith =>

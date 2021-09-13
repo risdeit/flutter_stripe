@@ -10,8 +10,8 @@ _$_PresentGooglePayParams _$_$_PresentGooglePayParamsFromJson(
     Map<String, dynamic> json) {
   return _$_PresentGooglePayParams(
     clientSecret: json['clientSecret'] as String,
-    forSetupIntent: json['forSetupIntent'] as bool? ?? false,
-    currencyCode: json['currencyCode'] as String?,
+    forSetupIntent: json['forSetupIntent'] as bool ?? false,
+    currencyCode: json['currencyCode'] as String,
   );
 }
 
@@ -28,14 +28,14 @@ _$_GooglePayInitParams _$_$_GooglePayInitParamsFromJson(
   return _$_GooglePayInitParams(
     merchantName: json['merchantName'] as String,
     countryCode: json['countryCode'] as String,
-    testEnv: json['testEnv'] as bool? ?? false,
+    testEnv: json['testEnv'] as bool ?? false,
     billingAddressConfig: json['billingAddressConfig'] == null
         ? null
         : BillingAddressConfig.fromJson(
             json['billingAddressConfig'] as Map<String, dynamic>),
-    isEmailRequired: json['isEmailRequired'] as bool? ?? false,
+    isEmailRequired: json['isEmailRequired'] as bool ?? false,
     existingPaymentMethodRequired:
-        json['existingPaymentMethodRequired'] as bool? ?? true,
+        json['existingPaymentMethodRequired'] as bool ?? true,
   );
 }
 
@@ -53,9 +53,9 @@ Map<String, dynamic> _$_$_GooglePayInitParamsToJson(
 _$_BillingAddressConfig _$_$_BillingAddressConfigFromJson(
     Map<String, dynamic> json) {
   return _$_BillingAddressConfig(
-    isRequired: json['isRequired'] as bool?,
+    isRequired: json['isRequired'] as bool,
     format: _$enumDecodeNullable(_$BillingAddressFormatEnumMap, json['format']),
-    isPhoneNumberRequired: json['isPhoneNumberRequired'] as bool?,
+    isPhoneNumberRequired: json['isPhoneNumberRequired'] as bool,
   );
 }
 
@@ -69,7 +69,7 @@ Map<String, dynamic> _$_$_BillingAddressConfigToJson(
 
 K _$enumDecode<K, V>(
   Map<K, V> enumValues,
-  Object? source, {
+  Object source, {
   K? unknownValue,
 }) {
   if (source == null) {

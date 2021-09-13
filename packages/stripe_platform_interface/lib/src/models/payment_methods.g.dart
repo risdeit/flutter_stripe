@@ -22,7 +22,7 @@ _$_PaymentMethod _$_$_PaymentMethodFromJson(Map<String, dynamic> json) {
     ideal: Ideal.fromJson(json['Ideal'] as Map<String, dynamic>),
     fpx: Fpx.fromJson(json['Fpx'] as Map<String, dynamic>),
     upi: Upi.fromJson(json['Upi'] as Map<String, dynamic>),
-    customerId: json['customerId'] as String?,
+    customerId: json['customerId'] as String,
   );
 }
 
@@ -45,12 +45,12 @@ Map<String, dynamic> _$_$_PaymentMethodToJson(_$_PaymentMethod instance) =>
 
 _$_BillingDetails _$_$_BillingDetailsFromJson(Map<String, dynamic> json) {
   return _$_BillingDetails(
-    email: json['email'] as String?,
+    email: json['email'] as String,
     address: json['address'] == null
         ? null
         : Address.fromJson(json['address'] as Map<String, dynamic>),
-    phone: json['phone'] as String?,
-    name: json['name'] as String?,
+    phone: json['phone'] as String,
+    name: json['name'] as String,
   );
 }
 
@@ -64,9 +64,9 @@ Map<String, dynamic> _$_$_BillingDetailsToJson(_$_BillingDetails instance) =>
 
 _$_AuBecsDebit _$_$_AuBecsDebitFromJson(Map<String, dynamic> json) {
   return _$_AuBecsDebit(
-    fingerprint: json['fingerprint'] as String?,
-    last4: json['last4'] as String?,
-    bsbNumber: json['bsbNumber'] as String?,
+    fingerprint: json['fingerprint'] as String,
+    last4: json['last4'] as String,
+    bsbNumber: json['bsbNumber'] as String,
   );
 }
 
@@ -79,9 +79,9 @@ Map<String, dynamic> _$_$_AuBecsDebitToJson(_$_AuBecsDebit instance) =>
 
 _$_BacsDebit _$_$_BacsDebitFromJson(Map<String, dynamic> json) {
   return _$_BacsDebit(
-    sortCode: json['sortCode'] as String?,
-    fingerprint: json['fingerprint'] as String?,
-    last4: json['last4'] as String?,
+    sortCode: json['sortCode'] as String,
+    fingerprint: json['fingerprint'] as String,
+    last4: json['last4'] as String,
   );
 }
 
@@ -94,12 +94,12 @@ Map<String, dynamic> _$_$_BacsDebitToJson(_$_BacsDebit instance) =>
 
 _$_Card _$_$_CardFromJson(Map<String, dynamic> json) {
   return _$_Card(
-    brand: json['brand'] as String?,
-    country: json['country'] as String?,
-    expYear: json['expYear'] as int?,
-    expMonth: json['expMonth'] as int?,
-    funding: json['funding'] as String?,
-    last4: json['last4'] as String?,
+    brand: json['brand'] as String,
+    country: json['country'] as String,
+    expYear: json['expYear'] as int,
+    expMonth: json['expMonth'] as int,
+    funding: json['funding'] as String,
+    last4: json['last4'] as String,
   );
 }
 
@@ -114,8 +114,8 @@ Map<String, dynamic> _$_$_CardToJson(_$_Card instance) => <String, dynamic>{
 
 _$_Fpx _$_$_FpxFromJson(Map<String, dynamic> json) {
   return _$_Fpx(
-    bank: json['bank'] as String?,
-    accountHolderType: json['accountHolderType'] as String?,
+    bank: json['bank'] as String,
+    accountHolderType: json['accountHolderType'] as String,
   );
 }
 
@@ -126,8 +126,8 @@ Map<String, dynamic> _$_$_FpxToJson(_$_Fpx instance) => <String, dynamic>{
 
 _$_Ideal _$_$_IdealFromJson(Map<String, dynamic> json) {
   return _$_Ideal(
-    bankIdentifierCode: json['bankIdentifierCode'] as String?,
-    bank: json['bank'] as String?,
+    bankIdentifierCode: json['bankIdentifierCode'] as String,
+    bank: json['bank'] as String,
   );
 }
 
@@ -138,10 +138,10 @@ Map<String, dynamic> _$_$_IdealToJson(_$_Ideal instance) => <String, dynamic>{
 
 _$_SepaDebit _$_$_SepaDebitFromJson(Map<String, dynamic> json) {
   return _$_SepaDebit(
-    country: json['country'] as String?,
-    bankCode: json['bankCode'] as String?,
-    fingerprint: json['fingerprint'] as String?,
-    last4: json['last4'] as String?,
+    country: json['country'] as String,
+    bankCode: json['bankCode'] as String,
+    fingerprint: json['fingerprint'] as String,
+    last4: json['last4'] as String,
   );
 }
 
@@ -155,7 +155,7 @@ Map<String, dynamic> _$_$_SepaDebitToJson(_$_SepaDebit instance) =>
 
 _$_Sofort _$_$_SofortFromJson(Map<String, dynamic> json) {
   return _$_Sofort(
-    country: json['country'] as String?,
+    country: json['country'] as String,
   );
 }
 
@@ -165,7 +165,7 @@ Map<String, dynamic> _$_$_SofortToJson(_$_Sofort instance) => <String, dynamic>{
 
 _$_Upi _$_$_UpiFromJson(Map<String, dynamic> json) {
   return _$_Upi(
-    vpa: json['vpa'] as String?,
+    vpa: json['vpa'] as String,
   );
 }
 
@@ -195,7 +195,7 @@ Map<String, dynamic> _$_$_PaymentMethodParamsCardToJson(
 
 K _$enumDecode<K, V>(
   Map<K, V> enumValues,
-  Object? source, {
+  Object source, {
   K? unknownValue,
 }) {
   if (source == null) {
@@ -257,7 +257,7 @@ _$_PaymentMethodParamsCardWithMethodId
         Map<String, dynamic> json) {
   return _$_PaymentMethodParamsCardWithMethodId(
     paymentMethodId: json['paymentMethodId'] as String,
-    cvc: json['cvc'] as String?,
+    cvc: json['cvc'] as String,
   );
 }
 
@@ -284,7 +284,7 @@ _$_PaymentMethodParamsIdeal _$_$_PaymentMethodParamsIdealFromJson(
         ? null
         : BillingDetails.fromJson(
             json['billingDetails'] as Map<String, dynamic>),
-    bankName: json['bankName'] as String?,
+    bankName: json['bankName'] as String,
   );
 }
 
@@ -471,7 +471,7 @@ Map<String, dynamic> _$_$_PaymentMethodParamsOxxoToJson(
 _$_PaymentMethodParamsWechat _$_$_PaymentMethodParamsWechatFromJson(
     Map<String, dynamic> json) {
   return _$_PaymentMethodParamsWechat(
-    appId: json['appId'] as String?,
+    appId: json['appId'] as String,
   );
 }
 

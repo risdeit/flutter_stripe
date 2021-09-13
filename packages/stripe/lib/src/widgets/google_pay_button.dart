@@ -6,14 +6,15 @@ import 'package:flutter/widgets.dart';
 
 class GooglePayButton extends StatefulWidget {
   const GooglePayButton({
-    required this.onTap,
+     this.onTap,
     this.type = GooglePayButtonType.pay,
-    Key? key,
+    Key key,
   }) : super(key: key);
 
   static const _viewType = 'flutter.stripe/google_pay_button';
 
   @override
+  _GooglePayButtonState createState() => _GooglePayButtonState();
   _GooglePayButtonState createState() => _GooglePayButtonState();
 
   final GooglePayButtonType type;
@@ -22,7 +23,7 @@ class GooglePayButton extends StatefulWidget {
 
 class _GooglePayButtonState extends State<GooglePayButton> {
   final Map<String, dynamic> _creationParams = {};
-  MethodChannel? _methodChannel;
+  MethodChannel _methodChannel;
 
   @override
   void initState() {
@@ -33,7 +34,7 @@ class _GooglePayButtonState extends State<GooglePayButton> {
 
   void onPlatformViewCreated(int viewId) {
     _methodChannel = MethodChannel('flutter.stripe/google_pay_button/$viewId');
-    _methodChannel?.setMethodCallHandler((call) async {
+    _methodChannel.setMethodCallHandler((call) async {
       if (call.method == 'onPressed') {
         widget.onTap.call();
       }

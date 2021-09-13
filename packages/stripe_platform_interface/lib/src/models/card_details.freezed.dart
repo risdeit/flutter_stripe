@@ -21,10 +21,10 @@ class _$CardDetailsTearOff {
   const _$CardDetailsTearOff();
 
   _CardDetailsConstructor call(
-      {String? number,
-      int? expirationYear,
-      int? expirationMonth,
-      String? cvc}) {
+      {String number,
+      int expirationYear,
+      int expirationMonth,
+      String cvc}) {
     return _CardDetailsConstructor(
       number: number,
       expirationYear: expirationYear,
@@ -43,10 +43,10 @@ const $CardDetails = _$CardDetailsTearOff();
 
 /// @nodoc
 mixin _$CardDetails {
-  String? get number => throw _privateConstructorUsedError;
-  int? get expirationYear => throw _privateConstructorUsedError;
-  int? get expirationMonth => throw _privateConstructorUsedError;
-  String? get cvc => throw _privateConstructorUsedError;
+  String get number => throw _privateConstructorUsedError;
+  int get expirationYear => throw _privateConstructorUsedError;
+  int get expirationMonth => throw _privateConstructorUsedError;
+  String get cvc => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -60,7 +60,7 @@ abstract class $CardDetailsCopyWith<$Res> {
           CardDetails value, $Res Function(CardDetails) then) =
       _$CardDetailsCopyWithImpl<$Res>;
   $Res call(
-      {String? number, int? expirationYear, int? expirationMonth, String? cvc});
+      {String number, int expirationYear, int expirationMonth, String cvc});
 }
 
 /// @nodoc
@@ -73,28 +73,28 @@ class _$CardDetailsCopyWithImpl<$Res> implements $CardDetailsCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? number = freezed,
-    Object? expirationYear = freezed,
-    Object? expirationMonth = freezed,
-    Object? cvc = freezed,
+    Object number = freezed,
+    Object expirationYear = freezed,
+    Object expirationMonth = freezed,
+    Object cvc = freezed,
   }) {
     return _then(_value.copyWith(
       number: number == freezed
           ? _value.number
           : number // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       expirationYear: expirationYear == freezed
           ? _value.expirationYear
           : expirationYear // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       expirationMonth: expirationMonth == freezed
           ? _value.expirationMonth
           : expirationMonth // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       cvc: cvc == freezed
           ? _value.cvc
           : cvc // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -107,7 +107,7 @@ abstract class _$CardDetailsConstructorCopyWith<$Res>
       __$CardDetailsConstructorCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String? number, int? expirationYear, int? expirationMonth, String? cvc});
+      {String number, int expirationYear, int expirationMonth, String cvc});
 }
 
 /// @nodoc
@@ -123,28 +123,28 @@ class __$CardDetailsConstructorCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? number = freezed,
-    Object? expirationYear = freezed,
-    Object? expirationMonth = freezed,
-    Object? cvc = freezed,
+    Object number = freezed,
+    Object expirationYear = freezed,
+    Object expirationMonth = freezed,
+    Object cvc = freezed,
   }) {
     return _then(_CardDetailsConstructor(
       number: number == freezed
           ? _value.number
           : number // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       expirationYear: expirationYear == freezed
           ? _value.expirationYear
           : expirationYear // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       expirationMonth: expirationMonth == freezed
           ? _value.expirationMonth
           : expirationMonth // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       cvc: cvc == freezed
           ? _value.cvc
           : cvc // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -161,13 +161,13 @@ class _$_CardDetailsConstructor extends _CardDetailsConstructor {
       _$_$_CardDetailsConstructorFromJson(json);
 
   @override
-  final String? number;
+  final String number;
   @override
-  final int? expirationYear;
+  final int expirationYear;
   @override
-  final int? expirationMonth;
+  final int expirationMonth;
   @override
-  final String? cvc;
+  final String cvc;
 
   @override
   String toString() {
@@ -212,23 +212,23 @@ class _$_CardDetailsConstructor extends _CardDetailsConstructor {
 
 abstract class _CardDetailsConstructor extends CardDetails {
   factory _CardDetailsConstructor(
-      {String? number,
-      int? expirationYear,
-      int? expirationMonth,
-      String? cvc}) = _$_CardDetailsConstructor;
+      {String number,
+      int expirationYear,
+      int expirationMonth,
+      String cvc}) = _$_CardDetailsConstructor;
   _CardDetailsConstructor._() : super._();
 
   factory _CardDetailsConstructor.fromJson(Map<String, dynamic> json) =
       _$_CardDetailsConstructor.fromJson;
 
   @override
-  String? get number => throw _privateConstructorUsedError;
+  String get number => throw _privateConstructorUsedError;
   @override
-  int? get expirationYear => throw _privateConstructorUsedError;
+  int get expirationYear => throw _privateConstructorUsedError;
   @override
-  int? get expirationMonth => throw _privateConstructorUsedError;
+  int get expirationMonth => throw _privateConstructorUsedError;
   @override
-  String? get cvc => throw _privateConstructorUsedError;
+  String get cvc => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CardDetailsConstructorCopyWith<_CardDetailsConstructor> get copyWith =>

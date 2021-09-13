@@ -12,7 +12,7 @@ typealias FlutterMap = Dictionary<String, AnyObject>
 
 
 class RCTConvert {
-    static func nsString(_ param: Any?) -> String? {
+    static func nsString(_ param: Any?) -> String {
        return param as? String
     }
     
@@ -22,10 +22,10 @@ class RCTConvert {
 }
 
 extension NSNull {
-    static func replaceForNil(_ value: AnyObject?) -> AnyObject? {
+    static func replaceForNil(_ value: AnyObject) -> AnyObject {
         if let map = value as? FlutterMap {
             return map.mapValues { replaceForNil($0) } as AnyObject
-        } else if let array = value as? Array<AnyObject?> {
+        } else if let array = value as? Array<AnyObject> {
             return array.map { replaceForNil($0) } as AnyObject
         } else if value is NSNull {
             return nil;
@@ -43,7 +43,7 @@ protocol FlutterPluginBinding {
 
 
 extension FlutterError {
-    static func invalidParams(_ message: String?) -> FlutterError {
+    static func invalidParams(_ message: String) -> FlutterError {
         return FlutterError.init(code: "Invalid Params", message: message, details: nil)
     }
     

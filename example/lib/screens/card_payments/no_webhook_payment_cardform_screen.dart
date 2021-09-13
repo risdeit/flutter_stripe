@@ -175,7 +175,7 @@ class _NoWebhookPaymentCardFormScreenState
   }
 
   Future<Map<String, dynamic>> callNoWebhookPayEndpointIntentId({
-    required String paymentIntentId,
+     String paymentIntentId,
   }) async {
     final url = Uri.parse('$kApiUrl/charge-card-off-session');
     final response = await http.post(
@@ -189,10 +189,10 @@ class _NoWebhookPaymentCardFormScreenState
   }
 
   Future<Map<String, dynamic>> callNoWebhookPayEndpointMethodId({
-    required bool useStripeSdk,
-    required String paymentMethodId,
-    required String currency,
-    List<Map<String, dynamic>>? items,
+     bool useStripeSdk,
+     String paymentMethodId,
+     String currency,
+    List<Map<String, dynamic>> items,
   }) async {
     final url = Uri.parse('$kApiUrl/pay-without-webhooks');
     final response = await http.post(

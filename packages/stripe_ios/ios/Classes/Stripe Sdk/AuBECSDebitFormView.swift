@@ -7,7 +7,7 @@ class AuBECSDebitFormView: UIView, STPAUBECSDebitFormViewDelegate {
 
     var auBecsFormView: STPAUBECSDebitFormView?
     @objc var onCompleteAction: RCTDirectEventBlock?
-    @objc var companyName: NSString?
+    @objc var companyName: NSString
     
     override func didSetProps(_ changedProps: [String]!) {
         if let auBecsFormView = self.auBecsFormView {

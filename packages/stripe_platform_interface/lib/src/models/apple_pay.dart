@@ -44,7 +44,7 @@ class ApplePayShippingMethod with _$ApplePayShippingMethod {
     required String amount,
     required String identifier,
     ApplePayShippingMethodType? type,
-    String? detail,
+    String detail,
   }) = _ApplePayShippingMethod;
 
   factory ApplePayShippingMethod.fromJson(Map<String, dynamic> json) =>

@@ -24,7 +24,7 @@ class ExampleSection extends StatelessWidget {
   final bool expanded;
 
   const ExampleSection({
-    Key? key,
+    Key key,
     required this.title,
     required this.children,
     this.expanded = false,
@@ -45,8 +45,8 @@ class ExampleSection extends StatelessWidget {
 
 class Example extends StatelessWidget {
   final String title;
-  final TextStyle? style;
-  final Widget? leading;
+  final TextStyle style;
+  final Widget leading;
 
   final WidgetBuilder builder;
 

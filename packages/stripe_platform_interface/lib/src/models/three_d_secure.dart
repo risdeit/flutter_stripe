@@ -9,10 +9,10 @@ class ThreeDSecureConfigurationParams with _$ThreeDSecureConfigurationParams {
   @JsonSerializable(explicitToJson: true)
   const factory ThreeDSecureConfigurationParams({
     /// Styling for the 3d secure navigation bar.
-    required ThreeDSecureNavigationBarThemeData navigationBar,
+     ThreeDSecureNavigationBarThemeData navigationBar,
 
     /// Desired timeout in milliseconds.
-    int? timeout,
+    int timeout,
 
     /// Styling for the 3d secure label.
     ThreeDSecureLabelThemeData? label,
@@ -50,24 +50,24 @@ class ThreeDSecureNavigationBarThemeData
   @JsonSerializable(explicitToJson: true)
   const factory ThreeDSecureNavigationBarThemeData({
     /// Localised text of the header.
-    String? headerText,
+    String headerText,
 
     /// localised text of the button
-    String? buttonText,
+    String buttonText,
 
     /// Color in hex to display navigation bar header text.
-    String? textColor,
+    String textColor,
 
     /// Color in hex for the status bar.
 
-    String? statusBarColor,
+    String statusBarColor,
 
     /// Color in hex to display navigation bar background.
 
-    String? backgroundColor,
+    String backgroundColor,
 
     /// Font size of header text.
-    double? textFontSize,
+    double textFontSize,
   }) = _ThreeDSecureNavigationBarThemeData;
 
   factory ThreeDSecureNavigationBarThemeData.fromJson(
@@ -84,17 +84,17 @@ class ThreeDSecureLabelThemeData with _$ThreeDSecureLabelThemeData {
   const factory ThreeDSecureLabelThemeData({
     /// Color in hex for header text.
 
-    String? headingTextColor,
+    String headingTextColor,
 
     /// Color in hex for label text.
 
-    String? textColor,
+    String textColor,
 
     /// Font size for label text.
-    double? textFontSize,
+    double textFontSize,
 
     // Font size for header.
-    double? headingFontSize,
+    double headingFontSize,
   }) = _ThreeDSecureLabelThemeData;
 
   factory ThreeDSecureLabelThemeData.fromJson(Map<String, dynamic> json) =>
@@ -109,20 +109,20 @@ class ThreeDSecureTextFieldThemeData with _$ThreeDSecureTextFieldThemeData {
   @JsonSerializable(explicitToJson: true)
   const factory ThreeDSecureTextFieldThemeData({
     /// Color in hex for the border
-    String? borderColor,
+    String borderColor,
 
     /// Thickness of the textfield border.
-    double? borderWidth,
+    double borderWidth,
 
     /// Radius for the textfield corners.
-    double? cornerRadius,
+    double cornerRadius,
 
     /// Color in hex for the textfield value.
-    String? textColor,
+    String textColor,
 
     /// Font size for the textfield text.
 
-    double? textFontSize,
+    double textFontSize,
   }) = _ThreeDSecureTextFieldThemeData;
 
   factory ThreeDSecureTextFieldThemeData.fromJson(Map<String, dynamic> json) =>
@@ -137,16 +137,16 @@ class ThreeDSecureButtonThemeData with _$ThreeDSecureButtonThemeData {
   @JsonSerializable(explicitToJson: true)
   const factory ThreeDSecureButtonThemeData({
     /// Color in hex for button background
-    String? backgroundColor,
+    String backgroundColor,
 
     /// Button corner radius.
-    double? cornerRadius,
+    double cornerRadius,
 
     /// Color in hex for button text.
-    String? textColor,
+    String textColor,
 
     /// Font size for the button text.
-    double? textFontSize,
+    double textFontSize,
   }) = _ThreeDSecureButtonThemeData;
 
   factory ThreeDSecureButtonThemeData.fromJson(Map<String, dynamic> json) =>

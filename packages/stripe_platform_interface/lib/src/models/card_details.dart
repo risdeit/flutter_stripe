@@ -8,10 +8,10 @@ part 'card_details.g.dart';
 class CardDetails with _$CardDetails {
   @JsonSerializable(explicitToJson: true)
   factory CardDetails({
-    String? number,
-    int? expirationYear,
-    int? expirationMonth,
-    String? cvc,
+    String number,
+    int expirationYear,
+    int expirationMonth,
+    String cvc,
   }) = _CardDetailsConstructor;
 
   factory CardDetails.fromJson(Map<String, dynamic> json) =>

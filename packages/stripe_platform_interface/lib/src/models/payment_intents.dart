@@ -17,22 +17,22 @@ class PaymentIntent with _$PaymentIntent {
   @JsonSerializable(explicitToJson: true)
   const factory PaymentIntent({
     /// Unique identifier.
-    required String id,
+     String id,
 
     /// Amount that will be collected in the payment intent.
-    required num amount,
+     num amount,
 
     /// Timestamp since epoch that represents the time the intent is created.
-    required String created,
+     String created,
 
     /// The three letter ISO 4217 code for the currency.
-    required String currency,
+     String currency,
 
     /// Current status of the intent.
-    required PaymentIntentsStatus status,
+     PaymentIntentsStatus status,
 
     /// The client is secret is used for handling the payment from the Client side.
-    required String clientSecret,
+     String clientSecret,
 
     /// Determines whether the intent is in live mode or in test mode.
     required bool livemode,
@@ -44,16 +44,16 @@ class PaymentIntent with _$PaymentIntent {
     required ConfirmationMethod confirmationMethod,
 
     /// Id of the payment method used in this intent.
-    String? paymentMethodId,
+    String paymentMethodId,
 
     /// Localized description that provides additional context to users.
-    String? description,
+    String description,
 
     /// Email address where the receipt will be send to.
-    String? receiptEmail,
+    String receiptEmail,
 
     /// Timestamp since epoch when the intent is cancelled.
-    String? canceledAt,
+    String canceledAt,
 
     /// Shipping information of the payment intent.
     ShippingDetails? shipping,

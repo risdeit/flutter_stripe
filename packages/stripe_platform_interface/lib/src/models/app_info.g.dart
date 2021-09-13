@@ -8,10 +8,10 @@ part of 'app_info.dart';
 
 _$_AppInfo _$_$_AppInfoFromJson(Map<String, dynamic> json) {
   return _$_AppInfo(
-    name: json['name'] as String?,
-    partnerId: json['partnerId'] as String?,
-    url: json['url'] as String?,
-    version: json['version'] as String?,
+    name: json['name'] as String,
+    partnerId: json['partnerId'] as String,
+    url: json['url'] as String,
+    version: json['version'] as String,
   );
 }
 

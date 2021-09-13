@@ -62,25 +62,25 @@ class CardData with _$CardData {
     required String brand,
 
     /// Two letter iso code.
-    String? country,
+    String country,
 
     /// The three letter ISO 4217 code for the currency.
-    String? currency,
+    String currency,
 
     /// four digit number representing the year of expiry of the card.
-    int? expYear,
+    int expYear,
 
     /// two digit number representing the month of expire of the card.
-    int? expMonth,
+    int expMonth,
 
     /// Fullname of the cardholder
-    String? name,
+    String name,
 
     /// card funding type e.g. (credit, debit).
-    String? funding,
+    String funding,
 
     /// last four digits of the card.
-    String? last4,
+    String last4,
 
     /// Address of the cardholder
     Address? address,
@@ -102,19 +102,19 @@ class BankAccount with _$BankAccount {
     required BankAccountStatus status,
 
     /// Name of the bank where the account is registered.
-    String? bankName,
+    String bankName,
 
     /// Full name of the account holder
-    String? accountHolderName,
+    String accountHolderName,
 
     /// 2 letter code of the country where the account is located
-    String? country,
+    String country,
 
     /// The three letter ISO 4217 code for the currency.
-    String? currency,
+    String currency,
 
     /// The routing number of the bank account (e.g. needer for US accounts).
-    String? routingNumber,
+    String routingNumber,
   }) = _BankAccount;
 
   factory BankAccount.fromJson(Map<String, dynamic> json) =>

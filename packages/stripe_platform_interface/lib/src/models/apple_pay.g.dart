@@ -14,7 +14,7 @@ _$_ApplePayShippingMethod _$_$_ApplePayShippingMethodFromJson(
     identifier: json['identifier'] as String,
     type:
         _$enumDecodeNullable(_$ApplePayShippingMethodTypeEnumMap, json['type']),
-    detail: json['detail'] as String?,
+    detail: json['detail'] as String,
   );
 }
 
@@ -30,7 +30,7 @@ Map<String, dynamic> _$_$_ApplePayShippingMethodToJson(
 
 K _$enumDecode<K, V>(
   Map<K, V> enumValues,
-  Object? source, {
+  Object source, {
   K? unknownValue,
 }) {
   if (source == null) {

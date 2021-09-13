@@ -13,7 +13,7 @@ void main() {
 
   group('$MethodChannelStripe', () {
     const methodChannelName = 'flutter.stripe/payments';
-    late MethodChannelStripe sut;
+    MethodChannelStripe sut;
     group('Initialise', () {
       setUp(() {
         sut = MethodChannelStripe(
@@ -36,7 +36,7 @@ void main() {
     });
 
     group('Create payment method', () {
-      late PaymentMethod result;
+      PaymentMethod result;
 
       group('When createpayment method succeeds', () {
         setUp(() async {
@@ -103,7 +103,7 @@ void main() {
     });
 
     group('createApplePayToken', () {
-      late TokenData result;
+      TokenData result;
 
       setUp(() async {
         sut = MethodChannelStripe(
@@ -130,7 +130,7 @@ void main() {
     });
 
     group('Confirm payment method', () {
-      late PaymentIntent result;
+      PaymentIntent result;
 
       group('When it succeeds', () {
         setUp(() async {
@@ -179,7 +179,7 @@ void main() {
     });
 
     group('Setup intent', () {
-      late SetupIntent result;
+      SetupIntent result;
 
       setUp(() async {
         sut = MethodChannelStripe(
@@ -205,7 +205,7 @@ void main() {
     });
 
     group('createTokenForCVCUpdate', () {
-      late String result;
+      String result;
 
       setUp(() async {
         sut = MethodChannelStripe(
@@ -225,7 +225,7 @@ void main() {
     });
 
     group('handleCardAction', () {
-      late PaymentIntent result;
+      PaymentIntent result;
 
       group('When handling card action is successfull', () {
         setUp(() async {
@@ -269,7 +269,7 @@ void main() {
       });
     });
     group('isApplePaySupported', () {
-      late bool result;
+      bool result;
 
       setUp(() async {
         sut = MethodChannelStripe(
@@ -290,7 +290,7 @@ void main() {
 
     group('presentApplePay', () {
       group('When platform is ios', () {
-        late Completer<void> completer;
+        Completer<void> completer;
         setUp(() async {
           completer = Completer();
           sut = MethodChannelStripe(
@@ -346,7 +346,7 @@ void main() {
 
     group('retrievePaymentIntent', () {
       group('When retrievePaymentIntent succeeds', () {
-        late PaymentIntent result;
+        PaymentIntent result;
         setUp(() async {
           sut = MethodChannelStripe(
             platformIsIos: false,
@@ -385,7 +385,7 @@ void main() {
     });
 
     group('initPaymentSheet', () {
-      late Completer<void> completer;
+      Completer<void> completer;
       setUp(() async {
         completer = Completer();
         sut = MethodChannelStripe(
@@ -410,7 +410,7 @@ void main() {
     });
 
     group('presentPaymentSheet', () {
-      late Completer<void> completer;
+      Completer<void> completer;
 
       setUp(() {
         completer = Completer();
@@ -493,8 +493,8 @@ void main() {
     });
 
     group('create token', () {
-      late CreateTokenParams params;
-      late TokenData result;
+      CreateTokenParams params;
+      TokenData result;
 
       setUp(() {
         params = const CreateTokenParams();

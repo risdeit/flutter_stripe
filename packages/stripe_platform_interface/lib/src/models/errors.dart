@@ -53,19 +53,19 @@ class LocalizedErrorMessage with _$LocalizedErrorMessage {
     required FailureCode code,
 
     /// Localized error message if any
-    String? localizedMessage,
+    String localizedMessage,
 
     /// Generic untranslated error message.
-    String? message,
+    String message,
 
     /// Stripe error code
-    String? stripeErrorCode,
+    String stripeErrorCode,
 
     /// Code in case payment is declined
-    String? declineCode,
+    String declineCode,
 
     /// Error type
-    String? type,
+    String type,
   }) = _LocalizedErrorMessage;
 
   factory LocalizedErrorMessage.fromJson(Map<String, dynamic> json) =>

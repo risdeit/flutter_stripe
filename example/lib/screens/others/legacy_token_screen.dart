@@ -12,9 +12,9 @@ class LegacyTokenScreen extends StatefulWidget {
 }
 
 class _LegacyTokenScreenState extends State<LegacyTokenScreen> {
-  CardFieldInputDetails? _card;
+  CardFieldInputDetails _card;
 
-  TokenData? tokenData;
+  TokenData tokenData;
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,7 @@ class _LegacyTokenScreenState extends State<LegacyTokenScreen> {
         ),
         SizedBox(height: 20),
         LoadingButton(
-          onPressed: _card?.complete == true ? _handleCreateTokenPress : null,
+          onPressed: _card.complete == true ? _handleCreateTokenPress : null,
           text: 'Create token',
         ),
         SizedBox(height: 20),

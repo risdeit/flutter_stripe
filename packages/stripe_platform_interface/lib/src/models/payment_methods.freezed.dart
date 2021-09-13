@@ -21,10 +21,10 @@ class _$PaymentMethodTearOff {
   const _$PaymentMethodTearOff();
 
   _PaymentMethod call(
-      {required String id,
-      required bool livemode,
-      required String type,
-      required BillingDetails billingDetails,
+      { String id,
+       bool livemode,
+       String type,
+       BillingDetails billingDetails,
       @JsonKey(name: 'Card') required Card card,
       @JsonKey(name: 'SepaDebit') required SepaDebit sepaDebit,
       @JsonKey(name: 'BacsDebit') required BacsDebit bacsDebit,
@@ -33,7 +33,7 @@ class _$PaymentMethodTearOff {
       @JsonKey(name: 'Ideal') required Ideal ideal,
       @JsonKey(name: 'Fpx') required Fpx fpx,
       @JsonKey(name: 'Upi') required Upi upi,
-      String? customerId}) {
+      String customerId}) {
     return _PaymentMethod(
       id: id,
       livemode: livemode,
@@ -106,7 +106,7 @@ mixin _$PaymentMethod {
   Upi get upi => throw _privateConstructorUsedError;
 
   /// Id related to the customer to which this paymentmethod has been saved.
-  String? get customerId => throw _privateConstructorUsedError;
+  String get customerId => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -132,7 +132,7 @@ abstract class $PaymentMethodCopyWith<$Res> {
       @JsonKey(name: 'Ideal') Ideal ideal,
       @JsonKey(name: 'Fpx') Fpx fpx,
       @JsonKey(name: 'Upi') Upi upi,
-      String? customerId});
+      String customerId});
 
   $BillingDetailsCopyWith<$Res> get billingDetails;
   $CardCopyWith<$Res> get card;
@@ -156,19 +156,19 @@ class _$PaymentMethodCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? id = freezed,
-    Object? livemode = freezed,
-    Object? type = freezed,
-    Object? billingDetails = freezed,
-    Object? card = freezed,
-    Object? sepaDebit = freezed,
-    Object? bacsDebit = freezed,
-    Object? auBecsDebit = freezed,
-    Object? sofort = freezed,
-    Object? ideal = freezed,
-    Object? fpx = freezed,
-    Object? upi = freezed,
-    Object? customerId = freezed,
+    Object id = freezed,
+    Object livemode = freezed,
+    Object type = freezed,
+    Object billingDetails = freezed,
+    Object card = freezed,
+    Object sepaDebit = freezed,
+    Object bacsDebit = freezed,
+    Object auBecsDebit = freezed,
+    Object sofort = freezed,
+    Object ideal = freezed,
+    Object fpx = freezed,
+    Object upi = freezed,
+    Object customerId = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -222,7 +222,7 @@ class _$PaymentMethodCopyWithImpl<$Res>
       customerId: customerId == freezed
           ? _value.customerId
           : customerId // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 
@@ -310,7 +310,7 @@ abstract class _$PaymentMethodCopyWith<$Res>
       @JsonKey(name: 'Ideal') Ideal ideal,
       @JsonKey(name: 'Fpx') Fpx fpx,
       @JsonKey(name: 'Upi') Upi upi,
-      String? customerId});
+      String customerId});
 
   @override
   $BillingDetailsCopyWith<$Res> get billingDetails;
@@ -345,19 +345,19 @@ class __$PaymentMethodCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? id = freezed,
-    Object? livemode = freezed,
-    Object? type = freezed,
-    Object? billingDetails = freezed,
-    Object? card = freezed,
-    Object? sepaDebit = freezed,
-    Object? bacsDebit = freezed,
-    Object? auBecsDebit = freezed,
-    Object? sofort = freezed,
-    Object? ideal = freezed,
-    Object? fpx = freezed,
-    Object? upi = freezed,
-    Object? customerId = freezed,
+    Object id = freezed,
+    Object livemode = freezed,
+    Object type = freezed,
+    Object billingDetails = freezed,
+    Object card = freezed,
+    Object sepaDebit = freezed,
+    Object bacsDebit = freezed,
+    Object auBecsDebit = freezed,
+    Object sofort = freezed,
+    Object ideal = freezed,
+    Object fpx = freezed,
+    Object upi = freezed,
+    Object customerId = freezed,
   }) {
     return _then(_PaymentMethod(
       id: id == freezed
@@ -411,7 +411,7 @@ class __$PaymentMethodCopyWithImpl<$Res>
       customerId: customerId == freezed
           ? _value.customerId
           : customerId // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -497,7 +497,7 @@ class _$_PaymentMethod implements _PaymentMethod {
   @override
 
   /// Id related to the customer to which this paymentmethod has been saved.
-  final String? customerId;
+  final String customerId;
 
   @override
   String toString() {
@@ -584,7 +584,7 @@ abstract class _PaymentMethod implements PaymentMethod {
       @JsonKey(name: 'Ideal') required Ideal ideal,
       @JsonKey(name: 'Fpx') required Fpx fpx,
       @JsonKey(name: 'Upi') required Upi upi,
-      String? customerId}) = _$_PaymentMethod;
+      String customerId}) = _$_PaymentMethod;
 
   factory _PaymentMethod.fromJson(Map<String, dynamic> json) =
       _$_PaymentMethod.fromJson;
@@ -648,7 +648,7 @@ abstract class _PaymentMethod implements PaymentMethod {
   @override
 
   /// Id related to the customer to which this paymentmethod has been saved.
-  String? get customerId => throw _privateConstructorUsedError;
+  String get customerId => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PaymentMethodCopyWith<_PaymentMethod> get copyWith =>
@@ -664,7 +664,7 @@ class _$BillingDetailsTearOff {
   const _$BillingDetailsTearOff();
 
   _BillingDetails call(
-      {String? email, Address? address, String? phone, String? name}) {
+      {String email, Address? address, String phone, String name}) {
     return _BillingDetails(
       email: email,
       address: address,
@@ -684,16 +684,16 @@ const $BillingDetails = _$BillingDetailsTearOff();
 /// @nodoc
 mixin _$BillingDetails {
   /// Email address.
-  String? get email => throw _privateConstructorUsedError;
+  String get email => throw _privateConstructorUsedError;
 
   /// Billing address.
   Address? get address => throw _privateConstructorUsedError;
 
   /// Billing phone number.
-  String? get phone => throw _privateConstructorUsedError;
+  String get phone => throw _privateConstructorUsedError;
 
   /// Full name.
-  String? get name => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -706,7 +706,7 @@ abstract class $BillingDetailsCopyWith<$Res> {
   factory $BillingDetailsCopyWith(
           BillingDetails value, $Res Function(BillingDetails) then) =
       _$BillingDetailsCopyWithImpl<$Res>;
-  $Res call({String? email, Address? address, String? phone, String? name});
+  $Res call({String email, Address? address, String phone, String name});
 
   $AddressCopyWith<$Res>? get address;
 }
@@ -722,16 +722,16 @@ class _$BillingDetailsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? email = freezed,
-    Object? address = freezed,
-    Object? phone = freezed,
-    Object? name = freezed,
+    Object email = freezed,
+    Object address = freezed,
+    Object phone = freezed,
+    Object name = freezed,
   }) {
     return _then(_value.copyWith(
       email: email == freezed
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       address: address == freezed
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
@@ -739,11 +739,11 @@ class _$BillingDetailsCopyWithImpl<$Res>
       phone: phone == freezed
           ? _value.phone
           : phone // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 
@@ -766,7 +766,7 @@ abstract class _$BillingDetailsCopyWith<$Res>
           _BillingDetails value, $Res Function(_BillingDetails) then) =
       __$BillingDetailsCopyWithImpl<$Res>;
   @override
-  $Res call({String? email, Address? address, String? phone, String? name});
+  $Res call({String email, Address? address, String phone, String name});
 
   @override
   $AddressCopyWith<$Res>? get address;
@@ -785,16 +785,16 @@ class __$BillingDetailsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? email = freezed,
-    Object? address = freezed,
-    Object? phone = freezed,
-    Object? name = freezed,
+    Object email = freezed,
+    Object address = freezed,
+    Object phone = freezed,
+    Object name = freezed,
   }) {
     return _then(_BillingDetails(
       email: email == freezed
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       address: address == freezed
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
@@ -802,11 +802,11 @@ class __$BillingDetailsCopyWithImpl<$Res>
       phone: phone == freezed
           ? _value.phone
           : phone // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -823,7 +823,7 @@ class _$_BillingDetails implements _BillingDetails {
   @override
 
   /// Email address.
-  final String? email;
+  final String email;
   @override
 
   /// Billing address.
@@ -831,11 +831,11 @@ class _$_BillingDetails implements _BillingDetails {
   @override
 
   /// Billing phone number.
-  final String? phone;
+  final String phone;
   @override
 
   /// Full name.
-  final String? name;
+  final String name;
 
   @override
   String toString() {
@@ -878,10 +878,10 @@ class _$_BillingDetails implements _BillingDetails {
 
 abstract class _BillingDetails implements BillingDetails {
   const factory _BillingDetails(
-      {String? email,
+      {String email,
       Address? address,
-      String? phone,
-      String? name}) = _$_BillingDetails;
+      String phone,
+      String name}) = _$_BillingDetails;
 
   factory _BillingDetails.fromJson(Map<String, dynamic> json) =
       _$_BillingDetails.fromJson;
@@ -889,7 +889,7 @@ abstract class _BillingDetails implements BillingDetails {
   @override
 
   /// Email address.
-  String? get email => throw _privateConstructorUsedError;
+  String get email => throw _privateConstructorUsedError;
   @override
 
   /// Billing address.
@@ -897,11 +897,11 @@ abstract class _BillingDetails implements BillingDetails {
   @override
 
   /// Billing phone number.
-  String? get phone => throw _privateConstructorUsedError;
+  String get phone => throw _privateConstructorUsedError;
   @override
 
   /// Full name.
-  String? get name => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$BillingDetailsCopyWith<_BillingDetails> get copyWith =>
@@ -916,7 +916,7 @@ AuBecsDebit _$AuBecsDebitFromJson(Map<String, dynamic> json) {
 class _$AuBecsDebitTearOff {
   const _$AuBecsDebitTearOff();
 
-  _AuBecsDebit call({String? fingerprint, String? last4, String? bsbNumber}) {
+  _AuBecsDebit call({String fingerprint, String last4, String bsbNumber}) {
     return _AuBecsDebit(
       fingerprint: fingerprint,
       last4: last4,
@@ -935,13 +935,13 @@ const $AuBecsDebit = _$AuBecsDebitTearOff();
 /// @nodoc
 mixin _$AuBecsDebit {
   /// Unique identifier for the bankaccount.
-  String? get fingerprint => throw _privateConstructorUsedError;
+  String get fingerprint => throw _privateConstructorUsedError;
 
   /// Last 4 digits of the bankaccount number.
-  String? get last4 => throw _privateConstructorUsedError;
+  String get last4 => throw _privateConstructorUsedError;
 
   /// Siz digit number identifying the bank or branch for this account.
-  String? get bsbNumber => throw _privateConstructorUsedError;
+  String get bsbNumber => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -954,7 +954,7 @@ abstract class $AuBecsDebitCopyWith<$Res> {
   factory $AuBecsDebitCopyWith(
           AuBecsDebit value, $Res Function(AuBecsDebit) then) =
       _$AuBecsDebitCopyWithImpl<$Res>;
-  $Res call({String? fingerprint, String? last4, String? bsbNumber});
+  $Res call({String fingerprint, String last4, String bsbNumber});
 }
 
 /// @nodoc
@@ -967,23 +967,23 @@ class _$AuBecsDebitCopyWithImpl<$Res> implements $AuBecsDebitCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? fingerprint = freezed,
-    Object? last4 = freezed,
-    Object? bsbNumber = freezed,
+    Object fingerprint = freezed,
+    Object last4 = freezed,
+    Object bsbNumber = freezed,
   }) {
     return _then(_value.copyWith(
       fingerprint: fingerprint == freezed
           ? _value.fingerprint
           : fingerprint // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       last4: last4 == freezed
           ? _value.last4
           : last4 // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       bsbNumber: bsbNumber == freezed
           ? _value.bsbNumber
           : bsbNumber // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -995,7 +995,7 @@ abstract class _$AuBecsDebitCopyWith<$Res>
           _AuBecsDebit value, $Res Function(_AuBecsDebit) then) =
       __$AuBecsDebitCopyWithImpl<$Res>;
   @override
-  $Res call({String? fingerprint, String? last4, String? bsbNumber});
+  $Res call({String fingerprint, String last4, String bsbNumber});
 }
 
 /// @nodoc
@@ -1010,23 +1010,23 @@ class __$AuBecsDebitCopyWithImpl<$Res> extends _$AuBecsDebitCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? fingerprint = freezed,
-    Object? last4 = freezed,
-    Object? bsbNumber = freezed,
+    Object fingerprint = freezed,
+    Object last4 = freezed,
+    Object bsbNumber = freezed,
   }) {
     return _then(_AuBecsDebit(
       fingerprint: fingerprint == freezed
           ? _value.fingerprint
           : fingerprint // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       last4: last4 == freezed
           ? _value.last4
           : last4 // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       bsbNumber: bsbNumber == freezed
           ? _value.bsbNumber
           : bsbNumber // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -1043,15 +1043,15 @@ class _$_AuBecsDebit implements _AuBecsDebit {
   @override
 
   /// Unique identifier for the bankaccount.
-  final String? fingerprint;
+  final String fingerprint;
   @override
 
   /// Last 4 digits of the bankaccount number.
-  final String? last4;
+  final String last4;
   @override
 
   /// Siz digit number identifying the bank or branch for this account.
-  final String? bsbNumber;
+  final String bsbNumber;
 
   @override
   String toString() {
@@ -1092,7 +1092,7 @@ class _$_AuBecsDebit implements _AuBecsDebit {
 
 abstract class _AuBecsDebit implements AuBecsDebit {
   const factory _AuBecsDebit(
-      {String? fingerprint, String? last4, String? bsbNumber}) = _$_AuBecsDebit;
+      {String fingerprint, String last4, String bsbNumber}) = _$_AuBecsDebit;
 
   factory _AuBecsDebit.fromJson(Map<String, dynamic> json) =
       _$_AuBecsDebit.fromJson;
@@ -1100,15 +1100,15 @@ abstract class _AuBecsDebit implements AuBecsDebit {
   @override
 
   /// Unique identifier for the bankaccount.
-  String? get fingerprint => throw _privateConstructorUsedError;
+  String get fingerprint => throw _privateConstructorUsedError;
   @override
 
   /// Last 4 digits of the bankaccount number.
-  String? get last4 => throw _privateConstructorUsedError;
+  String get last4 => throw _privateConstructorUsedError;
   @override
 
   /// Siz digit number identifying the bank or branch for this account.
-  String? get bsbNumber => throw _privateConstructorUsedError;
+  String get bsbNumber => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$AuBecsDebitCopyWith<_AuBecsDebit> get copyWith =>
@@ -1123,7 +1123,7 @@ BacsDebit _$BacsDebitFromJson(Map<String, dynamic> json) {
 class _$BacsDebitTearOff {
   const _$BacsDebitTearOff();
 
-  _BacsDebit call({String? sortCode, String? fingerprint, String? last4}) {
+  _BacsDebit call({String sortCode, String fingerprint, String last4}) {
     return _BacsDebit(
       sortCode: sortCode,
       fingerprint: fingerprint,
@@ -1142,13 +1142,13 @@ const $BacsDebit = _$BacsDebitTearOff();
 /// @nodoc
 mixin _$BacsDebit {
   /// Sort code of the bankaccount.
-  String? get sortCode => throw _privateConstructorUsedError;
+  String get sortCode => throw _privateConstructorUsedError;
 
   /// Unique identifier for the bankaccount.
-  String? get fingerprint => throw _privateConstructorUsedError;
+  String get fingerprint => throw _privateConstructorUsedError;
 
   /// Last 4 digits of the bank account.
-  String? get last4 => throw _privateConstructorUsedError;
+  String get last4 => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1160,7 +1160,7 @@ mixin _$BacsDebit {
 abstract class $BacsDebitCopyWith<$Res> {
   factory $BacsDebitCopyWith(BacsDebit value, $Res Function(BacsDebit) then) =
       _$BacsDebitCopyWithImpl<$Res>;
-  $Res call({String? sortCode, String? fingerprint, String? last4});
+  $Res call({String sortCode, String fingerprint, String last4});
 }
 
 /// @nodoc
@@ -1173,23 +1173,23 @@ class _$BacsDebitCopyWithImpl<$Res> implements $BacsDebitCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? sortCode = freezed,
-    Object? fingerprint = freezed,
-    Object? last4 = freezed,
+    Object sortCode = freezed,
+    Object fingerprint = freezed,
+    Object last4 = freezed,
   }) {
     return _then(_value.copyWith(
       sortCode: sortCode == freezed
           ? _value.sortCode
           : sortCode // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       fingerprint: fingerprint == freezed
           ? _value.fingerprint
           : fingerprint // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       last4: last4 == freezed
           ? _value.last4
           : last4 // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -1200,7 +1200,7 @@ abstract class _$BacsDebitCopyWith<$Res> implements $BacsDebitCopyWith<$Res> {
           _BacsDebit value, $Res Function(_BacsDebit) then) =
       __$BacsDebitCopyWithImpl<$Res>;
   @override
-  $Res call({String? sortCode, String? fingerprint, String? last4});
+  $Res call({String sortCode, String fingerprint, String last4});
 }
 
 /// @nodoc
@@ -1214,23 +1214,23 @@ class __$BacsDebitCopyWithImpl<$Res> extends _$BacsDebitCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? sortCode = freezed,
-    Object? fingerprint = freezed,
-    Object? last4 = freezed,
+    Object sortCode = freezed,
+    Object fingerprint = freezed,
+    Object last4 = freezed,
   }) {
     return _then(_BacsDebit(
       sortCode: sortCode == freezed
           ? _value.sortCode
           : sortCode // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       fingerprint: fingerprint == freezed
           ? _value.fingerprint
           : fingerprint // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       last4: last4 == freezed
           ? _value.last4
           : last4 // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -1247,15 +1247,15 @@ class _$_BacsDebit implements _BacsDebit {
   @override
 
   /// Sort code of the bankaccount.
-  final String? sortCode;
+  final String sortCode;
   @override
 
   /// Unique identifier for the bankaccount.
-  final String? fingerprint;
+  final String fingerprint;
   @override
 
   /// Last 4 digits of the bank account.
-  final String? last4;
+  final String last4;
 
   @override
   String toString() {
@@ -1296,7 +1296,7 @@ class _$_BacsDebit implements _BacsDebit {
 
 abstract class _BacsDebit implements BacsDebit {
   const factory _BacsDebit(
-      {String? sortCode, String? fingerprint, String? last4}) = _$_BacsDebit;
+      {String sortCode, String fingerprint, String last4}) = _$_BacsDebit;
 
   factory _BacsDebit.fromJson(Map<String, dynamic> json) =
       _$_BacsDebit.fromJson;
@@ -1304,15 +1304,15 @@ abstract class _BacsDebit implements BacsDebit {
   @override
 
   /// Sort code of the bankaccount.
-  String? get sortCode => throw _privateConstructorUsedError;
+  String get sortCode => throw _privateConstructorUsedError;
   @override
 
   /// Unique identifier for the bankaccount.
-  String? get fingerprint => throw _privateConstructorUsedError;
+  String get fingerprint => throw _privateConstructorUsedError;
   @override
 
   /// Last 4 digits of the bank account.
-  String? get last4 => throw _privateConstructorUsedError;
+  String get last4 => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$BacsDebitCopyWith<_BacsDebit> get copyWith =>
@@ -1328,12 +1328,12 @@ class _$CardTearOff {
   const _$CardTearOff();
 
   _Card call(
-      {String? brand,
-      String? country,
-      int? expYear,
-      int? expMonth,
-      String? funding,
-      String? last4}) {
+      {String brand,
+      String country,
+      int expYear,
+      int expMonth,
+      String funding,
+      String last4}) {
     return _Card(
       brand: brand,
       country: country,
@@ -1355,22 +1355,22 @@ const $Card = _$CardTearOff();
 /// @nodoc
 mixin _$Card {
   /// The brand associated to the card e.g. (visa, amex).
-  String? get brand => throw _privateConstructorUsedError;
+  String get brand => throw _privateConstructorUsedError;
 
   /// Two letter iso code.
-  String? get country => throw _privateConstructorUsedError;
+  String get country => throw _privateConstructorUsedError;
 
   /// four digit number representing the year of expiry of the card.
-  int? get expYear => throw _privateConstructorUsedError;
+  int get expYear => throw _privateConstructorUsedError;
 
   /// two digit number representing the month of expire of the card.
-  int? get expMonth => throw _privateConstructorUsedError;
+  int get expMonth => throw _privateConstructorUsedError;
 
   /// card funding type e.g. (credit, debit).
-  String? get funding => throw _privateConstructorUsedError;
+  String get funding => throw _privateConstructorUsedError;
 
   /// last four digits of the card.
-  String? get last4 => throw _privateConstructorUsedError;
+  String get last4 => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1382,12 +1382,12 @@ abstract class $CardCopyWith<$Res> {
   factory $CardCopyWith(Card value, $Res Function(Card) then) =
       _$CardCopyWithImpl<$Res>;
   $Res call(
-      {String? brand,
-      String? country,
-      int? expYear,
-      int? expMonth,
-      String? funding,
-      String? last4});
+      {String brand,
+      String country,
+      int expYear,
+      int expMonth,
+      String funding,
+      String last4});
 }
 
 /// @nodoc
@@ -1400,38 +1400,38 @@ class _$CardCopyWithImpl<$Res> implements $CardCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? brand = freezed,
-    Object? country = freezed,
-    Object? expYear = freezed,
-    Object? expMonth = freezed,
-    Object? funding = freezed,
-    Object? last4 = freezed,
+    Object brand = freezed,
+    Object country = freezed,
+    Object expYear = freezed,
+    Object expMonth = freezed,
+    Object funding = freezed,
+    Object last4 = freezed,
   }) {
     return _then(_value.copyWith(
       brand: brand == freezed
           ? _value.brand
           : brand // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       country: country == freezed
           ? _value.country
           : country // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       expYear: expYear == freezed
           ? _value.expYear
           : expYear // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       expMonth: expMonth == freezed
           ? _value.expMonth
           : expMonth // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       funding: funding == freezed
           ? _value.funding
           : funding // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       last4: last4 == freezed
           ? _value.last4
           : last4 // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -1442,12 +1442,12 @@ abstract class _$CardCopyWith<$Res> implements $CardCopyWith<$Res> {
       __$CardCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String? brand,
-      String? country,
-      int? expYear,
-      int? expMonth,
-      String? funding,
-      String? last4});
+      {String brand,
+      String country,
+      int expYear,
+      int expMonth,
+      String funding,
+      String last4});
 }
 
 /// @nodoc
@@ -1461,38 +1461,38 @@ class __$CardCopyWithImpl<$Res> extends _$CardCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? brand = freezed,
-    Object? country = freezed,
-    Object? expYear = freezed,
-    Object? expMonth = freezed,
-    Object? funding = freezed,
-    Object? last4 = freezed,
+    Object brand = freezed,
+    Object country = freezed,
+    Object expYear = freezed,
+    Object expMonth = freezed,
+    Object funding = freezed,
+    Object last4 = freezed,
   }) {
     return _then(_Card(
       brand: brand == freezed
           ? _value.brand
           : brand // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       country: country == freezed
           ? _value.country
           : country // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       expYear: expYear == freezed
           ? _value.expYear
           : expYear // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       expMonth: expMonth == freezed
           ? _value.expMonth
           : expMonth // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       funding: funding == freezed
           ? _value.funding
           : funding // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       last4: last4 == freezed
           ? _value.last4
           : last4 // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -1515,27 +1515,27 @@ class _$_Card implements _Card {
   @override
 
   /// The brand associated to the card e.g. (visa, amex).
-  final String? brand;
+  final String brand;
   @override
 
   /// Two letter iso code.
-  final String? country;
+  final String country;
   @override
 
   /// four digit number representing the year of expiry of the card.
-  final int? expYear;
+  final int expYear;
   @override
 
   /// two digit number representing the month of expire of the card.
-  final int? expMonth;
+  final int expMonth;
   @override
 
   /// card funding type e.g. (credit, debit).
-  final String? funding;
+  final String funding;
   @override
 
   /// last four digits of the card.
-  final String? last4;
+  final String last4;
 
   @override
   String toString() {
@@ -1587,39 +1587,39 @@ class _$_Card implements _Card {
 
 abstract class _Card implements Card {
   const factory _Card(
-      {String? brand,
-      String? country,
-      int? expYear,
-      int? expMonth,
-      String? funding,
-      String? last4}) = _$_Card;
+      {String brand,
+      String country,
+      int expYear,
+      int expMonth,
+      String funding,
+      String last4}) = _$_Card;
 
   factory _Card.fromJson(Map<String, dynamic> json) = _$_Card.fromJson;
 
   @override
 
   /// The brand associated to the card e.g. (visa, amex).
-  String? get brand => throw _privateConstructorUsedError;
+  String get brand => throw _privateConstructorUsedError;
   @override
 
   /// Two letter iso code.
-  String? get country => throw _privateConstructorUsedError;
+  String get country => throw _privateConstructorUsedError;
   @override
 
   /// four digit number representing the year of expiry of the card.
-  int? get expYear => throw _privateConstructorUsedError;
+  int get expYear => throw _privateConstructorUsedError;
   @override
 
   /// two digit number representing the month of expire of the card.
-  int? get expMonth => throw _privateConstructorUsedError;
+  int get expMonth => throw _privateConstructorUsedError;
   @override
 
   /// card funding type e.g. (credit, debit).
-  String? get funding => throw _privateConstructorUsedError;
+  String get funding => throw _privateConstructorUsedError;
   @override
 
   /// last four digits of the card.
-  String? get last4 => throw _privateConstructorUsedError;
+  String get last4 => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CardCopyWith<_Card> get copyWith => throw _privateConstructorUsedError;
@@ -1633,7 +1633,7 @@ Fpx _$FpxFromJson(Map<String, dynamic> json) {
 class _$FpxTearOff {
   const _$FpxTearOff();
 
-  _Fpx call({String? bank, String? accountHolderType}) {
+  _Fpx call({String bank, String accountHolderType}) {
     return _Fpx(
       bank: bank,
       accountHolderType: accountHolderType,
@@ -1651,10 +1651,10 @@ const $Fpx = _$FpxTearOff();
 /// @nodoc
 mixin _$Fpx {
   /// the customer bank
-  String? get bank => throw _privateConstructorUsedError;
+  String get bank => throw _privateConstructorUsedError;
 
   /// accountholder type
-  String? get accountHolderType => throw _privateConstructorUsedError;
+  String get accountHolderType => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1665,7 +1665,7 @@ mixin _$Fpx {
 abstract class $FpxCopyWith<$Res> {
   factory $FpxCopyWith(Fpx value, $Res Function(Fpx) then) =
       _$FpxCopyWithImpl<$Res>;
-  $Res call({String? bank, String? accountHolderType});
+  $Res call({String bank, String accountHolderType});
 }
 
 /// @nodoc
@@ -1678,18 +1678,18 @@ class _$FpxCopyWithImpl<$Res> implements $FpxCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? bank = freezed,
-    Object? accountHolderType = freezed,
+    Object bank = freezed,
+    Object accountHolderType = freezed,
   }) {
     return _then(_value.copyWith(
       bank: bank == freezed
           ? _value.bank
           : bank // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       accountHolderType: accountHolderType == freezed
           ? _value.accountHolderType
           : accountHolderType // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -1699,7 +1699,7 @@ abstract class _$FpxCopyWith<$Res> implements $FpxCopyWith<$Res> {
   factory _$FpxCopyWith(_Fpx value, $Res Function(_Fpx) then) =
       __$FpxCopyWithImpl<$Res>;
   @override
-  $Res call({String? bank, String? accountHolderType});
+  $Res call({String bank, String accountHolderType});
 }
 
 /// @nodoc
@@ -1713,18 +1713,18 @@ class __$FpxCopyWithImpl<$Res> extends _$FpxCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? bank = freezed,
-    Object? accountHolderType = freezed,
+    Object bank = freezed,
+    Object accountHolderType = freezed,
   }) {
     return _then(_Fpx(
       bank: bank == freezed
           ? _value.bank
           : bank // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       accountHolderType: accountHolderType == freezed
           ? _value.accountHolderType
           : accountHolderType // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -1740,11 +1740,11 @@ class _$_Fpx implements _Fpx {
   @override
 
   /// the customer bank
-  final String? bank;
+  final String bank;
   @override
 
   /// accountholder type
-  final String? accountHolderType;
+  final String accountHolderType;
 
   @override
   String toString() {
@@ -1780,18 +1780,18 @@ class _$_Fpx implements _Fpx {
 }
 
 abstract class _Fpx implements Fpx {
-  const factory _Fpx({String? bank, String? accountHolderType}) = _$_Fpx;
+  const factory _Fpx({String bank, String accountHolderType}) = _$_Fpx;
 
   factory _Fpx.fromJson(Map<String, dynamic> json) = _$_Fpx.fromJson;
 
   @override
 
   /// the customer bank
-  String? get bank => throw _privateConstructorUsedError;
+  String get bank => throw _privateConstructorUsedError;
   @override
 
   /// accountholder type
-  String? get accountHolderType => throw _privateConstructorUsedError;
+  String get accountHolderType => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$FpxCopyWith<_Fpx> get copyWith => throw _privateConstructorUsedError;
@@ -1805,7 +1805,7 @@ Ideal _$IdealFromJson(Map<String, dynamic> json) {
 class _$IdealTearOff {
   const _$IdealTearOff();
 
-  _Ideal call({String? bankIdentifierCode, String? bank}) {
+  _Ideal call({String bankIdentifierCode, String bank}) {
     return _Ideal(
       bankIdentifierCode: bankIdentifierCode,
       bank: bank,
@@ -1823,10 +1823,10 @@ const $Ideal = _$IdealTearOff();
 /// @nodoc
 mixin _$Ideal {
   /// The BIC code of the bank
-  String? get bankIdentifierCode => throw _privateConstructorUsedError;
+  String get bankIdentifierCode => throw _privateConstructorUsedError;
 
   /// The bank of the customer
-  String? get bank => throw _privateConstructorUsedError;
+  String get bank => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1837,7 +1837,7 @@ mixin _$Ideal {
 abstract class $IdealCopyWith<$Res> {
   factory $IdealCopyWith(Ideal value, $Res Function(Ideal) then) =
       _$IdealCopyWithImpl<$Res>;
-  $Res call({String? bankIdentifierCode, String? bank});
+  $Res call({String bankIdentifierCode, String bank});
 }
 
 /// @nodoc
@@ -1850,18 +1850,18 @@ class _$IdealCopyWithImpl<$Res> implements $IdealCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? bankIdentifierCode = freezed,
-    Object? bank = freezed,
+    Object bankIdentifierCode = freezed,
+    Object bank = freezed,
   }) {
     return _then(_value.copyWith(
       bankIdentifierCode: bankIdentifierCode == freezed
           ? _value.bankIdentifierCode
           : bankIdentifierCode // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       bank: bank == freezed
           ? _value.bank
           : bank // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -1871,7 +1871,7 @@ abstract class _$IdealCopyWith<$Res> implements $IdealCopyWith<$Res> {
   factory _$IdealCopyWith(_Ideal value, $Res Function(_Ideal) then) =
       __$IdealCopyWithImpl<$Res>;
   @override
-  $Res call({String? bankIdentifierCode, String? bank});
+  $Res call({String bankIdentifierCode, String bank});
 }
 
 /// @nodoc
@@ -1885,18 +1885,18 @@ class __$IdealCopyWithImpl<$Res> extends _$IdealCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? bankIdentifierCode = freezed,
-    Object? bank = freezed,
+    Object bankIdentifierCode = freezed,
+    Object bank = freezed,
   }) {
     return _then(_Ideal(
       bankIdentifierCode: bankIdentifierCode == freezed
           ? _value.bankIdentifierCode
           : bankIdentifierCode // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       bank: bank == freezed
           ? _value.bank
           : bank // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -1913,11 +1913,11 @@ class _$_Ideal implements _Ideal {
   @override
 
   /// The BIC code of the bank
-  final String? bankIdentifierCode;
+  final String bankIdentifierCode;
   @override
 
   /// The bank of the customer
-  final String? bank;
+  final String bank;
 
   @override
   String toString() {
@@ -1953,18 +1953,18 @@ class _$_Ideal implements _Ideal {
 }
 
 abstract class _Ideal implements Ideal {
-  const factory _Ideal({String? bankIdentifierCode, String? bank}) = _$_Ideal;
+  const factory _Ideal({String bankIdentifierCode, String bank}) = _$_Ideal;
 
   factory _Ideal.fromJson(Map<String, dynamic> json) = _$_Ideal.fromJson;
 
   @override
 
   /// The BIC code of the bank
-  String? get bankIdentifierCode => throw _privateConstructorUsedError;
+  String get bankIdentifierCode => throw _privateConstructorUsedError;
   @override
 
   /// The bank of the customer
-  String? get bank => throw _privateConstructorUsedError;
+  String get bank => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$IdealCopyWith<_Ideal> get copyWith => throw _privateConstructorUsedError;
@@ -1979,7 +1979,7 @@ class _$SepaDebitTearOff {
   const _$SepaDebitTearOff();
 
   _SepaDebit call(
-      {String? country, String? bankCode, String? fingerprint, String? last4}) {
+      {String country, String bankCode, String fingerprint, String last4}) {
     return _SepaDebit(
       country: country,
       bankCode: bankCode,
@@ -1999,16 +1999,16 @@ const $SepaDebit = _$SepaDebitTearOff();
 /// @nodoc
 mixin _$SepaDebit {
   /// Two letter ISO code representing the country of the bank account.
-  String? get country => throw _privateConstructorUsedError;
+  String get country => throw _privateConstructorUsedError;
 
   /// Bank code associated with the bankaccount.
-  String? get bankCode => throw _privateConstructorUsedError;
+  String get bankCode => throw _privateConstructorUsedError;
 
   /// Unique ID for the bank account.
-  String? get fingerprint => throw _privateConstructorUsedError;
+  String get fingerprint => throw _privateConstructorUsedError;
 
   /// Last four characters of IBAN.
-  String? get last4 => throw _privateConstructorUsedError;
+  String get last4 => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -2021,7 +2021,7 @@ abstract class $SepaDebitCopyWith<$Res> {
   factory $SepaDebitCopyWith(SepaDebit value, $Res Function(SepaDebit) then) =
       _$SepaDebitCopyWithImpl<$Res>;
   $Res call(
-      {String? country, String? bankCode, String? fingerprint, String? last4});
+      {String country, String bankCode, String fingerprint, String last4});
 }
 
 /// @nodoc
@@ -2034,28 +2034,28 @@ class _$SepaDebitCopyWithImpl<$Res> implements $SepaDebitCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? country = freezed,
-    Object? bankCode = freezed,
-    Object? fingerprint = freezed,
-    Object? last4 = freezed,
+    Object country = freezed,
+    Object bankCode = freezed,
+    Object fingerprint = freezed,
+    Object last4 = freezed,
   }) {
     return _then(_value.copyWith(
       country: country == freezed
           ? _value.country
           : country // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       bankCode: bankCode == freezed
           ? _value.bankCode
           : bankCode // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       fingerprint: fingerprint == freezed
           ? _value.fingerprint
           : fingerprint // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       last4: last4 == freezed
           ? _value.last4
           : last4 // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -2067,7 +2067,7 @@ abstract class _$SepaDebitCopyWith<$Res> implements $SepaDebitCopyWith<$Res> {
       __$SepaDebitCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String? country, String? bankCode, String? fingerprint, String? last4});
+      {String country, String bankCode, String fingerprint, String last4});
 }
 
 /// @nodoc
@@ -2081,28 +2081,28 @@ class __$SepaDebitCopyWithImpl<$Res> extends _$SepaDebitCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? country = freezed,
-    Object? bankCode = freezed,
-    Object? fingerprint = freezed,
-    Object? last4 = freezed,
+    Object country = freezed,
+    Object bankCode = freezed,
+    Object fingerprint = freezed,
+    Object last4 = freezed,
   }) {
     return _then(_SepaDebit(
       country: country == freezed
           ? _value.country
           : country // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       bankCode: bankCode == freezed
           ? _value.bankCode
           : bankCode // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       fingerprint: fingerprint == freezed
           ? _value.fingerprint
           : fingerprint // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       last4: last4 == freezed
           ? _value.last4
           : last4 // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -2120,19 +2120,19 @@ class _$_SepaDebit implements _SepaDebit {
   @override
 
   /// Two letter ISO code representing the country of the bank account.
-  final String? country;
+  final String country;
   @override
 
   /// Bank code associated with the bankaccount.
-  final String? bankCode;
+  final String bankCode;
   @override
 
   /// Unique ID for the bank account.
-  final String? fingerprint;
+  final String fingerprint;
   @override
 
   /// Last four characters of IBAN.
-  final String? last4;
+  final String last4;
 
   @override
   String toString() {
@@ -2177,10 +2177,10 @@ class _$_SepaDebit implements _SepaDebit {
 
 abstract class _SepaDebit implements SepaDebit {
   const factory _SepaDebit(
-      {String? country,
-      String? bankCode,
-      String? fingerprint,
-      String? last4}) = _$_SepaDebit;
+      {String country,
+      String bankCode,
+      String fingerprint,
+      String last4}) = _$_SepaDebit;
 
   factory _SepaDebit.fromJson(Map<String, dynamic> json) =
       _$_SepaDebit.fromJson;
@@ -2188,19 +2188,19 @@ abstract class _SepaDebit implements SepaDebit {
   @override
 
   /// Two letter ISO code representing the country of the bank account.
-  String? get country => throw _privateConstructorUsedError;
+  String get country => throw _privateConstructorUsedError;
   @override
 
   /// Bank code associated with the bankaccount.
-  String? get bankCode => throw _privateConstructorUsedError;
+  String get bankCode => throw _privateConstructorUsedError;
   @override
 
   /// Unique ID for the bank account.
-  String? get fingerprint => throw _privateConstructorUsedError;
+  String get fingerprint => throw _privateConstructorUsedError;
   @override
 
   /// Last four characters of IBAN.
-  String? get last4 => throw _privateConstructorUsedError;
+  String get last4 => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SepaDebitCopyWith<_SepaDebit> get copyWith =>
@@ -2215,7 +2215,7 @@ Sofort _$SofortFromJson(Map<String, dynamic> json) {
 class _$SofortTearOff {
   const _$SofortTearOff();
 
-  _Sofort call({String? country}) {
+  _Sofort call({String country}) {
     return _Sofort(
       country: country,
     );
@@ -2232,7 +2232,7 @@ const $Sofort = _$SofortTearOff();
 /// @nodoc
 mixin _$Sofort {
   /// Two letter ISO code representing the country of the bank account.
-  String? get country => throw _privateConstructorUsedError;
+  String get country => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -2243,7 +2243,7 @@ mixin _$Sofort {
 abstract class $SofortCopyWith<$Res> {
   factory $SofortCopyWith(Sofort value, $Res Function(Sofort) then) =
       _$SofortCopyWithImpl<$Res>;
-  $Res call({String? country});
+  $Res call({String country});
 }
 
 /// @nodoc
@@ -2256,13 +2256,13 @@ class _$SofortCopyWithImpl<$Res> implements $SofortCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? country = freezed,
+    Object country = freezed,
   }) {
     return _then(_value.copyWith(
       country: country == freezed
           ? _value.country
           : country // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -2272,7 +2272,7 @@ abstract class _$SofortCopyWith<$Res> implements $SofortCopyWith<$Res> {
   factory _$SofortCopyWith(_Sofort value, $Res Function(_Sofort) then) =
       __$SofortCopyWithImpl<$Res>;
   @override
-  $Res call({String? country});
+  $Res call({String country});
 }
 
 /// @nodoc
@@ -2286,13 +2286,13 @@ class __$SofortCopyWithImpl<$Res> extends _$SofortCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? country = freezed,
+    Object country = freezed,
   }) {
     return _then(_Sofort(
       country: country == freezed
           ? _value.country
           : country // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -2309,7 +2309,7 @@ class _$_Sofort implements _Sofort {
   @override
 
   /// Two letter ISO code representing the country of the bank account.
-  final String? country;
+  final String country;
 
   @override
   String toString() {
@@ -2340,14 +2340,14 @@ class _$_Sofort implements _Sofort {
 }
 
 abstract class _Sofort implements Sofort {
-  const factory _Sofort({String? country}) = _$_Sofort;
+  const factory _Sofort({String country}) = _$_Sofort;
 
   factory _Sofort.fromJson(Map<String, dynamic> json) = _$_Sofort.fromJson;
 
   @override
 
   /// Two letter ISO code representing the country of the bank account.
-  String? get country => throw _privateConstructorUsedError;
+  String get country => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SofortCopyWith<_Sofort> get copyWith => throw _privateConstructorUsedError;
@@ -2361,7 +2361,7 @@ Upi _$UpiFromJson(Map<String, dynamic> json) {
 class _$UpiTearOff {
   const _$UpiTearOff();
 
-  _Upi call({String? vpa}) {
+  _Upi call({String vpa}) {
     return _Upi(
       vpa: vpa,
     );
@@ -2378,7 +2378,7 @@ const $Upi = _$UpiTearOff();
 /// @nodoc
 mixin _$Upi {
   /// The customer's vpa.
-  String? get vpa => throw _privateConstructorUsedError;
+  String get vpa => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -2389,7 +2389,7 @@ mixin _$Upi {
 abstract class $UpiCopyWith<$Res> {
   factory $UpiCopyWith(Upi value, $Res Function(Upi) then) =
       _$UpiCopyWithImpl<$Res>;
-  $Res call({String? vpa});
+  $Res call({String vpa});
 }
 
 /// @nodoc
@@ -2402,13 +2402,13 @@ class _$UpiCopyWithImpl<$Res> implements $UpiCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? vpa = freezed,
+    Object vpa = freezed,
   }) {
     return _then(_value.copyWith(
       vpa: vpa == freezed
           ? _value.vpa
           : vpa // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -2418,7 +2418,7 @@ abstract class _$UpiCopyWith<$Res> implements $UpiCopyWith<$Res> {
   factory _$UpiCopyWith(_Upi value, $Res Function(_Upi) then) =
       __$UpiCopyWithImpl<$Res>;
   @override
-  $Res call({String? vpa});
+  $Res call({String vpa});
 }
 
 /// @nodoc
@@ -2432,13 +2432,13 @@ class __$UpiCopyWithImpl<$Res> extends _$UpiCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? vpa = freezed,
+    Object vpa = freezed,
   }) {
     return _then(_Upi(
       vpa: vpa == freezed
           ? _value.vpa
           : vpa // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -2454,7 +2454,7 @@ class _$_Upi implements _Upi {
   @override
 
   /// The customer's vpa.
-  final String? vpa;
+  final String vpa;
 
   @override
   String toString() {
@@ -2485,14 +2485,14 @@ class _$_Upi implements _Upi {
 }
 
 abstract class _Upi implements Upi {
-  const factory _Upi({String? vpa}) = _$_Upi;
+  const factory _Upi({String vpa}) = _$_Upi;
 
   factory _Upi.fromJson(Map<String, dynamic> json) = _$_Upi.fromJson;
 
   @override
 
   /// The customer's vpa.
-  String? get vpa => throw _privateConstructorUsedError;
+  String get vpa => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$UpiCopyWith<_Upi> get copyWith => throw _privateConstructorUsedError;
@@ -2560,7 +2560,7 @@ class _$PaymentMethodParamsTearOff {
   }
 
   _PaymentMethodParamsCardWithMethodId cardFromMethodId(
-      {required String paymentMethodId, String? cvc}) {
+      {required String paymentMethodId, String cvc}) {
     return _PaymentMethodParamsCardWithMethodId(
       paymentMethodId: paymentMethodId,
       cvc: cvc,
@@ -2572,7 +2572,7 @@ class _$PaymentMethodParamsTearOff {
   }
 
   _PaymentMethodParamsIdeal ideal(
-      {BillingDetails? billingDetails, String? bankName}) {
+      {BillingDetails? billingDetails, String bankName}) {
     return _PaymentMethodParamsIdeal(
       billingDetails: billingDetails,
       bankName: bankName,
@@ -2652,7 +2652,7 @@ class _$PaymentMethodParamsTearOff {
     );
   }
 
-  _PaymentMethodParamsWechat weChatPay({String? appId}) {
+  _PaymentMethodParamsWechat weChatPay({String appId}) {
     return _PaymentMethodParamsWechat(
       appId: appId,
     );
@@ -2669,17 +2669,17 @@ const $PaymentMethodParams = _$PaymentMethodParamsTearOff();
 /// @nodoc
 mixin _$PaymentMethodParams {
   @optionalTypeArgs
-  TResult when<TResult extends Object?>({
+  TResult when<TResult extends Object>({
     required TResult Function(PaymentIntentsFutureUsage? setupFutureUsage,
             BillingDetails? billingDetails)
         card,
     required TResult Function(
             String token, PaymentIntentsFutureUsage? setupFutureUsage)
         cardFromToken,
-    required TResult Function(String paymentMethodId, String? cvc)
+    required TResult Function(String paymentMethodId, String cvc)
         cardFromMethodId,
     required TResult Function() alipay,
-    required TResult Function(BillingDetails? billingDetails, String? bankName)
+    required TResult Function(BillingDetails? billingDetails, String bankName)
         ideal,
     required TResult Function(BillingDetails? billingDetails) bancontact,
     required TResult Function(BillingDetails? billingDetails) giroPay,
@@ -2701,19 +2701,19 @@ mixin _$PaymentMethodParams {
             ShippingDetails shippingDetails, BillingDetails? billingDetails)
         afterpayClearpay,
     required TResult Function(BillingDetails? billingDetails) oxxo,
-    required TResult Function(String? appId) weChatPay,
+    required TResult Function(String appId) weChatPay,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
+  TResult maybeWhen<TResult extends Object>({
     TResult Function(PaymentIntentsFutureUsage? setupFutureUsage,
             BillingDetails? billingDetails)?
         card,
     TResult Function(String token, PaymentIntentsFutureUsage? setupFutureUsage)?
         cardFromToken,
-    TResult Function(String paymentMethodId, String? cvc)? cardFromMethodId,
+    TResult Function(String paymentMethodId, String cvc)? cardFromMethodId,
     TResult Function()? alipay,
-    TResult Function(BillingDetails? billingDetails, String? bankName)? ideal,
+    TResult Function(BillingDetails? billingDetails, String bankName)? ideal,
     TResult Function(BillingDetails? billingDetails)? bancontact,
     TResult Function(BillingDetails? billingDetails)? giroPay,
     TResult Function(BillingDetails? billingDetails)? eps,
@@ -2732,12 +2732,12 @@ mixin _$PaymentMethodParams {
             ShippingDetails shippingDetails, BillingDetails? billingDetails)?
         afterpayClearpay,
     TResult Function(BillingDetails? billingDetails)? oxxo,
-    TResult Function(String? appId)? weChatPay,
+    TResult Function(String appId)? weChatPay,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult map<TResult extends Object?>({
+  TResult map<TResult extends Object>({
     required TResult Function(_PaymentMethodParamsCard value) card,
     required TResult Function(_PaymentMethodParamsCardWithToken value)
         cardFromToken,
@@ -2760,7 +2760,7 @@ mixin _$PaymentMethodParams {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
+  TResult maybeMap<TResult extends Object>({
     TResult Function(_PaymentMethodParamsCard value)? card,
     TResult Function(_PaymentMethodParamsCardWithToken value)? cardFromToken,
     TResult Function(_PaymentMethodParamsCardWithMethodId value)?
@@ -2828,8 +2828,8 @@ class __$PaymentMethodParamsCardCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? setupFutureUsage = freezed,
-    Object? billingDetails = freezed,
+    Object setupFutureUsage = freezed,
+    Object billingDetails = freezed,
   }) {
     return _then(_PaymentMethodParamsCard(
       setupFutureUsage: setupFutureUsage == freezed
@@ -2906,17 +2906,17 @@ class _$_PaymentMethodParamsCard implements _PaymentMethodParamsCard {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object?>({
+  TResult when<TResult extends Object>({
     required TResult Function(PaymentIntentsFutureUsage? setupFutureUsage,
             BillingDetails? billingDetails)
         card,
     required TResult Function(
             String token, PaymentIntentsFutureUsage? setupFutureUsage)
         cardFromToken,
-    required TResult Function(String paymentMethodId, String? cvc)
+    required TResult Function(String paymentMethodId, String cvc)
         cardFromMethodId,
     required TResult Function() alipay,
-    required TResult Function(BillingDetails? billingDetails, String? bankName)
+    required TResult Function(BillingDetails? billingDetails, String bankName)
         ideal,
     required TResult Function(BillingDetails? billingDetails) bancontact,
     required TResult Function(BillingDetails? billingDetails) giroPay,
@@ -2938,22 +2938,22 @@ class _$_PaymentMethodParamsCard implements _PaymentMethodParamsCard {
             ShippingDetails shippingDetails, BillingDetails? billingDetails)
         afterpayClearpay,
     required TResult Function(BillingDetails? billingDetails) oxxo,
-    required TResult Function(String? appId) weChatPay,
+    required TResult Function(String appId) weChatPay,
   }) {
     return card(setupFutureUsage, billingDetails);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
+  TResult maybeWhen<TResult extends Object>({
     TResult Function(PaymentIntentsFutureUsage? setupFutureUsage,
             BillingDetails? billingDetails)?
         card,
     TResult Function(String token, PaymentIntentsFutureUsage? setupFutureUsage)?
         cardFromToken,
-    TResult Function(String paymentMethodId, String? cvc)? cardFromMethodId,
+    TResult Function(String paymentMethodId, String cvc)? cardFromMethodId,
     TResult Function()? alipay,
-    TResult Function(BillingDetails? billingDetails, String? bankName)? ideal,
+    TResult Function(BillingDetails? billingDetails, String bankName)? ideal,
     TResult Function(BillingDetails? billingDetails)? bancontact,
     TResult Function(BillingDetails? billingDetails)? giroPay,
     TResult Function(BillingDetails? billingDetails)? eps,
@@ -2972,7 +2972,7 @@ class _$_PaymentMethodParamsCard implements _PaymentMethodParamsCard {
             ShippingDetails shippingDetails, BillingDetails? billingDetails)?
         afterpayClearpay,
     TResult Function(BillingDetails? billingDetails)? oxxo,
-    TResult Function(String? appId)? weChatPay,
+    TResult Function(String appId)? weChatPay,
     required TResult orElse(),
   }) {
     if (card != null) {
@@ -2983,7 +2983,7 @@ class _$_PaymentMethodParamsCard implements _PaymentMethodParamsCard {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object?>({
+  TResult map<TResult extends Object>({
     required TResult Function(_PaymentMethodParamsCard value) card,
     required TResult Function(_PaymentMethodParamsCardWithToken value)
         cardFromToken,
@@ -3009,7 +3009,7 @@ class _$_PaymentMethodParamsCard implements _PaymentMethodParamsCard {
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
+  TResult maybeMap<TResult extends Object>({
     TResult Function(_PaymentMethodParamsCard value)? card,
     TResult Function(_PaymentMethodParamsCardWithToken value)? cardFromToken,
     TResult Function(_PaymentMethodParamsCardWithMethodId value)?
@@ -3085,8 +3085,8 @@ class __$PaymentMethodParamsCardWithTokenCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? token = freezed,
-    Object? setupFutureUsage = freezed,
+    Object token = freezed,
+    Object setupFutureUsage = freezed,
   }) {
     return _then(_PaymentMethodParamsCardWithToken(
       token: token == freezed
@@ -3153,17 +3153,17 @@ class _$_PaymentMethodParamsCardWithToken
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object?>({
+  TResult when<TResult extends Object>({
     required TResult Function(PaymentIntentsFutureUsage? setupFutureUsage,
             BillingDetails? billingDetails)
         card,
     required TResult Function(
             String token, PaymentIntentsFutureUsage? setupFutureUsage)
         cardFromToken,
-    required TResult Function(String paymentMethodId, String? cvc)
+    required TResult Function(String paymentMethodId, String cvc)
         cardFromMethodId,
     required TResult Function() alipay,
-    required TResult Function(BillingDetails? billingDetails, String? bankName)
+    required TResult Function(BillingDetails? billingDetails, String bankName)
         ideal,
     required TResult Function(BillingDetails? billingDetails) bancontact,
     required TResult Function(BillingDetails? billingDetails) giroPay,
@@ -3185,22 +3185,22 @@ class _$_PaymentMethodParamsCardWithToken
             ShippingDetails shippingDetails, BillingDetails? billingDetails)
         afterpayClearpay,
     required TResult Function(BillingDetails? billingDetails) oxxo,
-    required TResult Function(String? appId) weChatPay,
+    required TResult Function(String appId) weChatPay,
   }) {
     return cardFromToken(token, setupFutureUsage);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
+  TResult maybeWhen<TResult extends Object>({
     TResult Function(PaymentIntentsFutureUsage? setupFutureUsage,
             BillingDetails? billingDetails)?
         card,
     TResult Function(String token, PaymentIntentsFutureUsage? setupFutureUsage)?
         cardFromToken,
-    TResult Function(String paymentMethodId, String? cvc)? cardFromMethodId,
+    TResult Function(String paymentMethodId, String cvc)? cardFromMethodId,
     TResult Function()? alipay,
-    TResult Function(BillingDetails? billingDetails, String? bankName)? ideal,
+    TResult Function(BillingDetails? billingDetails, String bankName)? ideal,
     TResult Function(BillingDetails? billingDetails)? bancontact,
     TResult Function(BillingDetails? billingDetails)? giroPay,
     TResult Function(BillingDetails? billingDetails)? eps,
@@ -3219,7 +3219,7 @@ class _$_PaymentMethodParamsCardWithToken
             ShippingDetails shippingDetails, BillingDetails? billingDetails)?
         afterpayClearpay,
     TResult Function(BillingDetails? billingDetails)? oxxo,
-    TResult Function(String? appId)? weChatPay,
+    TResult Function(String appId)? weChatPay,
     required TResult orElse(),
   }) {
     if (cardFromToken != null) {
@@ -3230,7 +3230,7 @@ class _$_PaymentMethodParamsCardWithToken
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object?>({
+  TResult map<TResult extends Object>({
     required TResult Function(_PaymentMethodParamsCard value) card,
     required TResult Function(_PaymentMethodParamsCardWithToken value)
         cardFromToken,
@@ -3256,7 +3256,7 @@ class _$_PaymentMethodParamsCardWithToken
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
+  TResult maybeMap<TResult extends Object>({
     TResult Function(_PaymentMethodParamsCard value)? card,
     TResult Function(_PaymentMethodParamsCardWithToken value)? cardFromToken,
     TResult Function(_PaymentMethodParamsCardWithMethodId value)?
@@ -3316,7 +3316,7 @@ abstract class _$PaymentMethodParamsCardWithMethodIdCopyWith<$Res> {
           _PaymentMethodParamsCardWithMethodId value,
           $Res Function(_PaymentMethodParamsCardWithMethodId) then) =
       __$PaymentMethodParamsCardWithMethodIdCopyWithImpl<$Res>;
-  $Res call({String paymentMethodId, String? cvc});
+  $Res call({String paymentMethodId, String cvc});
 }
 
 /// @nodoc
@@ -3334,8 +3334,8 @@ class __$PaymentMethodParamsCardWithMethodIdCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? paymentMethodId = freezed,
-    Object? cvc = freezed,
+    Object paymentMethodId = freezed,
+    Object cvc = freezed,
   }) {
     return _then(_PaymentMethodParamsCardWithMethodId(
       paymentMethodId: paymentMethodId == freezed
@@ -3345,7 +3345,7 @@ class __$PaymentMethodParamsCardWithMethodIdCopyWithImpl<$Res>
       cvc: cvc == freezed
           ? _value.cvc
           : cvc // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -3368,7 +3368,7 @@ class _$_PaymentMethodParamsCardWithMethodId
   @override
 
   /// cvc of the cart
-  final String? cvc;
+  final String cvc;
 
   @override
   String toString() {
@@ -3401,17 +3401,17 @@ class _$_PaymentMethodParamsCardWithMethodId
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object?>({
+  TResult when<TResult extends Object>({
     required TResult Function(PaymentIntentsFutureUsage? setupFutureUsage,
             BillingDetails? billingDetails)
         card,
     required TResult Function(
             String token, PaymentIntentsFutureUsage? setupFutureUsage)
         cardFromToken,
-    required TResult Function(String paymentMethodId, String? cvc)
+    required TResult Function(String paymentMethodId, String cvc)
         cardFromMethodId,
     required TResult Function() alipay,
-    required TResult Function(BillingDetails? billingDetails, String? bankName)
+    required TResult Function(BillingDetails? billingDetails, String bankName)
         ideal,
     required TResult Function(BillingDetails? billingDetails) bancontact,
     required TResult Function(BillingDetails? billingDetails) giroPay,
@@ -3433,22 +3433,22 @@ class _$_PaymentMethodParamsCardWithMethodId
             ShippingDetails shippingDetails, BillingDetails? billingDetails)
         afterpayClearpay,
     required TResult Function(BillingDetails? billingDetails) oxxo,
-    required TResult Function(String? appId) weChatPay,
+    required TResult Function(String appId) weChatPay,
   }) {
     return cardFromMethodId(paymentMethodId, cvc);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
+  TResult maybeWhen<TResult extends Object>({
     TResult Function(PaymentIntentsFutureUsage? setupFutureUsage,
             BillingDetails? billingDetails)?
         card,
     TResult Function(String token, PaymentIntentsFutureUsage? setupFutureUsage)?
         cardFromToken,
-    TResult Function(String paymentMethodId, String? cvc)? cardFromMethodId,
+    TResult Function(String paymentMethodId, String cvc)? cardFromMethodId,
     TResult Function()? alipay,
-    TResult Function(BillingDetails? billingDetails, String? bankName)? ideal,
+    TResult Function(BillingDetails? billingDetails, String bankName)? ideal,
     TResult Function(BillingDetails? billingDetails)? bancontact,
     TResult Function(BillingDetails? billingDetails)? giroPay,
     TResult Function(BillingDetails? billingDetails)? eps,
@@ -3467,7 +3467,7 @@ class _$_PaymentMethodParamsCardWithMethodId
             ShippingDetails shippingDetails, BillingDetails? billingDetails)?
         afterpayClearpay,
     TResult Function(BillingDetails? billingDetails)? oxxo,
-    TResult Function(String? appId)? weChatPay,
+    TResult Function(String appId)? weChatPay,
     required TResult orElse(),
   }) {
     if (cardFromMethodId != null) {
@@ -3478,7 +3478,7 @@ class _$_PaymentMethodParamsCardWithMethodId
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object?>({
+  TResult map<TResult extends Object>({
     required TResult Function(_PaymentMethodParamsCard value) card,
     required TResult Function(_PaymentMethodParamsCardWithToken value)
         cardFromToken,
@@ -3504,7 +3504,7 @@ class _$_PaymentMethodParamsCardWithMethodId
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
+  TResult maybeMap<TResult extends Object>({
     TResult Function(_PaymentMethodParamsCard value)? card,
     TResult Function(_PaymentMethodParamsCardWithToken value)? cardFromToken,
     TResult Function(_PaymentMethodParamsCardWithMethodId value)?
@@ -3542,7 +3542,7 @@ abstract class _PaymentMethodParamsCardWithMethodId
     implements PaymentMethodParams {
   const factory _PaymentMethodParamsCardWithMethodId(
       {required String paymentMethodId,
-      String? cvc}) = _$_PaymentMethodParamsCardWithMethodId;
+      String cvc}) = _$_PaymentMethodParamsCardWithMethodId;
 
   factory _PaymentMethodParamsCardWithMethodId.fromJson(
           Map<String, dynamic> json) =
@@ -3551,7 +3551,7 @@ abstract class _PaymentMethodParamsCardWithMethodId
   String get paymentMethodId => throw _privateConstructorUsedError;
 
   /// cvc of the cart
-  String? get cvc => throw _privateConstructorUsedError;
+  String get cvc => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   _$PaymentMethodParamsCardWithMethodIdCopyWith<
           _PaymentMethodParamsCardWithMethodId>
@@ -3603,17 +3603,17 @@ class _$_PaymentMethodParamsAlipay implements _PaymentMethodParamsAlipay {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object?>({
+  TResult when<TResult extends Object>({
     required TResult Function(PaymentIntentsFutureUsage? setupFutureUsage,
             BillingDetails? billingDetails)
         card,
     required TResult Function(
             String token, PaymentIntentsFutureUsage? setupFutureUsage)
         cardFromToken,
-    required TResult Function(String paymentMethodId, String? cvc)
+    required TResult Function(String paymentMethodId, String cvc)
         cardFromMethodId,
     required TResult Function() alipay,
-    required TResult Function(BillingDetails? billingDetails, String? bankName)
+    required TResult Function(BillingDetails? billingDetails, String bankName)
         ideal,
     required TResult Function(BillingDetails? billingDetails) bancontact,
     required TResult Function(BillingDetails? billingDetails) giroPay,
@@ -3635,22 +3635,22 @@ class _$_PaymentMethodParamsAlipay implements _PaymentMethodParamsAlipay {
             ShippingDetails shippingDetails, BillingDetails? billingDetails)
         afterpayClearpay,
     required TResult Function(BillingDetails? billingDetails) oxxo,
-    required TResult Function(String? appId) weChatPay,
+    required TResult Function(String appId) weChatPay,
   }) {
     return alipay();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
+  TResult maybeWhen<TResult extends Object>({
     TResult Function(PaymentIntentsFutureUsage? setupFutureUsage,
             BillingDetails? billingDetails)?
         card,
     TResult Function(String token, PaymentIntentsFutureUsage? setupFutureUsage)?
         cardFromToken,
-    TResult Function(String paymentMethodId, String? cvc)? cardFromMethodId,
+    TResult Function(String paymentMethodId, String cvc)? cardFromMethodId,
     TResult Function()? alipay,
-    TResult Function(BillingDetails? billingDetails, String? bankName)? ideal,
+    TResult Function(BillingDetails? billingDetails, String bankName)? ideal,
     TResult Function(BillingDetails? billingDetails)? bancontact,
     TResult Function(BillingDetails? billingDetails)? giroPay,
     TResult Function(BillingDetails? billingDetails)? eps,
@@ -3669,7 +3669,7 @@ class _$_PaymentMethodParamsAlipay implements _PaymentMethodParamsAlipay {
             ShippingDetails shippingDetails, BillingDetails? billingDetails)?
         afterpayClearpay,
     TResult Function(BillingDetails? billingDetails)? oxxo,
-    TResult Function(String? appId)? weChatPay,
+    TResult Function(String appId)? weChatPay,
     required TResult orElse(),
   }) {
     if (alipay != null) {
@@ -3680,7 +3680,7 @@ class _$_PaymentMethodParamsAlipay implements _PaymentMethodParamsAlipay {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object?>({
+  TResult map<TResult extends Object>({
     required TResult Function(_PaymentMethodParamsCard value) card,
     required TResult Function(_PaymentMethodParamsCardWithToken value)
         cardFromToken,
@@ -3706,7 +3706,7 @@ class _$_PaymentMethodParamsAlipay implements _PaymentMethodParamsAlipay {
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
+  TResult maybeMap<TResult extends Object>({
     TResult Function(_PaymentMethodParamsCard value)? card,
     TResult Function(_PaymentMethodParamsCardWithToken value)? cardFromToken,
     TResult Function(_PaymentMethodParamsCardWithMethodId value)?
@@ -3751,7 +3751,7 @@ abstract class _$PaymentMethodParamsIdealCopyWith<$Res> {
   factory _$PaymentMethodParamsIdealCopyWith(_PaymentMethodParamsIdeal value,
           $Res Function(_PaymentMethodParamsIdeal) then) =
       __$PaymentMethodParamsIdealCopyWithImpl<$Res>;
-  $Res call({BillingDetails? billingDetails, String? bankName});
+  $Res call({BillingDetails? billingDetails, String bankName});
 
   $BillingDetailsCopyWith<$Res>? get billingDetails;
 }
@@ -3770,8 +3770,8 @@ class __$PaymentMethodParamsIdealCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? billingDetails = freezed,
-    Object? bankName = freezed,
+    Object billingDetails = freezed,
+    Object bankName = freezed,
   }) {
     return _then(_PaymentMethodParamsIdeal(
       billingDetails: billingDetails == freezed
@@ -3781,7 +3781,7 @@ class __$PaymentMethodParamsIdealCopyWithImpl<$Res>
       bankName: bankName == freezed
           ? _value.bankName
           : bankName // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 
@@ -3814,7 +3814,7 @@ class _$_PaymentMethodParamsIdeal implements _PaymentMethodParamsIdeal {
   @override
 
   /// The name of bank.
-  final String? bankName;
+  final String bankName;
 
   @override
   String toString() {
@@ -3847,17 +3847,17 @@ class _$_PaymentMethodParamsIdeal implements _PaymentMethodParamsIdeal {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object?>({
+  TResult when<TResult extends Object>({
     required TResult Function(PaymentIntentsFutureUsage? setupFutureUsage,
             BillingDetails? billingDetails)
         card,
     required TResult Function(
             String token, PaymentIntentsFutureUsage? setupFutureUsage)
         cardFromToken,
-    required TResult Function(String paymentMethodId, String? cvc)
+    required TResult Function(String paymentMethodId, String cvc)
         cardFromMethodId,
     required TResult Function() alipay,
-    required TResult Function(BillingDetails? billingDetails, String? bankName)
+    required TResult Function(BillingDetails? billingDetails, String bankName)
         ideal,
     required TResult Function(BillingDetails? billingDetails) bancontact,
     required TResult Function(BillingDetails? billingDetails) giroPay,
@@ -3879,22 +3879,22 @@ class _$_PaymentMethodParamsIdeal implements _PaymentMethodParamsIdeal {
             ShippingDetails shippingDetails, BillingDetails? billingDetails)
         afterpayClearpay,
     required TResult Function(BillingDetails? billingDetails) oxxo,
-    required TResult Function(String? appId) weChatPay,
+    required TResult Function(String appId) weChatPay,
   }) {
     return ideal(billingDetails, bankName);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
+  TResult maybeWhen<TResult extends Object>({
     TResult Function(PaymentIntentsFutureUsage? setupFutureUsage,
             BillingDetails? billingDetails)?
         card,
     TResult Function(String token, PaymentIntentsFutureUsage? setupFutureUsage)?
         cardFromToken,
-    TResult Function(String paymentMethodId, String? cvc)? cardFromMethodId,
+    TResult Function(String paymentMethodId, String cvc)? cardFromMethodId,
     TResult Function()? alipay,
-    TResult Function(BillingDetails? billingDetails, String? bankName)? ideal,
+    TResult Function(BillingDetails? billingDetails, String bankName)? ideal,
     TResult Function(BillingDetails? billingDetails)? bancontact,
     TResult Function(BillingDetails? billingDetails)? giroPay,
     TResult Function(BillingDetails? billingDetails)? eps,
@@ -3913,7 +3913,7 @@ class _$_PaymentMethodParamsIdeal implements _PaymentMethodParamsIdeal {
             ShippingDetails shippingDetails, BillingDetails? billingDetails)?
         afterpayClearpay,
     TResult Function(BillingDetails? billingDetails)? oxxo,
-    TResult Function(String? appId)? weChatPay,
+    TResult Function(String appId)? weChatPay,
     required TResult orElse(),
   }) {
     if (ideal != null) {
@@ -3924,7 +3924,7 @@ class _$_PaymentMethodParamsIdeal implements _PaymentMethodParamsIdeal {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object?>({
+  TResult map<TResult extends Object>({
     required TResult Function(_PaymentMethodParamsCard value) card,
     required TResult Function(_PaymentMethodParamsCardWithToken value)
         cardFromToken,
@@ -3950,7 +3950,7 @@ class _$_PaymentMethodParamsIdeal implements _PaymentMethodParamsIdeal {
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
+  TResult maybeMap<TResult extends Object>({
     TResult Function(_PaymentMethodParamsCard value)? card,
     TResult Function(_PaymentMethodParamsCardWithToken value)? cardFromToken,
     TResult Function(_PaymentMethodParamsCardWithMethodId value)?
@@ -3986,7 +3986,7 @@ class _$_PaymentMethodParamsIdeal implements _PaymentMethodParamsIdeal {
 abstract class _PaymentMethodParamsIdeal implements PaymentMethodParams {
   const factory _PaymentMethodParamsIdeal(
       {BillingDetails? billingDetails,
-      String? bankName}) = _$_PaymentMethodParamsIdeal;
+      String bankName}) = _$_PaymentMethodParamsIdeal;
 
   factory _PaymentMethodParamsIdeal.fromJson(Map<String, dynamic> json) =
       _$_PaymentMethodParamsIdeal.fromJson;
@@ -3995,7 +3995,7 @@ abstract class _PaymentMethodParamsIdeal implements PaymentMethodParams {
   BillingDetails? get billingDetails => throw _privateConstructorUsedError;
 
   /// The name of bank.
-  String? get bankName => throw _privateConstructorUsedError;
+  String get bankName => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   _$PaymentMethodParamsIdealCopyWith<_PaymentMethodParamsIdeal> get copyWith =>
       throw _privateConstructorUsedError;
@@ -4027,7 +4027,7 @@ class __$PaymentMethodParamsBankContactCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? billingDetails = freezed,
+    Object billingDetails = freezed,
   }) {
     return _then(_PaymentMethodParamsBankContact(
       billingDetails: billingDetails == freezed
@@ -4093,17 +4093,17 @@ class _$_PaymentMethodParamsBankContact
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object?>({
+  TResult when<TResult extends Object>({
     required TResult Function(PaymentIntentsFutureUsage? setupFutureUsage,
             BillingDetails? billingDetails)
         card,
     required TResult Function(
             String token, PaymentIntentsFutureUsage? setupFutureUsage)
         cardFromToken,
-    required TResult Function(String paymentMethodId, String? cvc)
+    required TResult Function(String paymentMethodId, String cvc)
         cardFromMethodId,
     required TResult Function() alipay,
-    required TResult Function(BillingDetails? billingDetails, String? bankName)
+    required TResult Function(BillingDetails? billingDetails, String bankName)
         ideal,
     required TResult Function(BillingDetails? billingDetails) bancontact,
     required TResult Function(BillingDetails? billingDetails) giroPay,
@@ -4125,22 +4125,22 @@ class _$_PaymentMethodParamsBankContact
             ShippingDetails shippingDetails, BillingDetails? billingDetails)
         afterpayClearpay,
     required TResult Function(BillingDetails? billingDetails) oxxo,
-    required TResult Function(String? appId) weChatPay,
+    required TResult Function(String appId) weChatPay,
   }) {
     return bancontact(billingDetails);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
+  TResult maybeWhen<TResult extends Object>({
     TResult Function(PaymentIntentsFutureUsage? setupFutureUsage,
             BillingDetails? billingDetails)?
         card,
     TResult Function(String token, PaymentIntentsFutureUsage? setupFutureUsage)?
         cardFromToken,
-    TResult Function(String paymentMethodId, String? cvc)? cardFromMethodId,
+    TResult Function(String paymentMethodId, String cvc)? cardFromMethodId,
     TResult Function()? alipay,
-    TResult Function(BillingDetails? billingDetails, String? bankName)? ideal,
+    TResult Function(BillingDetails? billingDetails, String bankName)? ideal,
     TResult Function(BillingDetails? billingDetails)? bancontact,
     TResult Function(BillingDetails? billingDetails)? giroPay,
     TResult Function(BillingDetails? billingDetails)? eps,
@@ -4159,7 +4159,7 @@ class _$_PaymentMethodParamsBankContact
             ShippingDetails shippingDetails, BillingDetails? billingDetails)?
         afterpayClearpay,
     TResult Function(BillingDetails? billingDetails)? oxxo,
-    TResult Function(String? appId)? weChatPay,
+    TResult Function(String appId)? weChatPay,
     required TResult orElse(),
   }) {
     if (bancontact != null) {
@@ -4170,7 +4170,7 @@ class _$_PaymentMethodParamsBankContact
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object?>({
+  TResult map<TResult extends Object>({
     required TResult Function(_PaymentMethodParamsCard value) card,
     required TResult Function(_PaymentMethodParamsCardWithToken value)
         cardFromToken,
@@ -4196,7 +4196,7 @@ class _$_PaymentMethodParamsBankContact
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
+  TResult maybeMap<TResult extends Object>({
     TResult Function(_PaymentMethodParamsCard value)? card,
     TResult Function(_PaymentMethodParamsCardWithToken value)? cardFromToken,
     TResult Function(_PaymentMethodParamsCardWithMethodId value)?
@@ -4269,7 +4269,7 @@ class __$PaymentMethodParamsGiroPayCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? billingDetails = freezed,
+    Object billingDetails = freezed,
   }) {
     return _then(_PaymentMethodParamsGiroPay(
       billingDetails: billingDetails == freezed
@@ -4333,17 +4333,17 @@ class _$_PaymentMethodParamsGiroPay implements _PaymentMethodParamsGiroPay {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object?>({
+  TResult when<TResult extends Object>({
     required TResult Function(PaymentIntentsFutureUsage? setupFutureUsage,
             BillingDetails? billingDetails)
         card,
     required TResult Function(
             String token, PaymentIntentsFutureUsage? setupFutureUsage)
         cardFromToken,
-    required TResult Function(String paymentMethodId, String? cvc)
+    required TResult Function(String paymentMethodId, String cvc)
         cardFromMethodId,
     required TResult Function() alipay,
-    required TResult Function(BillingDetails? billingDetails, String? bankName)
+    required TResult Function(BillingDetails? billingDetails, String bankName)
         ideal,
     required TResult Function(BillingDetails? billingDetails) bancontact,
     required TResult Function(BillingDetails? billingDetails) giroPay,
@@ -4365,22 +4365,22 @@ class _$_PaymentMethodParamsGiroPay implements _PaymentMethodParamsGiroPay {
             ShippingDetails shippingDetails, BillingDetails? billingDetails)
         afterpayClearpay,
     required TResult Function(BillingDetails? billingDetails) oxxo,
-    required TResult Function(String? appId) weChatPay,
+    required TResult Function(String appId) weChatPay,
   }) {
     return giroPay(billingDetails);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
+  TResult maybeWhen<TResult extends Object>({
     TResult Function(PaymentIntentsFutureUsage? setupFutureUsage,
             BillingDetails? billingDetails)?
         card,
     TResult Function(String token, PaymentIntentsFutureUsage? setupFutureUsage)?
         cardFromToken,
-    TResult Function(String paymentMethodId, String? cvc)? cardFromMethodId,
+    TResult Function(String paymentMethodId, String cvc)? cardFromMethodId,
     TResult Function()? alipay,
-    TResult Function(BillingDetails? billingDetails, String? bankName)? ideal,
+    TResult Function(BillingDetails? billingDetails, String bankName)? ideal,
     TResult Function(BillingDetails? billingDetails)? bancontact,
     TResult Function(BillingDetails? billingDetails)? giroPay,
     TResult Function(BillingDetails? billingDetails)? eps,
@@ -4399,7 +4399,7 @@ class _$_PaymentMethodParamsGiroPay implements _PaymentMethodParamsGiroPay {
             ShippingDetails shippingDetails, BillingDetails? billingDetails)?
         afterpayClearpay,
     TResult Function(BillingDetails? billingDetails)? oxxo,
-    TResult Function(String? appId)? weChatPay,
+    TResult Function(String appId)? weChatPay,
     required TResult orElse(),
   }) {
     if (giroPay != null) {
@@ -4410,7 +4410,7 @@ class _$_PaymentMethodParamsGiroPay implements _PaymentMethodParamsGiroPay {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object?>({
+  TResult map<TResult extends Object>({
     required TResult Function(_PaymentMethodParamsCard value) card,
     required TResult Function(_PaymentMethodParamsCardWithToken value)
         cardFromToken,
@@ -4436,7 +4436,7 @@ class _$_PaymentMethodParamsGiroPay implements _PaymentMethodParamsGiroPay {
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
+  TResult maybeMap<TResult extends Object>({
     TResult Function(_PaymentMethodParamsCard value)? card,
     TResult Function(_PaymentMethodParamsCardWithToken value)? cardFromToken,
     TResult Function(_PaymentMethodParamsCardWithMethodId value)?
@@ -4506,7 +4506,7 @@ class __$PaymentMethodParamsEpsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? billingDetails = freezed,
+    Object billingDetails = freezed,
   }) {
     return _then(_PaymentMethodParamsEps(
       billingDetails: billingDetails == freezed
@@ -4570,17 +4570,17 @@ class _$_PaymentMethodParamsEps implements _PaymentMethodParamsEps {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object?>({
+  TResult when<TResult extends Object>({
     required TResult Function(PaymentIntentsFutureUsage? setupFutureUsage,
             BillingDetails? billingDetails)
         card,
     required TResult Function(
             String token, PaymentIntentsFutureUsage? setupFutureUsage)
         cardFromToken,
-    required TResult Function(String paymentMethodId, String? cvc)
+    required TResult Function(String paymentMethodId, String cvc)
         cardFromMethodId,
     required TResult Function() alipay,
-    required TResult Function(BillingDetails? billingDetails, String? bankName)
+    required TResult Function(BillingDetails? billingDetails, String bankName)
         ideal,
     required TResult Function(BillingDetails? billingDetails) bancontact,
     required TResult Function(BillingDetails? billingDetails) giroPay,
@@ -4602,22 +4602,22 @@ class _$_PaymentMethodParamsEps implements _PaymentMethodParamsEps {
             ShippingDetails shippingDetails, BillingDetails? billingDetails)
         afterpayClearpay,
     required TResult Function(BillingDetails? billingDetails) oxxo,
-    required TResult Function(String? appId) weChatPay,
+    required TResult Function(String appId) weChatPay,
   }) {
     return eps(billingDetails);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
+  TResult maybeWhen<TResult extends Object>({
     TResult Function(PaymentIntentsFutureUsage? setupFutureUsage,
             BillingDetails? billingDetails)?
         card,
     TResult Function(String token, PaymentIntentsFutureUsage? setupFutureUsage)?
         cardFromToken,
-    TResult Function(String paymentMethodId, String? cvc)? cardFromMethodId,
+    TResult Function(String paymentMethodId, String cvc)? cardFromMethodId,
     TResult Function()? alipay,
-    TResult Function(BillingDetails? billingDetails, String? bankName)? ideal,
+    TResult Function(BillingDetails? billingDetails, String bankName)? ideal,
     TResult Function(BillingDetails? billingDetails)? bancontact,
     TResult Function(BillingDetails? billingDetails)? giroPay,
     TResult Function(BillingDetails? billingDetails)? eps,
@@ -4636,7 +4636,7 @@ class _$_PaymentMethodParamsEps implements _PaymentMethodParamsEps {
             ShippingDetails shippingDetails, BillingDetails? billingDetails)?
         afterpayClearpay,
     TResult Function(BillingDetails? billingDetails)? oxxo,
-    TResult Function(String? appId)? weChatPay,
+    TResult Function(String appId)? weChatPay,
     required TResult orElse(),
   }) {
     if (eps != null) {
@@ -4647,7 +4647,7 @@ class _$_PaymentMethodParamsEps implements _PaymentMethodParamsEps {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object?>({
+  TResult map<TResult extends Object>({
     required TResult Function(_PaymentMethodParamsCard value) card,
     required TResult Function(_PaymentMethodParamsCardWithToken value)
         cardFromToken,
@@ -4673,7 +4673,7 @@ class _$_PaymentMethodParamsEps implements _PaymentMethodParamsEps {
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
+  TResult maybeMap<TResult extends Object>({
     TResult Function(_PaymentMethodParamsCard value)? card,
     TResult Function(_PaymentMethodParamsCardWithToken value)? cardFromToken,
     TResult Function(_PaymentMethodParamsCardWithMethodId value)?
@@ -4743,7 +4743,7 @@ class __$PaymentMethodParamsPayCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? billingDetails = freezed,
+    Object billingDetails = freezed,
   }) {
     return _then(_PaymentMethodParamsPay(
       billingDetails: billingDetails == freezed
@@ -4807,17 +4807,17 @@ class _$_PaymentMethodParamsPay implements _PaymentMethodParamsPay {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object?>({
+  TResult when<TResult extends Object>({
     required TResult Function(PaymentIntentsFutureUsage? setupFutureUsage,
             BillingDetails? billingDetails)
         card,
     required TResult Function(
             String token, PaymentIntentsFutureUsage? setupFutureUsage)
         cardFromToken,
-    required TResult Function(String paymentMethodId, String? cvc)
+    required TResult Function(String paymentMethodId, String cvc)
         cardFromMethodId,
     required TResult Function() alipay,
-    required TResult Function(BillingDetails? billingDetails, String? bankName)
+    required TResult Function(BillingDetails? billingDetails, String bankName)
         ideal,
     required TResult Function(BillingDetails? billingDetails) bancontact,
     required TResult Function(BillingDetails? billingDetails) giroPay,
@@ -4839,22 +4839,22 @@ class _$_PaymentMethodParamsPay implements _PaymentMethodParamsPay {
             ShippingDetails shippingDetails, BillingDetails? billingDetails)
         afterpayClearpay,
     required TResult Function(BillingDetails? billingDetails) oxxo,
-    required TResult Function(String? appId) weChatPay,
+    required TResult Function(String appId) weChatPay,
   }) {
     return grabPay(billingDetails);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
+  TResult maybeWhen<TResult extends Object>({
     TResult Function(PaymentIntentsFutureUsage? setupFutureUsage,
             BillingDetails? billingDetails)?
         card,
     TResult Function(String token, PaymentIntentsFutureUsage? setupFutureUsage)?
         cardFromToken,
-    TResult Function(String paymentMethodId, String? cvc)? cardFromMethodId,
+    TResult Function(String paymentMethodId, String cvc)? cardFromMethodId,
     TResult Function()? alipay,
-    TResult Function(BillingDetails? billingDetails, String? bankName)? ideal,
+    TResult Function(BillingDetails? billingDetails, String bankName)? ideal,
     TResult Function(BillingDetails? billingDetails)? bancontact,
     TResult Function(BillingDetails? billingDetails)? giroPay,
     TResult Function(BillingDetails? billingDetails)? eps,
@@ -4873,7 +4873,7 @@ class _$_PaymentMethodParamsPay implements _PaymentMethodParamsPay {
             ShippingDetails shippingDetails, BillingDetails? billingDetails)?
         afterpayClearpay,
     TResult Function(BillingDetails? billingDetails)? oxxo,
-    TResult Function(String? appId)? weChatPay,
+    TResult Function(String appId)? weChatPay,
     required TResult orElse(),
   }) {
     if (grabPay != null) {
@@ -4884,7 +4884,7 @@ class _$_PaymentMethodParamsPay implements _PaymentMethodParamsPay {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object?>({
+  TResult map<TResult extends Object>({
     required TResult Function(_PaymentMethodParamsCard value) card,
     required TResult Function(_PaymentMethodParamsCardWithToken value)
         cardFromToken,
@@ -4910,7 +4910,7 @@ class _$_PaymentMethodParamsPay implements _PaymentMethodParamsPay {
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
+  TResult maybeMap<TResult extends Object>({
     TResult Function(_PaymentMethodParamsCard value)? card,
     TResult Function(_PaymentMethodParamsCardWithToken value)? cardFromToken,
     TResult Function(_PaymentMethodParamsCardWithMethodId value)?
@@ -4980,7 +4980,7 @@ class __$PaymentMethodParamsP24CopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? billingDetails = freezed,
+    Object billingDetails = freezed,
   }) {
     return _then(_PaymentMethodParamsP24(
       billingDetails: billingDetails == freezed
@@ -5044,17 +5044,17 @@ class _$_PaymentMethodParamsP24 implements _PaymentMethodParamsP24 {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object?>({
+  TResult when<TResult extends Object>({
     required TResult Function(PaymentIntentsFutureUsage? setupFutureUsage,
             BillingDetails? billingDetails)
         card,
     required TResult Function(
             String token, PaymentIntentsFutureUsage? setupFutureUsage)
         cardFromToken,
-    required TResult Function(String paymentMethodId, String? cvc)
+    required TResult Function(String paymentMethodId, String cvc)
         cardFromMethodId,
     required TResult Function() alipay,
-    required TResult Function(BillingDetails? billingDetails, String? bankName)
+    required TResult Function(BillingDetails? billingDetails, String bankName)
         ideal,
     required TResult Function(BillingDetails? billingDetails) bancontact,
     required TResult Function(BillingDetails? billingDetails) giroPay,
@@ -5076,22 +5076,22 @@ class _$_PaymentMethodParamsP24 implements _PaymentMethodParamsP24 {
             ShippingDetails shippingDetails, BillingDetails? billingDetails)
         afterpayClearpay,
     required TResult Function(BillingDetails? billingDetails) oxxo,
-    required TResult Function(String? appId) weChatPay,
+    required TResult Function(String appId) weChatPay,
   }) {
     return p24(billingDetails);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
+  TResult maybeWhen<TResult extends Object>({
     TResult Function(PaymentIntentsFutureUsage? setupFutureUsage,
             BillingDetails? billingDetails)?
         card,
     TResult Function(String token, PaymentIntentsFutureUsage? setupFutureUsage)?
         cardFromToken,
-    TResult Function(String paymentMethodId, String? cvc)? cardFromMethodId,
+    TResult Function(String paymentMethodId, String cvc)? cardFromMethodId,
     TResult Function()? alipay,
-    TResult Function(BillingDetails? billingDetails, String? bankName)? ideal,
+    TResult Function(BillingDetails? billingDetails, String bankName)? ideal,
     TResult Function(BillingDetails? billingDetails)? bancontact,
     TResult Function(BillingDetails? billingDetails)? giroPay,
     TResult Function(BillingDetails? billingDetails)? eps,
@@ -5110,7 +5110,7 @@ class _$_PaymentMethodParamsP24 implements _PaymentMethodParamsP24 {
             ShippingDetails shippingDetails, BillingDetails? billingDetails)?
         afterpayClearpay,
     TResult Function(BillingDetails? billingDetails)? oxxo,
-    TResult Function(String? appId)? weChatPay,
+    TResult Function(String appId)? weChatPay,
     required TResult orElse(),
   }) {
     if (p24 != null) {
@@ -5121,7 +5121,7 @@ class _$_PaymentMethodParamsP24 implements _PaymentMethodParamsP24 {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object?>({
+  TResult map<TResult extends Object>({
     required TResult Function(_PaymentMethodParamsCard value) card,
     required TResult Function(_PaymentMethodParamsCardWithToken value)
         cardFromToken,
@@ -5147,7 +5147,7 @@ class _$_PaymentMethodParamsP24 implements _PaymentMethodParamsP24 {
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
+  TResult maybeMap<TResult extends Object>({
     TResult Function(_PaymentMethodParamsCard value)? card,
     TResult Function(_PaymentMethodParamsCardWithToken value)? cardFromToken,
     TResult Function(_PaymentMethodParamsCardWithMethodId value)?
@@ -5215,7 +5215,7 @@ class __$PaymentMethodParamsFpxCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? testOfflineBank = freezed,
+    Object testOfflineBank = freezed,
   }) {
     return _then(_PaymentMethodParamsFpx(
       testOfflineBank: testOfflineBank == freezed
@@ -5266,17 +5266,17 @@ class _$_PaymentMethodParamsFpx implements _PaymentMethodParamsFpx {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object?>({
+  TResult when<TResult extends Object>({
     required TResult Function(PaymentIntentsFutureUsage? setupFutureUsage,
             BillingDetails? billingDetails)
         card,
     required TResult Function(
             String token, PaymentIntentsFutureUsage? setupFutureUsage)
         cardFromToken,
-    required TResult Function(String paymentMethodId, String? cvc)
+    required TResult Function(String paymentMethodId, String cvc)
         cardFromMethodId,
     required TResult Function() alipay,
-    required TResult Function(BillingDetails? billingDetails, String? bankName)
+    required TResult Function(BillingDetails? billingDetails, String bankName)
         ideal,
     required TResult Function(BillingDetails? billingDetails) bancontact,
     required TResult Function(BillingDetails? billingDetails) giroPay,
@@ -5298,22 +5298,22 @@ class _$_PaymentMethodParamsFpx implements _PaymentMethodParamsFpx {
             ShippingDetails shippingDetails, BillingDetails? billingDetails)
         afterpayClearpay,
     required TResult Function(BillingDetails? billingDetails) oxxo,
-    required TResult Function(String? appId) weChatPay,
+    required TResult Function(String appId) weChatPay,
   }) {
     return fpx(testOfflineBank);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
+  TResult maybeWhen<TResult extends Object>({
     TResult Function(PaymentIntentsFutureUsage? setupFutureUsage,
             BillingDetails? billingDetails)?
         card,
     TResult Function(String token, PaymentIntentsFutureUsage? setupFutureUsage)?
         cardFromToken,
-    TResult Function(String paymentMethodId, String? cvc)? cardFromMethodId,
+    TResult Function(String paymentMethodId, String cvc)? cardFromMethodId,
     TResult Function()? alipay,
-    TResult Function(BillingDetails? billingDetails, String? bankName)? ideal,
+    TResult Function(BillingDetails? billingDetails, String bankName)? ideal,
     TResult Function(BillingDetails? billingDetails)? bancontact,
     TResult Function(BillingDetails? billingDetails)? giroPay,
     TResult Function(BillingDetails? billingDetails)? eps,
@@ -5332,7 +5332,7 @@ class _$_PaymentMethodParamsFpx implements _PaymentMethodParamsFpx {
             ShippingDetails shippingDetails, BillingDetails? billingDetails)?
         afterpayClearpay,
     TResult Function(BillingDetails? billingDetails)? oxxo,
-    TResult Function(String? appId)? weChatPay,
+    TResult Function(String appId)? weChatPay,
     required TResult orElse(),
   }) {
     if (fpx != null) {
@@ -5343,7 +5343,7 @@ class _$_PaymentMethodParamsFpx implements _PaymentMethodParamsFpx {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object?>({
+  TResult map<TResult extends Object>({
     required TResult Function(_PaymentMethodParamsCard value) card,
     required TResult Function(_PaymentMethodParamsCardWithToken value)
         cardFromToken,
@@ -5369,7 +5369,7 @@ class _$_PaymentMethodParamsFpx implements _PaymentMethodParamsFpx {
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
+  TResult maybeMap<TResult extends Object>({
     TResult Function(_PaymentMethodParamsCard value)? card,
     TResult Function(_PaymentMethodParamsCardWithToken value)? cardFromToken,
     TResult Function(_PaymentMethodParamsCardWithMethodId value)?
@@ -5444,9 +5444,9 @@ class __$PaymentMethodParamsSepaDebitCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? iban = freezed,
-    Object? setupFutureUsage = freezed,
-    Object? billingDetails = freezed,
+    Object iban = freezed,
+    Object setupFutureUsage = freezed,
+    Object billingDetails = freezed,
   }) {
     return _then(_PaymentMethodParamsSepaDebit(
       iban: iban == freezed
@@ -5530,17 +5530,17 @@ class _$_PaymentMethodParamsSepaDebit implements _PaymentMethodParamsSepaDebit {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object?>({
+  TResult when<TResult extends Object>({
     required TResult Function(PaymentIntentsFutureUsage? setupFutureUsage,
             BillingDetails? billingDetails)
         card,
     required TResult Function(
             String token, PaymentIntentsFutureUsage? setupFutureUsage)
         cardFromToken,
-    required TResult Function(String paymentMethodId, String? cvc)
+    required TResult Function(String paymentMethodId, String cvc)
         cardFromMethodId,
     required TResult Function() alipay,
-    required TResult Function(BillingDetails? billingDetails, String? bankName)
+    required TResult Function(BillingDetails? billingDetails, String bankName)
         ideal,
     required TResult Function(BillingDetails? billingDetails) bancontact,
     required TResult Function(BillingDetails? billingDetails) giroPay,
@@ -5562,22 +5562,22 @@ class _$_PaymentMethodParamsSepaDebit implements _PaymentMethodParamsSepaDebit {
             ShippingDetails shippingDetails, BillingDetails? billingDetails)
         afterpayClearpay,
     required TResult Function(BillingDetails? billingDetails) oxxo,
-    required TResult Function(String? appId) weChatPay,
+    required TResult Function(String appId) weChatPay,
   }) {
     return sepaDebit(iban, setupFutureUsage, billingDetails);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
+  TResult maybeWhen<TResult extends Object>({
     TResult Function(PaymentIntentsFutureUsage? setupFutureUsage,
             BillingDetails? billingDetails)?
         card,
     TResult Function(String token, PaymentIntentsFutureUsage? setupFutureUsage)?
         cardFromToken,
-    TResult Function(String paymentMethodId, String? cvc)? cardFromMethodId,
+    TResult Function(String paymentMethodId, String cvc)? cardFromMethodId,
     TResult Function()? alipay,
-    TResult Function(BillingDetails? billingDetails, String? bankName)? ideal,
+    TResult Function(BillingDetails? billingDetails, String bankName)? ideal,
     TResult Function(BillingDetails? billingDetails)? bancontact,
     TResult Function(BillingDetails? billingDetails)? giroPay,
     TResult Function(BillingDetails? billingDetails)? eps,
@@ -5596,7 +5596,7 @@ class _$_PaymentMethodParamsSepaDebit implements _PaymentMethodParamsSepaDebit {
             ShippingDetails shippingDetails, BillingDetails? billingDetails)?
         afterpayClearpay,
     TResult Function(BillingDetails? billingDetails)? oxxo,
-    TResult Function(String? appId)? weChatPay,
+    TResult Function(String appId)? weChatPay,
     required TResult orElse(),
   }) {
     if (sepaDebit != null) {
@@ -5607,7 +5607,7 @@ class _$_PaymentMethodParamsSepaDebit implements _PaymentMethodParamsSepaDebit {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object?>({
+  TResult map<TResult extends Object>({
     required TResult Function(_PaymentMethodParamsCard value) card,
     required TResult Function(_PaymentMethodParamsCardWithToken value)
         cardFromToken,
@@ -5633,7 +5633,7 @@ class _$_PaymentMethodParamsSepaDebit implements _PaymentMethodParamsSepaDebit {
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
+  TResult maybeMap<TResult extends Object>({
     TResult Function(_PaymentMethodParamsCard value)? card,
     TResult Function(_PaymentMethodParamsCardWithToken value)? cardFromToken,
     TResult Function(_PaymentMethodParamsCardWithMethodId value)?
@@ -5714,9 +5714,9 @@ class __$PaymentMethodParamsSofortCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? country = freezed,
-    Object? setupFutureUsage = freezed,
-    Object? billingDetails = freezed,
+    Object country = freezed,
+    Object setupFutureUsage = freezed,
+    Object billingDetails = freezed,
   }) {
     return _then(_PaymentMethodParamsSofort(
       country: country == freezed
@@ -5802,17 +5802,17 @@ class _$_PaymentMethodParamsSofort implements _PaymentMethodParamsSofort {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object?>({
+  TResult when<TResult extends Object>({
     required TResult Function(PaymentIntentsFutureUsage? setupFutureUsage,
             BillingDetails? billingDetails)
         card,
     required TResult Function(
             String token, PaymentIntentsFutureUsage? setupFutureUsage)
         cardFromToken,
-    required TResult Function(String paymentMethodId, String? cvc)
+    required TResult Function(String paymentMethodId, String cvc)
         cardFromMethodId,
     required TResult Function() alipay,
-    required TResult Function(BillingDetails? billingDetails, String? bankName)
+    required TResult Function(BillingDetails? billingDetails, String bankName)
         ideal,
     required TResult Function(BillingDetails? billingDetails) bancontact,
     required TResult Function(BillingDetails? billingDetails) giroPay,
@@ -5834,22 +5834,22 @@ class _$_PaymentMethodParamsSofort implements _PaymentMethodParamsSofort {
             ShippingDetails shippingDetails, BillingDetails? billingDetails)
         afterpayClearpay,
     required TResult Function(BillingDetails? billingDetails) oxxo,
-    required TResult Function(String? appId) weChatPay,
+    required TResult Function(String appId) weChatPay,
   }) {
     return sofort(country, setupFutureUsage, billingDetails);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
+  TResult maybeWhen<TResult extends Object>({
     TResult Function(PaymentIntentsFutureUsage? setupFutureUsage,
             BillingDetails? billingDetails)?
         card,
     TResult Function(String token, PaymentIntentsFutureUsage? setupFutureUsage)?
         cardFromToken,
-    TResult Function(String paymentMethodId, String? cvc)? cardFromMethodId,
+    TResult Function(String paymentMethodId, String cvc)? cardFromMethodId,
     TResult Function()? alipay,
-    TResult Function(BillingDetails? billingDetails, String? bankName)? ideal,
+    TResult Function(BillingDetails? billingDetails, String bankName)? ideal,
     TResult Function(BillingDetails? billingDetails)? bancontact,
     TResult Function(BillingDetails? billingDetails)? giroPay,
     TResult Function(BillingDetails? billingDetails)? eps,
@@ -5868,7 +5868,7 @@ class _$_PaymentMethodParamsSofort implements _PaymentMethodParamsSofort {
             ShippingDetails shippingDetails, BillingDetails? billingDetails)?
         afterpayClearpay,
     TResult Function(BillingDetails? billingDetails)? oxxo,
-    TResult Function(String? appId)? weChatPay,
+    TResult Function(String appId)? weChatPay,
     required TResult orElse(),
   }) {
     if (sofort != null) {
@@ -5879,7 +5879,7 @@ class _$_PaymentMethodParamsSofort implements _PaymentMethodParamsSofort {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object?>({
+  TResult map<TResult extends Object>({
     required TResult Function(_PaymentMethodParamsCard value) card,
     required TResult Function(_PaymentMethodParamsCardWithToken value)
         cardFromToken,
@@ -5905,7 +5905,7 @@ class _$_PaymentMethodParamsSofort implements _PaymentMethodParamsSofort {
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
+  TResult maybeMap<TResult extends Object>({
     TResult Function(_PaymentMethodParamsCard value)? card,
     TResult Function(_PaymentMethodParamsCardWithToken value)? cardFromToken,
     TResult Function(_PaymentMethodParamsCardWithMethodId value)?
@@ -5985,8 +5985,8 @@ class __$PaymentMethodParamsAfterpayClearpayCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? shippingDetails = freezed,
-    Object? billingDetails = freezed,
+    Object shippingDetails = freezed,
+    Object billingDetails = freezed,
   }) {
     return _then(_PaymentMethodParamsAfterpayClearpay(
       shippingDetails: shippingDetails == freezed
@@ -6071,17 +6071,17 @@ class _$_PaymentMethodParamsAfterpayClearpay
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object?>({
+  TResult when<TResult extends Object>({
     required TResult Function(PaymentIntentsFutureUsage? setupFutureUsage,
             BillingDetails? billingDetails)
         card,
     required TResult Function(
             String token, PaymentIntentsFutureUsage? setupFutureUsage)
         cardFromToken,
-    required TResult Function(String paymentMethodId, String? cvc)
+    required TResult Function(String paymentMethodId, String cvc)
         cardFromMethodId,
     required TResult Function() alipay,
-    required TResult Function(BillingDetails? billingDetails, String? bankName)
+    required TResult Function(BillingDetails? billingDetails, String bankName)
         ideal,
     required TResult Function(BillingDetails? billingDetails) bancontact,
     required TResult Function(BillingDetails? billingDetails) giroPay,
@@ -6103,22 +6103,22 @@ class _$_PaymentMethodParamsAfterpayClearpay
             ShippingDetails shippingDetails, BillingDetails? billingDetails)
         afterpayClearpay,
     required TResult Function(BillingDetails? billingDetails) oxxo,
-    required TResult Function(String? appId) weChatPay,
+    required TResult Function(String appId) weChatPay,
   }) {
     return afterpayClearpay(shippingDetails, billingDetails);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
+  TResult maybeWhen<TResult extends Object>({
     TResult Function(PaymentIntentsFutureUsage? setupFutureUsage,
             BillingDetails? billingDetails)?
         card,
     TResult Function(String token, PaymentIntentsFutureUsage? setupFutureUsage)?
         cardFromToken,
-    TResult Function(String paymentMethodId, String? cvc)? cardFromMethodId,
+    TResult Function(String paymentMethodId, String cvc)? cardFromMethodId,
     TResult Function()? alipay,
-    TResult Function(BillingDetails? billingDetails, String? bankName)? ideal,
+    TResult Function(BillingDetails? billingDetails, String bankName)? ideal,
     TResult Function(BillingDetails? billingDetails)? bancontact,
     TResult Function(BillingDetails? billingDetails)? giroPay,
     TResult Function(BillingDetails? billingDetails)? eps,
@@ -6137,7 +6137,7 @@ class _$_PaymentMethodParamsAfterpayClearpay
             ShippingDetails shippingDetails, BillingDetails? billingDetails)?
         afterpayClearpay,
     TResult Function(BillingDetails? billingDetails)? oxxo,
-    TResult Function(String? appId)? weChatPay,
+    TResult Function(String appId)? weChatPay,
     required TResult orElse(),
   }) {
     if (afterpayClearpay != null) {
@@ -6148,7 +6148,7 @@ class _$_PaymentMethodParamsAfterpayClearpay
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object?>({
+  TResult map<TResult extends Object>({
     required TResult Function(_PaymentMethodParamsCard value) card,
     required TResult Function(_PaymentMethodParamsCardWithToken value)
         cardFromToken,
@@ -6174,7 +6174,7 @@ class _$_PaymentMethodParamsAfterpayClearpay
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
+  TResult maybeMap<TResult extends Object>({
     TResult Function(_PaymentMethodParamsCard value)? card,
     TResult Function(_PaymentMethodParamsCardWithToken value)? cardFromToken,
     TResult Function(_PaymentMethodParamsCardWithMethodId value)?
@@ -6252,7 +6252,7 @@ class __$PaymentMethodParamsOxxoCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? billingDetails = freezed,
+    Object billingDetails = freezed,
   }) {
     return _then(_PaymentMethodParamsOxxo(
       billingDetails: billingDetails == freezed
@@ -6316,17 +6316,17 @@ class _$_PaymentMethodParamsOxxo implements _PaymentMethodParamsOxxo {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object?>({
+  TResult when<TResult extends Object>({
     required TResult Function(PaymentIntentsFutureUsage? setupFutureUsage,
             BillingDetails? billingDetails)
         card,
     required TResult Function(
             String token, PaymentIntentsFutureUsage? setupFutureUsage)
         cardFromToken,
-    required TResult Function(String paymentMethodId, String? cvc)
+    required TResult Function(String paymentMethodId, String cvc)
         cardFromMethodId,
     required TResult Function() alipay,
-    required TResult Function(BillingDetails? billingDetails, String? bankName)
+    required TResult Function(BillingDetails? billingDetails, String bankName)
         ideal,
     required TResult Function(BillingDetails? billingDetails) bancontact,
     required TResult Function(BillingDetails? billingDetails) giroPay,
@@ -6348,22 +6348,22 @@ class _$_PaymentMethodParamsOxxo implements _PaymentMethodParamsOxxo {
             ShippingDetails shippingDetails, BillingDetails? billingDetails)
         afterpayClearpay,
     required TResult Function(BillingDetails? billingDetails) oxxo,
-    required TResult Function(String? appId) weChatPay,
+    required TResult Function(String appId) weChatPay,
   }) {
     return oxxo(billingDetails);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
+  TResult maybeWhen<TResult extends Object>({
     TResult Function(PaymentIntentsFutureUsage? setupFutureUsage,
             BillingDetails? billingDetails)?
         card,
     TResult Function(String token, PaymentIntentsFutureUsage? setupFutureUsage)?
         cardFromToken,
-    TResult Function(String paymentMethodId, String? cvc)? cardFromMethodId,
+    TResult Function(String paymentMethodId, String cvc)? cardFromMethodId,
     TResult Function()? alipay,
-    TResult Function(BillingDetails? billingDetails, String? bankName)? ideal,
+    TResult Function(BillingDetails? billingDetails, String bankName)? ideal,
     TResult Function(BillingDetails? billingDetails)? bancontact,
     TResult Function(BillingDetails? billingDetails)? giroPay,
     TResult Function(BillingDetails? billingDetails)? eps,
@@ -6382,7 +6382,7 @@ class _$_PaymentMethodParamsOxxo implements _PaymentMethodParamsOxxo {
             ShippingDetails shippingDetails, BillingDetails? billingDetails)?
         afterpayClearpay,
     TResult Function(BillingDetails? billingDetails)? oxxo,
-    TResult Function(String? appId)? weChatPay,
+    TResult Function(String appId)? weChatPay,
     required TResult orElse(),
   }) {
     if (oxxo != null) {
@@ -6393,7 +6393,7 @@ class _$_PaymentMethodParamsOxxo implements _PaymentMethodParamsOxxo {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object?>({
+  TResult map<TResult extends Object>({
     required TResult Function(_PaymentMethodParamsCard value) card,
     required TResult Function(_PaymentMethodParamsCardWithToken value)
         cardFromToken,
@@ -6419,7 +6419,7 @@ class _$_PaymentMethodParamsOxxo implements _PaymentMethodParamsOxxo {
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
+  TResult maybeMap<TResult extends Object>({
     TResult Function(_PaymentMethodParamsCard value)? card,
     TResult Function(_PaymentMethodParamsCardWithToken value)? cardFromToken,
     TResult Function(_PaymentMethodParamsCardWithMethodId value)?
@@ -6471,7 +6471,7 @@ abstract class _$PaymentMethodParamsWechatCopyWith<$Res> {
   factory _$PaymentMethodParamsWechatCopyWith(_PaymentMethodParamsWechat value,
           $Res Function(_PaymentMethodParamsWechat) then) =
       __$PaymentMethodParamsWechatCopyWithImpl<$Res>;
-  $Res call({String? appId});
+  $Res call({String appId});
 }
 
 /// @nodoc
@@ -6488,13 +6488,13 @@ class __$PaymentMethodParamsWechatCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? appId = freezed,
+    Object appId = freezed,
   }) {
     return _then(_PaymentMethodParamsWechat(
       appId: appId == freezed
           ? _value.appId
           : appId // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -6510,7 +6510,7 @@ class _$_PaymentMethodParamsWechat implements _PaymentMethodParamsWechat {
       _$_$_PaymentMethodParamsWechatFromJson(json);
 
   @override
-  final String? appId;
+  final String appId;
 
   @override
   String toString() {
@@ -6538,17 +6538,17 @@ class _$_PaymentMethodParamsWechat implements _PaymentMethodParamsWechat {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object?>({
+  TResult when<TResult extends Object>({
     required TResult Function(PaymentIntentsFutureUsage? setupFutureUsage,
             BillingDetails? billingDetails)
         card,
     required TResult Function(
             String token, PaymentIntentsFutureUsage? setupFutureUsage)
         cardFromToken,
-    required TResult Function(String paymentMethodId, String? cvc)
+    required TResult Function(String paymentMethodId, String cvc)
         cardFromMethodId,
     required TResult Function() alipay,
-    required TResult Function(BillingDetails? billingDetails, String? bankName)
+    required TResult Function(BillingDetails? billingDetails, String bankName)
         ideal,
     required TResult Function(BillingDetails? billingDetails) bancontact,
     required TResult Function(BillingDetails? billingDetails) giroPay,
@@ -6570,22 +6570,22 @@ class _$_PaymentMethodParamsWechat implements _PaymentMethodParamsWechat {
             ShippingDetails shippingDetails, BillingDetails? billingDetails)
         afterpayClearpay,
     required TResult Function(BillingDetails? billingDetails) oxxo,
-    required TResult Function(String? appId) weChatPay,
+    required TResult Function(String appId) weChatPay,
   }) {
     return weChatPay(appId);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
+  TResult maybeWhen<TResult extends Object>({
     TResult Function(PaymentIntentsFutureUsage? setupFutureUsage,
             BillingDetails? billingDetails)?
         card,
     TResult Function(String token, PaymentIntentsFutureUsage? setupFutureUsage)?
         cardFromToken,
-    TResult Function(String paymentMethodId, String? cvc)? cardFromMethodId,
+    TResult Function(String paymentMethodId, String cvc)? cardFromMethodId,
     TResult Function()? alipay,
-    TResult Function(BillingDetails? billingDetails, String? bankName)? ideal,
+    TResult Function(BillingDetails? billingDetails, String bankName)? ideal,
     TResult Function(BillingDetails? billingDetails)? bancontact,
     TResult Function(BillingDetails? billingDetails)? giroPay,
     TResult Function(BillingDetails? billingDetails)? eps,
@@ -6604,7 +6604,7 @@ class _$_PaymentMethodParamsWechat implements _PaymentMethodParamsWechat {
             ShippingDetails shippingDetails, BillingDetails? billingDetails)?
         afterpayClearpay,
     TResult Function(BillingDetails? billingDetails)? oxxo,
-    TResult Function(String? appId)? weChatPay,
+    TResult Function(String appId)? weChatPay,
     required TResult orElse(),
   }) {
     if (weChatPay != null) {
@@ -6615,7 +6615,7 @@ class _$_PaymentMethodParamsWechat implements _PaymentMethodParamsWechat {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object?>({
+  TResult map<TResult extends Object>({
     required TResult Function(_PaymentMethodParamsCard value) card,
     required TResult Function(_PaymentMethodParamsCardWithToken value)
         cardFromToken,
@@ -6641,7 +6641,7 @@ class _$_PaymentMethodParamsWechat implements _PaymentMethodParamsWechat {
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
+  TResult maybeMap<TResult extends Object>({
     TResult Function(_PaymentMethodParamsCard value)? card,
     TResult Function(_PaymentMethodParamsCardWithToken value)? cardFromToken,
     TResult Function(_PaymentMethodParamsCardWithMethodId value)?
@@ -6675,13 +6675,13 @@ class _$_PaymentMethodParamsWechat implements _PaymentMethodParamsWechat {
 }
 
 abstract class _PaymentMethodParamsWechat implements PaymentMethodParams {
-  const factory _PaymentMethodParamsWechat({String? appId}) =
+  const factory _PaymentMethodParamsWechat({String appId}) =
       _$_PaymentMethodParamsWechat;
 
   factory _PaymentMethodParamsWechat.fromJson(Map<String, dynamic> json) =
       _$_PaymentMethodParamsWechat.fromJson;
 
-  String? get appId => throw _privateConstructorUsedError;
+  String get appId => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   _$PaymentMethodParamsWechatCopyWith<_PaymentMethodParamsWechat>
       get copyWith => throw _privateConstructorUsedError;

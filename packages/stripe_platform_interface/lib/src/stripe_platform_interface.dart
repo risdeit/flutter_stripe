@@ -31,11 +31,11 @@ abstract class StripePlatform extends PlatformInterface {
   }
 
   Future<void> initialise({
-    required String publishableKey,
-    String? stripeAccountId,
-    ThreeDSecureConfigurationParams? threeDSecureParams,
-    String? merchantIdentifier,
-    String? urlScheme,
+     String publishableKey,
+    String stripeAccountId,
+    ThreeDSecureConfigurationParams threeDSecureParams,
+    String merchantIdentifier,
+    String urlScheme,
   });
 
   Future<PaymentMethod> createPaymentMethod(

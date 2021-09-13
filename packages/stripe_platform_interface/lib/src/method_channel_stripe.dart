@@ -24,8 +24,8 @@ const _appInfo = AppInfo(
 /// An implementation of [StripePlatform] that uses method channels.
 class MethodChannelStripe extends StripePlatform {
   MethodChannelStripe({
-    required MethodChannel methodChannel,
-    required bool platformIsIos,
+     MethodChannel methodChannel,
+     bool platformIsIos,
   })  : _methodChannel = methodChannel,
         _platformIsIos = platformIsIos;
 
@@ -34,11 +34,11 @@ class MethodChannelStripe extends StripePlatform {
 
   @override
   Future<void> initialise({
-    required String publishableKey,
-    String? stripeAccountId,
-    ThreeDSecureConfigurationParams? threeDSecureParams,
-    String? merchantIdentifier,
-    String? urlScheme,
+     String publishableKey,
+    String stripeAccountId,
+    ThreeDSecureConfigurationParams threeDSecureParams,
+    String merchantIdentifier,
+    String urlScheme,
   }) async {
     await _methodChannel.invokeMethod('initialise', {
       'publishableKey': publishableKey,
@@ -215,7 +215,7 @@ class MethodChannelStripe extends StripePlatform {
     });
   }
 
-  void _parsePaymentSheetResult(Map<String, dynamic>? result) {
+  void _parsePaymentSheetResult(Map<String, dynamic> result) {
     if (result != null) {
       if (result.isEmpty || result['paymentOption'] != null) {
         return;

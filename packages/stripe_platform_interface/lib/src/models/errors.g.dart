@@ -37,11 +37,11 @@ _$_LocalizedErrorMessage _$_$_LocalizedErrorMessageFromJson(
     Map<String, dynamic> json) {
   return _$_LocalizedErrorMessage(
     code: _$enumDecode(_$FailureCodeEnumMap, json['code']),
-    localizedMessage: json['localizedMessage'] as String?,
-    message: json['message'] as String?,
-    stripeErrorCode: json['stripeErrorCode'] as String?,
-    declineCode: json['declineCode'] as String?,
-    type: json['type'] as String?,
+    localizedMessage: json['localizedMessage'] as String,
+    message: json['message'] as String,
+    stripeErrorCode: json['stripeErrorCode'] as String,
+    declineCode: json['declineCode'] as String,
+    type: json['type'] as String,
   );
 }
 
@@ -58,7 +58,7 @@ Map<String, dynamic> _$_$_LocalizedErrorMessageToJson(
 
 K _$enumDecode<K, V>(
   Map<K, V> enumValues,
-  Object? source, {
+  Object source, {
   K? unknownValue,
 }) {
   if (source == null) {

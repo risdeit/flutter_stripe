@@ -19,9 +19,9 @@ class SetupFuturePaymentScreen extends StatefulWidget {
 }
 
 class _SetupFuturePaymentScreenState extends State<SetupFuturePaymentScreen> {
-  PaymentIntent? _retrievedPaymentIntent;
-  CardFieldInputDetails? _card;
-  SetupIntent? _setupIntentResult;
+  PaymentIntent _retrievedPaymentIntent;
+  CardFieldInputDetails _card;
+  SetupIntent _setupIntentResult;
   String _email = 'email@stripe.com';
 
   int step = 0;
@@ -60,7 +60,7 @@ class _SetupFuturePaymentScreenState extends State<SetupFuturePaymentScreen> {
             Step(
               title: Text('Save card'),
               content: LoadingButton(
-                onPressed: _card?.complete == true ? _handleSavePress : null,
+                onPressed: _card.complete == true ? _handleSavePress : null,
                 text: 'Save',
               ),
             ),

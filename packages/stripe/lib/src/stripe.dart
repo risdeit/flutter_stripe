@@ -33,10 +33,10 @@ class Stripe {
   }
 
   /// Retrieves the id associate with the Stripe account.
-  static String? get stripeAccountId => instance._stripeAccountId;
+  static String get stripeAccountId => instance._stripeAccountId;
 
   /// Sets the account id that is generated when creating a Stripe account.
-  static set stripeAccountId(String? value) {
+  static set stripeAccountId(String value) {
     if (value == instance._stripeAccountId) {
       return;
     }
@@ -45,11 +45,11 @@ class Stripe {
   }
 
   /// Retrieves the configuration parameters for 3D secure.
-  static ThreeDSecureConfigurationParams? get threeDSecureParams =>
+  static ThreeDSecureConfigurationParams get threeDSecureParams =>
       instance._threeDSecureParams;
 
   /// Sets the configuration parameters for 3D secure.
-  static set threeDSecureParams(ThreeDSecureConfigurationParams? value) {
+  static set threeDSecureParams(ThreeDSecureConfigurationParams value) {
     if (value == instance._threeDSecureParams) {
       return;
     }
@@ -58,7 +58,7 @@ class Stripe {
   }
 
   /// Sets the custom url scheme
-  static set urlScheme(String? value) {
+  static set urlScheme(String value) {
     if (value == instance._urlScheme) {
       return;
     }
@@ -67,15 +67,15 @@ class Stripe {
   }
 
   /// Retrieves the custom url scheme
-  static String? get urlScheme {
+  static String get urlScheme {
     return instance._urlScheme;
   }
 
   /// Retrieves the merchant identifier.
-  static String? get merchantIdentifier => instance._merchantIdentifier;
+  static String get merchantIdentifier => instance._merchantIdentifier;
 
   /// Sets the merchant identifier.
-  static set merchantIdentifier(String? value) {
+  static set merchantIdentifier(String value) {
     if (value == instance._merchantIdentifier) {
       return;
     }
@@ -113,7 +113,7 @@ class Stripe {
     await _awaitForSettings();
     final isSupported = await _platform.isApplePaySupported();
     _isApplePaySupported ??= ValueNotifier(false);
-    _isApplePaySupported?.value = isSupported;
+    _isApplePaySupported.value = isSupported;
     return isSupported;
   }
 
@@ -288,7 +288,7 @@ class Stripe {
   /// Returns a single-use token.
   ///
   /// Throws [StripeError] in case creating the token fails.
-  Future<String?> createTokenForCVCUpdate(
+  Future<String> createTokenForCVCUpdate(
     String cvc,
   ) async {
     await _awaitForSettings();
@@ -374,17 +374,17 @@ class Stripe {
     return null;
   }
 
-  Future<void>? _settingsFuture;
+  Future<void> _settingsFuture;
 
-  static late final Stripe instance = Stripe._();
+  static final Stripe instance = Stripe._();
 
-  String? _publishableKey;
-  String? _stripeAccountId;
-  ThreeDSecureConfigurationParams? _threeDSecureParams;
-  String? _merchantIdentifier;
-  String? _urlScheme;
+  String _publishableKey;
+  String _stripeAccountId;
+  ThreeDSecureConfigurationParams _threeDSecureParams;
+  String _merchantIdentifier;
+  String _urlScheme;
 
-  static StripePlatform? __platform;
+  static StripePlatform __platform;
 
   // This is to manually endorse the Linux plugin until automatic registration
   // of dart plugins is implemented.
@@ -401,10 +401,10 @@ class Stripe {
 
   Future<void> _initialise({
     required String publishableKey,
-    String? stripeAccountId,
-    ThreeDSecureConfigurationParams? threeDSecureParams,
-    String? merchantIdentifier,
-    String? urlScheme,
+    String stripeAccountId,
+    ThreeDSecureConfigurationParams threeDSecureParams,
+    String merchantIdentifier,
+    String urlScheme,
   }) async {
     _needsSettings = false;
     await _platform.initialise(
@@ -416,5 +416,5 @@ class Stripe {
     );
   }
 
-  ValueNotifier<bool>? _isApplePaySupported;
+  ValueNotifier<bool> _isApplePaySupported;
 }

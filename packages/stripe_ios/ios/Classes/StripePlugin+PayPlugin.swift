@@ -101,9 +101,9 @@ class PKMapPayment : PKPayment {
     
     class PaymentMethod : PKPaymentMethod {
         let stp_network : PKPaymentNetwork?
-        let stp_displayName : String?
+        let stp_displayName : String
 
-        override var displayName: String? {
+        override var displayName: String {
             return stp_displayName
         }
 
