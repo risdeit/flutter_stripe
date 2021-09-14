@@ -22,7 +22,7 @@ class RCTConvert {
 }
 
 extension NSNull {
-    static func replaceForNil(_ value: AnyObject) -> AnyObject {
+    static func replaceForNil(_ value: AnyObject?) -> AnyObject? {
         if let map = value as? FlutterMap {
             return map.mapValues { replaceForNil($0) } as AnyObject
         } else if let array = value as? Array<AnyObject?> {
