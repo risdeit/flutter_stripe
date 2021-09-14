@@ -147,7 +147,7 @@ class CardEditController extends ChangeNotifier {
   CardFieldContext get context {
     assert(
         _context != null, 'CardEditController is not attached to any CardView');
-    return _context!;
+    return _context;
   }
 }
 
@@ -157,9 +157,9 @@ class _CardFieldState extends State<CardField> {
 
   CardEditController _fallbackContoller;
   CardEditController get controller {
-    if (widget.controller != null) return widget.controller!;
+    if (widget.controller != null) return widget.controller;
     _fallbackContoller ??= CardEditController();
-    return _fallbackContoller!;
+    return _fallbackContoller;
   }
 
   @override
@@ -190,7 +190,7 @@ class _CardFieldState extends State<CardField> {
     // Arbitrary values compared for both Android and iOS platform
     // For adding a framework input decorator, the platform one is removed
     // together with the extra padding
-    final platformCardHeight = style.fontSize! + 31;
+    final platformCardHeight = style.fontSize + 31;
     const platformMargin = EdgeInsets.fromLTRB(12, 10, 10, 12);
 
     final cardHeight = platformCardHeight - platformMargin.vertical;
@@ -257,7 +257,7 @@ class _CardFieldState extends State<CardField> {
 // Crops a view by a given negative margin values.
 // http://ln.hixie.ch/?start=1515099369&count=1
 class _NegativeMarginLayout extends SingleChildLayoutDelegate {
-  const _NegativeMarginLayout({required this.margin});
+  const _NegativeMarginLayout({this.margin});
 
   final EdgeInsets margin;
 
@@ -284,7 +284,7 @@ class _NegativeMarginLayout extends SingleChildLayoutDelegate {
 class _MethodChannelCardField extends StatefulWidget {
   _MethodChannelCardField({
     this.onCardChanged,
-    required this.controller,
+    this.controller,
     Key key,
     this.onFocus,
     this.style,
@@ -533,7 +533,7 @@ class _MethodChannelCardFieldState extends State<_MethodChannelCardField>
       final map = Map<String, dynamic>.from(arguments);
       final field = CardFieldFocusName.fromJson(map);
       if (field.focusedField != null &&
-          WidgetsBinding.instance!.focusManager.primaryFocus !=
+          WidgetsBinding.instance.focusManager.primaryFocus !=
               _effectiveNode) {
         _effectiveNode.requestFocus();
       }
@@ -588,9 +588,9 @@ class _MethodChannelCardFieldState extends State<_MethodChannelCardField>
 class _AndroidCardField extends StatelessWidget {
   const _AndroidCardField({
     Key key,
-    required this.viewType,
-    required this.creationParams,
-    required this.onPlatformViewCreated,
+     this.viewType,
+     this.creationParams,
+     this.onPlatformViewCreated,
   }) : super(key: key);
 
   final String viewType;
@@ -627,9 +627,9 @@ class _AndroidCardField extends StatelessWidget {
 class _UiKitCardField extends StatelessWidget {
   const _UiKitCardField({
     Key key,
-    required this.viewType,
-    required this.creationParams,
-    required this.onPlatformViewCreated,
+     this.viewType,
+     this.creationParams,
+     this.onPlatformViewCreated,
   }) : super(key: key);
 
   final String viewType;

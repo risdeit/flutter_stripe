@@ -162,9 +162,9 @@ class _CardFormFieldState extends State<CardFormField> {
 
   CardFormEditController _fallbackContoller;
   CardFormEditController get controller {
-    if (widget.controller != null) return widget.controller!;
+    if (widget.controller != null) return widget.controller;
     _fallbackContoller ??= CardFormEditController();
-    return _fallbackContoller!;
+    return _fallbackContoller;
   }
 
   @override
@@ -242,7 +242,7 @@ class _CardFormFieldState extends State<CardFormField> {
 class _MethodChannelCardFormField extends StatefulWidget {
   _MethodChannelCardFormField({
     this.onCardChanged,
-    required this.controller,
+    this.controller,
     Key key,
     this.onFocus,
     this.style,
@@ -501,7 +501,7 @@ class _MethodChannelCardFormFieldState
       final map = Map<String, dynamic>.from(arguments);
       final field = CardFieldFocusName.fromJson(map);
       if (field.focusedField != null &&
-          WidgetsBinding.instance!.focusManager.primaryFocus !=
+          WidgetsBinding.instance.focusManager.primaryFocus !=
               _effectiveNode) {
         _effectiveNode.requestFocus();
       }
@@ -556,9 +556,9 @@ class _MethodChannelCardFormFieldState
 class _AndroidCardFormField extends StatelessWidget {
   const _AndroidCardFormField({
     Key key,
-    required this.viewType,
-    required this.creationParams,
-    required this.onPlatformViewCreated,
+     this.viewType,
+     this.creationParams,
+     this.onPlatformViewCreated,
   }) : super(key: key);
 
   final String viewType;
@@ -595,9 +595,9 @@ class _AndroidCardFormField extends StatelessWidget {
 class _UiKitCardFormField extends StatelessWidget {
   const _UiKitCardFormField({
     Key key,
-    required this.viewType,
-    required this.creationParams,
-    required this.onPlatformViewCreated,
+     this.viewType,
+     this.creationParams,
+     this.onPlatformViewCreated,
   }) : super(key: key);
 
   final String viewType;

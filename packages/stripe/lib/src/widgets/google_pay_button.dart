@@ -15,7 +15,6 @@ class GooglePayButton extends StatefulWidget {
 
   @override
   _GooglePayButtonState createState() => _GooglePayButtonState();
-  _GooglePayButtonState createState() => _GooglePayButtonState();
 
   final GooglePayButtonType type;
   final VoidCallback onTap;

@@ -308,7 +308,7 @@ class Stripe {
   /// See [SetupPaymentSheetParameters] for more info. In order to show the
   /// payment sheet it is required to call [presentPaymentSheet].
   Future<void> initPaymentSheet({
-    required SetupPaymentSheetParameters paymentSheetParameters,
+    SetupPaymentSheetParameters paymentSheetParameters,
   }) async {
     await _awaitForSettings();
     await _platform.initPaymentSheet(paymentSheetParameters);
@@ -391,7 +391,7 @@ class Stripe {
   // See https://github.com/flutter/flutter/issues/52267 for more details.
   static StripePlatform get _platform {
     __platform ??= StripePlatform.instance;
-    return __platform!;
+    return __platform;
   }
 
   bool _needsSettings = true;
