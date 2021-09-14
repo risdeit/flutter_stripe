@@ -433,8 +433,8 @@ class _$_ApplePayCartSummaryItem implements _ApplePayCartSummaryItem {
 
 abstract class _ApplePayCartSummaryItem implements ApplePayCartSummaryItem {
   const factory _ApplePayCartSummaryItem(
-      {required String label,
-      required String amount}) = _$_ApplePayCartSummaryItem;
+      { String label,
+       String amount}) = _$_ApplePayCartSummaryItem;
 
   factory _ApplePayCartSummaryItem.fromJson(Map<String, dynamic> json) =
       _$_ApplePayCartSummaryItem.fromJson;
@@ -744,9 +744,9 @@ class _$_ApplePayPresentParams implements _ApplePayPresentParams {
 
 abstract class _ApplePayPresentParams implements ApplePayPresentParams {
   const factory _ApplePayPresentParams(
-          {required List<ApplePayCartSummaryItem> cartItems,
-          required String country,
-          required String currency,
+          {List<ApplePayCartSummaryItem> cartItems,
+            String country,
+           String currency,
           List<ApplePayContactFieldsType>? requiredShippingAddressFields,
           List<ApplePayContactFieldsType>? requiredBillingContactFields,
           List<ApplePayShippingMethod>? shippingMethods}) =

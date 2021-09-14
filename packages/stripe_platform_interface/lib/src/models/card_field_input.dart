@@ -18,22 +18,22 @@ class CardStyle with _$CardStyle {
         /// Background color of the cardfield
         ///
         /// Make sure that there is enough contrast with the text color.
-        Color? backgroundColor,
+        Color backgroundColor,
     @JsonKey(toJson: ColorKey.toJson, fromJson: ColorKey.fromJson)
 
         /// Border color of the cardfield.
-        Color? borderColor,
+        Color borderColor,
 
     /// Borderradius that can give the Cardfield rounded corners.
     double borderRadius,
     @JsonKey(toJson: ColorKey.toJson, fromJson: ColorKey.fromJson)
 
         /// Cursor color when the card has focus.
-        Color? cursorColor,
+        Color cursorColor,
     @JsonKey(toJson: ColorKey.toJson, fromJson: ColorKey.fromJson)
 
         /// Color of the typed text on the Card fuekd.
-        Color? textColor,
+        Color textColor,
 
     /// Font size.
     double fontSize,
@@ -43,11 +43,11 @@ class CardStyle with _$CardStyle {
 
     /// Color of the input in case incorrect data is entered.
     @JsonKey(toJson: ColorKey.toJson, fromJson: ColorKey.fromJson)
-        Color? textErrorColor,
+        Color textErrorColor,
     @JsonKey(toJson: ColorKey.toJson, fromJson: ColorKey.fromJson)
 
         /// Color of the placeholder text.
-        Color? placeholderColor,
+        Color placeholderColor,
   }) = _CardStyleConstructor;
 
   factory CardStyle.fromJson(Map<String, dynamic> json) =>
@@ -55,7 +55,7 @@ class CardStyle with _$CardStyle {
 
   CardStyle._();
 
-  CardStyle apply(CardStyle? style) => copyWith(
+  CardStyle apply(CardStyle style) => copyWith(
         borderWidth: style?.borderWidth ?? borderWidth,
         backgroundColor: style?.backgroundColor ?? backgroundColor,
         borderColor: style?.borderColor ?? borderColor,
@@ -96,7 +96,7 @@ class CardPlaceholder with _$CardPlaceholder {
   /// Apply a new placeholder object on an existing placeholder.
   ///
   /// In case fields are null the original value will be used.
-  CardPlaceholder apply(CardPlaceholder? placeholder) => copyWith(
+  CardPlaceholder apply(CardPlaceholder placeholder) => copyWith(
         number: placeholder?.number ?? number,
         expiration: placeholder?.expiration ?? expiration,
         cvc: placeholder?.cvc ?? cvc,
@@ -110,14 +110,14 @@ class CardPlaceholder with _$CardPlaceholder {
 class ColorKey {
   const ColorKey();
 
-  static String toJson(Color? color) {
+  static String toJson(Color color) {
     if (color != null) {
       // ignore: lines_longer_than_80_chars
       return '#${color.value.toRadixString(16).padLeft(8, '0').toUpperCase()}';
     }
   }
 
-  static Color? fromJson(value) {
+  static Color fromJson(value) {
     throw UnimplementedError();
   }
 }
@@ -131,7 +131,7 @@ class CardFieldInputDetails with _$CardFieldInputDetails {
   @JsonSerializable(explicitToJson: true)
   const factory CardFieldInputDetails({
     /// Indicates whether the card field input is complete.
-    required bool complete,
+     bool complete,
 
     /// Last 4 digits of the entered card number.
     String last4,
@@ -165,7 +165,7 @@ class CardFieldInputDetails with _$CardFieldInputDetails {
 @freezed
 class CardFieldFocusName with _$CardFieldFocusName {
   @JsonSerializable(explicitToJson: true)
-  factory CardFieldFocusName({CardFieldName? focusedField}) =
+  factory CardFieldFocusName({CardFieldName focusedField}) =
       _CardFieldFocusName;
 
   factory CardFieldFocusName.fromJson(Map<String, dynamic> json) =>

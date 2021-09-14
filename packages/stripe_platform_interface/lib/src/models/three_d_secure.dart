@@ -15,27 +15,27 @@ class ThreeDSecureConfigurationParams with _$ThreeDSecureConfigurationParams {
     int timeout,
 
     /// Styling for the 3d secure label.
-    ThreeDSecureLabelThemeData? label,
+    ThreeDSecureLabelThemeData label,
 
     /// Styling for the 3d secure textfield.
 
-    ThreeDSecureTextFieldThemeData? textField,
+    ThreeDSecureTextFieldThemeData textField,
 
     /// Styling for the 3d secure confirmation button.
 
-    ThreeDSecureButtonThemeData? submitButton,
+    ThreeDSecureButtonThemeData submitButton,
 
     /// Styling for the 3d secure cancel button.
-    ThreeDSecureButtonThemeData? cancelButton,
+    ThreeDSecureButtonThemeData cancelButton,
 
     /// Styling for the 3d secure next button.
-    ThreeDSecureButtonThemeData? nextButton,
+    ThreeDSecureButtonThemeData nextButton,
 
     /// Styling for the 3d secure continue button.
-    ThreeDSecureButtonThemeData? continueButton,
+    ThreeDSecureButtonThemeData continueButton,
 
     /// Styling for the 3d secure resend button.
-    ThreeDSecureButtonThemeData? resendButton,
+    ThreeDSecureButtonThemeData resendButton,
   }) = _ThreeDSecureConfigurationParams;
 
   factory ThreeDSecureConfigurationParams.fromJson(Map<String, dynamic> json) =>

@@ -409,13 +409,13 @@ class _$_SetupIntent implements _SetupIntent {
 
 abstract class _SetupIntent implements SetupIntent {
   const factory _SetupIntent(
-      {required String id,
-      required String status,
-      required bool livemode,
-      required String clientSecret,
-      required String paymentMethodId,
-      required String usage,
-      required List<PaymentMethodType> paymentMethodTypes,
+      { String id,
+       String status,
+       bool livemode,
+       String clientSecret,
+       String paymentMethodId,
+       String usage,
+       List<PaymentMethodType> paymentMethodTypes,
       String description,
       String created,
       LastSetupError? lastSetupError}) = _$_SetupIntent;
@@ -635,7 +635,7 @@ class _$_LastSetupError implements _LastSetupError {
 
 abstract class _LastSetupError implements LastSetupError {
   const factory _LastSetupError(
-      {required String code, required String message}) = _$_LastSetupError;
+      { String code,  String message}) = _$_LastSetupError;
 
   factory _LastSetupError.fromJson(Map<String, dynamic> json) =
       _$_LastSetupError.fromJson;

@@ -63,7 +63,7 @@ class MethodChannelStripe extends StripePlatform {
 
     return ResultParser<PaymentMethod>(
             parseJson: (json) => PaymentMethod.fromJson(json))
-        .parse(result: result!, successResultKey: 'paymentMethod');
+        .parse(result: result, successResultKey: 'paymentMethod');
   }
 
   @override
@@ -88,7 +88,7 @@ class MethodChannelStripe extends StripePlatform {
 
     return ResultParser<PaymentIntent>(
             parseJson: (json) => PaymentIntent.fromJson(json))
-        .parse(result: result!, successResultKey: 'paymentIntent');
+        .parse(result: result, successResultKey: 'paymentIntent');
   }
 
   @override
@@ -106,7 +106,7 @@ class MethodChannelStripe extends StripePlatform {
 
     return ResultParser<SetupIntent>(
       parseJson: (json) => SetupIntent.fromJson(json),
-    ).parse(result: result!, successResultKey: 'setupIntent');
+    ).parse(result: result, successResultKey: 'setupIntent');
   }
 
   @override
@@ -129,7 +129,7 @@ class MethodChannelStripe extends StripePlatform {
 
     return ResultParser<PaymentIntent>(
             parseJson: (json) => PaymentIntent.fromJson(json))
-        .parse(result: result!, successResultKey: 'paymentIntent');
+        .parse(result: result, successResultKey: 'paymentIntent');
   }
 
   @override
@@ -159,7 +159,7 @@ class MethodChannelStripe extends StripePlatform {
 
     return ResultParser<PaymentIntent>(
             parseJson: (json) => PaymentIntent.fromJson(json))
-        .parse(result: result!, successResultKey: 'paymentIntent');
+        .parse(result: result, successResultKey: 'paymentIntent');
   }
 
   @override
@@ -205,7 +205,7 @@ class MethodChannelStripe extends StripePlatform {
 
     return ResultParser<TokenData>(
             parseJson: (json) => TokenData.fromJson(json))
-        .parse(result: result!, successResultKey: 'token');
+        .parse(result: result, successResultKey: 'token');
   }
 
   @override
@@ -250,7 +250,7 @@ class MethodChannelStripe extends StripePlatform {
 
     return ResultParser<PaymentMethod>(
             parseJson: (json) => PaymentMethod.fromJson(json))
-        .parse(result: result!, successResultKey: 'paymentMethod');
+        .parse(result: result, successResultKey: 'paymentMethod');
   }
 
   @override
@@ -264,7 +264,7 @@ class MethodChannelStripe extends StripePlatform {
     final result = await _methodChannel.invokeMapMethod<String, dynamic>(
         'presentGooglePay', {'params': params.toJson()});
 
-    if (result!.containsKey('error')) {
+    if (result.containsKey('error')) {
       throw ResultParser<void>(parseJson: (json) => {}).parseError(result);
     }
   }
@@ -276,7 +276,7 @@ class MethodChannelStripe extends StripePlatform {
 
     return ResultParser<TokenData>(
             parseJson: (json) => TokenData.fromJson(json))
-        .parse(result: result!, successResultKey: 'token');
+        .parse(result: result, successResultKey: 'token');
   }
 }
 

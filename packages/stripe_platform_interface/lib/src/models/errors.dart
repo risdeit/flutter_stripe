@@ -17,8 +17,8 @@ enum PaymentSheetError { unknown }
 class StripeError<T> with _$StripeError<T>, Exception {
   @JsonSerializable(explicitToJson: true)
   const factory StripeError({
-    required String message,
-    @JsonKey(fromJson: _dataFromJson, toJson: _dataToJson) required T code,
+    String message,
+    @JsonKey(fromJson: _dataFromJson, toJson: _dataToJson) T code,
   }) = _StripeErrorGeneric;
 
   factory StripeError.fromJson(Map<String, dynamic> json) =>
@@ -36,7 +36,7 @@ Map<String, dynamic> _dataToJson<T>(T input) => {'code': input};
 class StripeException with _$StripeException, Exception {
   const factory StripeException({
     /// error details
-    required LocalizedErrorMessage error,
+    LocalizedErrorMessage error,
   }) = _StripeException;
 
   factory StripeException.fromJson(Map<String, dynamic> json) =>
@@ -50,7 +50,7 @@ class LocalizedErrorMessage with _$LocalizedErrorMessage {
   @JsonSerializable(explicitToJson: true)
   const factory LocalizedErrorMessage({
     /// The error code for example Cancelled
-    required FailureCode code,
+    FailureCode code,
 
     /// Localized error message if any
     String localizedMessage,

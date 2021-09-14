@@ -28,7 +28,7 @@ extension UnfoldToNonNull<T> on T {
     if (this == null) {
       throw AssertionError('Result should not be null');
     } else {
-      return this!;
+      return this;
     }
   }
 }

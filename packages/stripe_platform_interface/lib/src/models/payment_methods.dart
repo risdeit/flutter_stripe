@@ -75,7 +75,7 @@ class BillingDetails with _$BillingDetails {
     String email,
 
     /// Billing address.
-    Address? address,
+    Address address,
 
     /// Billing phone number.
     String phone,
@@ -267,161 +267,161 @@ enum PaymentMethodType {
 /// Parameters that specify the desired configuration of a specific payment method.
 class PaymentMethodParams with _$PaymentMethodParams {
   @JsonSerializable(explicitToJson: true)
-  @FreezedUnionValue('Card')
+  // @FreezedUnionValue('Card')
 
   /// Config parameters for card payment method.
   const factory PaymentMethodParams.card({
     /// Indicates whether or not you want to reuse this method for future payments.
 
-    PaymentIntentsFutureUsage? setupFutureUsage,
+    PaymentIntentsFutureUsage setupFutureUsage,
 
     /// Billing information.
 
-    BillingDetails? billingDetails,
+    BillingDetails billingDetails,
   }) = _PaymentMethodParamsCard;
 
   @JsonSerializable(explicitToJson: true)
-  @FreezedUnionValue('Card')
+  // @FreezedUnionValue('Card')
 
   /// Config parameters for card with token payment method.
   const factory PaymentMethodParams.cardFromToken({
     /// Token.
-    required String token,
+     String token,
 
     /// Indicates whether or not you want to reuse this method for future payments.
-    PaymentIntentsFutureUsage? setupFutureUsage,
+    PaymentIntentsFutureUsage setupFutureUsage,
   }) = _PaymentMethodParamsCardWithToken;
 
   @JsonSerializable(explicitToJson: true)
-  @FreezedUnionValue('Card')
+  // @FreezedUnionValue('Card')
 
   /// Config parameters for card from method id payment method.
   const factory PaymentMethodParams.cardFromMethodId({
-    required String paymentMethodId,
+     String paymentMethodId,
 
     /// cvc of the cart
     String cvc,
   }) = _PaymentMethodParamsCardWithMethodId;
 
   @JsonSerializable(explicitToJson: true)
-  @FreezedUnionValue('Alipay')
+  // @FreezedUnionValue('Alipay')
 
   /// Config parameters for Alipay card payment method.
   const factory PaymentMethodParams.alipay() = _PaymentMethodParamsAlipay;
 
   @JsonSerializable(explicitToJson: true)
-  @FreezedUnionValue('Ideal')
+  // @FreezedUnionValue('Ideal')
 
   /// Config parameters for ideal payment method.
 
   const factory PaymentMethodParams.ideal({
     /// Billing information.
 
-    BillingDetails? billingDetails,
+    BillingDetails billingDetails,
 
     /// The name of bank.
     String bankName,
   }) = _PaymentMethodParamsIdeal;
 
   @JsonSerializable(explicitToJson: true)
-  @FreezedUnionValue('Bancontact')
+  // @FreezedUnionValue('Bancontact')
 
   /// Config parameters for bankcontact payment method.
 
   const factory PaymentMethodParams.bancontact({
     /// Billing information.
 
-    BillingDetails? billingDetails,
+    BillingDetails billingDetails,
   }) = _PaymentMethodParamsBankContact;
 
   @JsonSerializable(explicitToJson: true)
-  @FreezedUnionValue('Giropay')
+  // @FreezedUnionValue('Giropay')
 
   /// Config parameters for giropay payment method.
 
   const factory PaymentMethodParams.giroPay({
     /// Billing information.
 
-    BillingDetails? billingDetails,
+    BillingDetails billingDetails,
   }) = _PaymentMethodParamsGiroPay;
 
   @JsonSerializable(explicitToJson: true)
-  @FreezedUnionValue('Eps')
+  // @FreezedUnionValue('Eps')
 
   /// Config parameters for eps payment method.
 
   const factory PaymentMethodParams.eps({
     /// Billing information.
 
-    BillingDetails? billingDetails,
+    BillingDetails billingDetails,
   }) = _PaymentMethodParamsEps;
 
   @JsonSerializable(explicitToJson: true)
-  @FreezedUnionValue('GrabPay')
+  // @FreezedUnionValue('GrabPay')
 
   /// Config parameters for GrabPay payment method.
 
   const factory PaymentMethodParams.grabPay({
     /// Billing information.
 
-    BillingDetails? billingDetails,
+    BillingDetails billingDetails,
   }) = _PaymentMethodParamsPay;
 
   @JsonSerializable(explicitToJson: true)
-  @FreezedUnionValue('P24')
+  // @FreezedUnionValue('P24')
 
   /// Config parameters for P24 payment method.
 
   const factory PaymentMethodParams.p24({
     /// Billing information.
 
-    BillingDetails? billingDetails,
+    BillingDetails billingDetails,
   }) = _PaymentMethodParamsP24;
 
   @JsonSerializable(explicitToJson: true)
-  @FreezedUnionValue('Fpx')
+  // @FreezedUnionValue('Fpx')
   const factory PaymentMethodParams.fpx({
-    required bool testOfflineBank,
+     bool testOfflineBank,
   }) = _PaymentMethodParamsFpx;
 
   @JsonSerializable(explicitToJson: true)
-  @FreezedUnionValue('SepaDebit')
+  // @FreezedUnionValue('SepaDebit')
   const factory PaymentMethodParams.sepaDebit({
-    required String iban,
-    PaymentIntentsFutureUsage? setupFutureUsage,
+     String iban,
+    PaymentIntentsFutureUsage setupFutureUsage,
 
     /// Billing information.
-    BillingDetails? billingDetails,
+    BillingDetails billingDetails,
   }) = _PaymentMethodParamsSepaDebit;
 
   @JsonSerializable(explicitToJson: true)
-  @FreezedUnionValue('Sofort')
+  // @FreezedUnionValue('Sofort')
   const factory PaymentMethodParams.sofort({
-    required String country,
-    PaymentIntentsFutureUsage? setupFutureUsage,
+     String country,
+    PaymentIntentsFutureUsage setupFutureUsage,
 
     /// Billing information.
-    BillingDetails? billingDetails,
+    BillingDetails billingDetails,
   }) = _PaymentMethodParamsSofort;
 
   @JsonSerializable(explicitToJson: true)
-  @FreezedUnionValue('AfterpayClearpay')
+  // @FreezedUnionValue('AfterpayClearpay')
   const factory PaymentMethodParams.afterpayClearpay({
-    required ShippingDetails shippingDetails,
+     ShippingDetails shippingDetails,
 
     /// Billing information.
-    BillingDetails? billingDetails,
+    BillingDetails billingDetails,
   }) = _PaymentMethodParamsAfterpayClearpay;
 
   @JsonSerializable(explicitToJson: true)
-  @FreezedUnionValue('Oxxo')
+  // @FreezedUnionValue('Oxxo')
   const factory PaymentMethodParams.oxxo({
     /// Billing information.
-    BillingDetails? billingDetails,
+    BillingDetails billingDetails,
   }) = _PaymentMethodParamsOxxo;
 
   @JsonSerializable(explicitToJson: true)
-  @FreezedUnionValue('WeChatPay')
+  // @FreezedUnionValue('WeChatPay')
    const factory PaymentMethodParams.weChatPay({
     String appId,
   }) = _PaymentMethodParamsWechat;

@@ -1050,7 +1050,7 @@ class _$_CardFieldInputDetails extends _CardFieldInputDetails {
 
 abstract class _CardFieldInputDetails extends CardFieldInputDetails {
   const factory _CardFieldInputDetails(
-      {required bool complete,
+      { bool complete,
       String last4,
       int expiryMonth,
       int expiryYear,

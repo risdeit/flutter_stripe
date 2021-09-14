@@ -21,8 +21,8 @@ class _$StripeErrorTearOff {
   const _$StripeErrorTearOff();
 
   _StripeErrorGeneric<T> call<T>(
-      {required String message,
-      @JsonKey(fromJson: _dataFromJson, toJson: _dataToJson) required T code}) {
+      {String message,
+      @JsonKey(fromJson: _dataFromJson, toJson: _dataToJson) T code}) {
     return _StripeErrorGeneric<T>(
       message: message,
       code: code,
@@ -132,9 +132,9 @@ class __$StripeErrorGenericCopyWithImpl<T, $Res>
 @JsonSerializable(explicitToJson: true)
 class _$_StripeErrorGeneric<T> implements _StripeErrorGeneric<T> {
   const _$_StripeErrorGeneric(
-      {required this.message,
+      { this.message,
       @JsonKey(fromJson: _dataFromJson, toJson: _dataToJson)
-          required this.code});
+           this.code});
 
   factory _$_StripeErrorGeneric.fromJson(Map<String, dynamic> json) =>
       _$_$_StripeErrorGenericFromJson(json);
@@ -181,9 +181,9 @@ class _$_StripeErrorGeneric<T> implements _StripeErrorGeneric<T> {
 
 abstract class _StripeErrorGeneric<T> implements StripeError<T> {
   const factory _StripeErrorGeneric(
-      {required String message,
+      { String message,
       @JsonKey(fromJson: _dataFromJson, toJson: _dataToJson)
-          required T code}) = _$_StripeErrorGeneric<T>;
+           T code}) = _$_StripeErrorGeneric<T>;
 
   factory _StripeErrorGeneric.fromJson(Map<String, dynamic> json) =
       _$_StripeErrorGeneric<T>.fromJson;
@@ -207,7 +207,7 @@ StripeException _$StripeExceptionFromJson(Map<String, dynamic> json) {
 class _$StripeExceptionTearOff {
   const _$StripeExceptionTearOff();
 
-  _StripeException call({required LocalizedErrorMessage error}) {
+  _StripeException call({ LocalizedErrorMessage error}) {
     return _StripeException(
       error: error,
     );
@@ -311,7 +311,7 @@ class __$StripeExceptionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_StripeException implements _StripeException {
-  const _$_StripeException({required this.error});
+  const _$_StripeException({ this.error});
 
   factory _$_StripeException.fromJson(Map<String, dynamic> json) =>
       _$_$_StripeExceptionFromJson(json);
@@ -350,7 +350,7 @@ class _$_StripeException implements _StripeException {
 }
 
 abstract class _StripeException implements StripeException {
-  const factory _StripeException({required LocalizedErrorMessage error}) =
+  const factory _StripeException({ LocalizedErrorMessage error}) =
       _$_StripeException;
 
   factory _StripeException.fromJson(Map<String, dynamic> json) =
@@ -376,7 +376,7 @@ class _$LocalizedErrorMessageTearOff {
   const _$LocalizedErrorMessageTearOff();
 
   _LocalizedErrorMessage call(
-      {required FailureCode code,
+      { FailureCode code,
       String localizedMessage,
       String message,
       String stripeErrorCode,
@@ -557,7 +557,7 @@ class __$LocalizedErrorMessageCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_LocalizedErrorMessage implements _LocalizedErrorMessage {
   const _$_LocalizedErrorMessage(
-      {required this.code,
+      { this.code,
       this.localizedMessage,
       this.message,
       this.stripeErrorCode,
@@ -643,7 +643,7 @@ class _$_LocalizedErrorMessage implements _LocalizedErrorMessage {
 
 abstract class _LocalizedErrorMessage implements LocalizedErrorMessage {
   const factory _LocalizedErrorMessage(
-      {required FailureCode code,
+      {FailureCode code,
       String localizedMessage,
       String message,
       String stripeErrorCode,

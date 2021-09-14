@@ -47,7 +47,7 @@ class SetupPaymentSheetParameters with _$SetupPaymentSheetParameters {
     bool applePay,
 
     /// Style options for colors in PaymentSheet
-    @JsonKey(toJson: UserInterfaceStyleKey.toJson) ThemeMode? style,
+    @JsonKey(toJson: UserInterfaceStyleKey.toJson) ThemeMode style,
 
     /// Configuration related to Google Pay
     /// If set, PaymentSheet displays Google Pay as a payment option
@@ -65,7 +65,7 @@ class SetupPaymentSheetParameters with _$SetupPaymentSheetParameters {
 class UserInterfaceStyleKey {
   const UserInterfaceStyleKey();
 
-  static String toJson(ThemeMode? style) {
+  static String toJson(ThemeMode style) {
     switch (style) {
       case ThemeMode.light:
         return 'alwaysLight';
@@ -77,7 +77,7 @@ class UserInterfaceStyleKey {
     }
   }
 
-  static Color? fromJson(value) {
+  static Color fromJson(value) {
     throw UnimplementedError();
   }
 }

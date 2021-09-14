@@ -35,13 +35,13 @@ class PaymentIntent with _$PaymentIntent {
      String clientSecret,
 
     /// Determines whether the intent is in live mode or in test mode.
-    required bool livemode,
+    bool livemode,
 
     /// How the funds will be caputure from the customer's account.
-    required CaptureMethod captureMethod,
+     CaptureMethod captureMethod,
 
     /// Method of how the payment will be confirmed.
-    required ConfirmationMethod confirmationMethod,
+     ConfirmationMethod confirmationMethod,
 
     /// Id of the payment method used in this intent.
     String paymentMethodId,
@@ -56,7 +56,7 @@ class PaymentIntent with _$PaymentIntent {
     String canceledAt,
 
     /// Shipping information of the payment intent.
-    ShippingDetails? shipping,
+    ShippingDetails shipping,
   }) = _PaymentIntent;
 
   factory PaymentIntent.fromJson(Map<String, dynamic> json) =>
@@ -88,20 +88,20 @@ class ShippingDetails with _$ShippingDetails {
   @JsonSerializable(explicitToJson: true)
   const factory ShippingDetails({
     /// Recipient address.
-    required Address address,
+     Address address,
 
     /// Recipient name.
-    required String name,
+    String name,
 
     /// Deliver service that will ship the product
-    required String carrier,
+    String carrier,
 
     /// Recipient phone number.
-    required String phone,
+    String phone,
 
     /// Tracking number of the shipment. If multiple tracking numbers separate them
     /// with commas.
-    required String trackingNumber,
+    String trackingNumber,
   }) = _ShippingDetails;
 
   factory ShippingDetails.fromJson(Map<String, dynamic> json) =>

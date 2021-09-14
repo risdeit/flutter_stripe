@@ -50,7 +50,7 @@ class SetupIntent with _$SetupIntent {
     String created,
 
     /// Error encountered since last configmration.
-    LastSetupError? lastSetupError,
+    LastSetupError lastSetupError,
   }) = _SetupIntent;
 
   factory SetupIntent.fromJson(Map<String, dynamic> json) =>

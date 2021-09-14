@@ -17,7 +17,7 @@ class CreateTokenParams with _$CreateTokenParams {
     @Default(TokenType.Card) TokenType type,
 
     /// Additional address details
-    Address? address,
+    Address address,
   }) = _CreateTokenParams;
 
   factory CreateTokenParams.fromJson(Map<String, dynamic> json) =>
@@ -30,22 +30,22 @@ class CreateTokenParams with _$CreateTokenParams {
 class TokenData with _$TokenData {
   const factory TokenData({
     /// Unique identifier of the token
-    required String id,
+    String id,
 
     /// Timestamp when token was created
-    @JsonKey(name: 'created') required String createdDateTime,
+    @JsonKey(name: 'created') String createdDateTime,
 
     /// Type of the token
-    required TokenType type,
+     TokenType type,
 
     /// Whether or not the object exists in livemode
-    required bool livemode,
+     bool livemode,
 
     /// Bank account data
-    BankAccount? bankAccount,
+    BankAccount bankAccount,
 
     /// Card data
-    CardData? card,
+    CardData card,
   }) = _TokenData;
 
   factory TokenData.fromJson(Map<String, dynamic> json) =>
@@ -59,7 +59,7 @@ class CardData with _$CardData {
   @JsonSerializable(explicitToJson: true)
   const factory CardData({
     /// The brand associated to the card e.g. (visa, amex).
-    required String brand,
+     String brand,
 
     /// Two letter iso code.
     String country,
@@ -83,7 +83,7 @@ class CardData with _$CardData {
     String last4,
 
     /// Address of the cardholder
-    Address? address,
+    Address address,
   }) = _CardData;
 
   factory CardData.fromJson(Map<String, dynamic> json) =>
@@ -96,10 +96,10 @@ class CardData with _$CardData {
 class BankAccount with _$BankAccount {
   const factory BankAccount({
     /// Entity that is holder of the account.
-    required BankAccountHolderType accountHolderType,
+     BankAccountHolderType accountHolderType,
 
     /// Status of the bank account.
-    required BankAccountStatus status,
+     BankAccountStatus status,
 
     /// Name of the bank where the account is registered.
     String bankName,

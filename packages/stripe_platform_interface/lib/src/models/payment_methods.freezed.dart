@@ -572,18 +572,18 @@ class _$_PaymentMethod implements _PaymentMethod {
 
 abstract class _PaymentMethod implements PaymentMethod {
   const factory _PaymentMethod(
-      {required String id,
-      required bool livemode,
-      required String type,
-      required BillingDetails billingDetails,
-      @JsonKey(name: 'Card') required Card card,
-      @JsonKey(name: 'SepaDebit') required SepaDebit sepaDebit,
-      @JsonKey(name: 'BacsDebit') required BacsDebit bacsDebit,
-      @JsonKey(name: 'AuBecsDebit') required AuBecsDebit auBecsDebit,
-      @JsonKey(name: 'Sofort') required Sofort sofort,
-      @JsonKey(name: 'Ideal') required Ideal ideal,
-      @JsonKey(name: 'Fpx') required Fpx fpx,
-      @JsonKey(name: 'Upi') required Upi upi,
+      { String id,
+       bool livemode,
+       String type,
+       BillingDetails billingDetails,
+      @JsonKey(name: 'Card')  Card card,
+      @JsonKey(name: 'SepaDebit')  SepaDebit sepaDebit,
+      @JsonKey(name: 'BacsDebit')  BacsDebit bacsDebit,
+      @JsonKey(name: 'AuBecsDebit')  AuBecsDebit auBecsDebit,
+      @JsonKey(name: 'Sofort')  Sofort sofort,
+      @JsonKey(name: 'Ideal')  Ideal ideal,
+      @JsonKey(name: 'Fpx')  Fpx fpx,
+      @JsonKey(name: 'Upi')  Upi upi,
       String customerId}) = _$_PaymentMethod;
 
   factory _PaymentMethod.fromJson(Map<String, dynamic> json) =
@@ -3292,7 +3292,7 @@ class _$_PaymentMethodParamsCardWithToken
 abstract class _PaymentMethodParamsCardWithToken
     implements PaymentMethodParams {
   const factory _PaymentMethodParamsCardWithToken(
-          {required String token,
+          { String token,
           PaymentIntentsFutureUsage? setupFutureUsage}) =
       _$_PaymentMethodParamsCardWithToken;
 
@@ -3541,7 +3541,7 @@ class _$_PaymentMethodParamsCardWithMethodId
 abstract class _PaymentMethodParamsCardWithMethodId
     implements PaymentMethodParams {
   const factory _PaymentMethodParamsCardWithMethodId(
-      {required String paymentMethodId,
+      { String paymentMethodId,
       String cvc}) = _$_PaymentMethodParamsCardWithMethodId;
 
   factory _PaymentMethodParamsCardWithMethodId.fromJson(
@@ -5403,7 +5403,7 @@ class _$_PaymentMethodParamsFpx implements _PaymentMethodParamsFpx {
 }
 
 abstract class _PaymentMethodParamsFpx implements PaymentMethodParams {
-  const factory _PaymentMethodParamsFpx({required bool testOfflineBank}) =
+  const factory _PaymentMethodParamsFpx({bool testOfflineBank}) =
       _$_PaymentMethodParamsFpx;
 
   factory _PaymentMethodParamsFpx.fromJson(Map<String, dynamic> json) =
@@ -5669,7 +5669,7 @@ class _$_PaymentMethodParamsSepaDebit implements _PaymentMethodParamsSepaDebit {
 
 abstract class _PaymentMethodParamsSepaDebit implements PaymentMethodParams {
   const factory _PaymentMethodParamsSepaDebit(
-      {required String iban,
+      {String iban,
       PaymentIntentsFutureUsage? setupFutureUsage,
       BillingDetails? billingDetails}) = _$_PaymentMethodParamsSepaDebit;
 
@@ -5940,7 +5940,7 @@ class _$_PaymentMethodParamsSofort implements _PaymentMethodParamsSofort {
 
 abstract class _PaymentMethodParamsSofort implements PaymentMethodParams {
   const factory _PaymentMethodParamsSofort(
-      {required String country,
+      {String country,
       PaymentIntentsFutureUsage? setupFutureUsage,
       BillingDetails? billingDetails}) = _$_PaymentMethodParamsSofort;
 
@@ -6211,7 +6211,7 @@ class _$_PaymentMethodParamsAfterpayClearpay
 abstract class _PaymentMethodParamsAfterpayClearpay
     implements PaymentMethodParams {
   const factory _PaymentMethodParamsAfterpayClearpay(
-      {required ShippingDetails shippingDetails,
+      {ShippingDetails shippingDetails,
       BillingDetails? billingDetails}) = _$_PaymentMethodParamsAfterpayClearpay;
 
   factory _PaymentMethodParamsAfterpayClearpay.fromJson(

@@ -10,7 +10,7 @@ class PresentGooglePayParams with _$PresentGooglePayParams {
   @JsonSerializable(explicitToJson: true)
   const factory PresentGooglePayParams({
     /// The client is secret is used for handling the payment from the Client side.
-    required String clientSecret,
+    String clientSecret,
 
     /// Determines whether to present Google Pay in order to confirm a [SetupIntent]
     /// or a [PaymentIntent].
@@ -33,16 +33,16 @@ class GooglePayInitParams with _$GooglePayInitParams {
   @JsonSerializable(explicitToJson: true)
   const factory GooglePayInitParams({
     /// Merchant name
-    required String merchantName,
+    String merchantName,
 
     /// ISO country code of the merchant
-    required String countryCode,
+    String countryCode,
 
     /// Flag to use test environment or live environment.
     @Default(false) bool testEnv,
 
     /// Configuration regarding collection of billing address,
-    BillingAddressConfig? billingAddressConfig,
+    BillingAddressConfig billingAddressConfig,
 
     /// Flag to indicate wheter Google Pay should collect email of the customer.
     @Default(false) bool isEmailRequired,
@@ -67,7 +67,7 @@ class BillingAddressConfig with _$BillingAddressConfig {
     bool isRequired,
 
     /// Desired format
-    BillingAddressFormat? format,
+    BillingAddressFormat format,
 
     /// If `true` customer needs to provide a phonenummer in order to process
     /// the transaction.
@@ -88,13 +88,13 @@ class CreateGooglePayPaymentParams with _$CreateGooglePayPaymentParams {
     /// ISO 4217 alphabetic currency code.
     ///
     /// For example: `USD`
-    required String currencyCode,
+    String currencyCode,
 
     /// Amount intended to be collected.
     ///
     /// The amount has to be a positive zero-digit integer representing the charge
     /// in the smallest currency unit (e.g. cents for US dollar).
-    required int amount,
+    int amount,
   }) = _CreateGooglePayPaymentParams;
 
     factory CreateGooglePayPaymentParams.fromJson(Map<String, dynamic> json) =>

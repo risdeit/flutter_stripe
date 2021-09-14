@@ -40,10 +40,10 @@ enum ApplePayContactFieldsType {
 class ApplePayShippingMethod with _$ApplePayShippingMethod {
   @JsonSerializable(explicitToJson: true)
   const factory ApplePayShippingMethod({
-    required String label,
-    required String amount,
-    required String identifier,
-    ApplePayShippingMethodType? type,
+    String label,
+    String amount,
+    String identifier,
+    ApplePayShippingMethodType type,
     String detail,
   }) = _ApplePayShippingMethod;
 
@@ -57,10 +57,10 @@ class ApplePayShippingMethod with _$ApplePayShippingMethod {
 class ApplePayCartSummaryItem with _$ApplePayCartSummaryItem {
   const factory ApplePayCartSummaryItem({
     /// Short localized description of the item.
-    required String label,
+    String label,
 
     /// The monetary amount.
-    required String amount,
+    String amount,
   }) = _ApplePayCartSummaryItem;
 
   factory ApplePayCartSummaryItem.fromJson(Map<String, dynamic> json) =>
@@ -72,24 +72,24 @@ class ApplePayPresentParams with _$ApplePayPresentParams {
   @JsonSerializable(explicitToJson: true)
   const factory ApplePayPresentParams({
     /// Line Items of the payment request.
-    required List<ApplePayCartSummaryItem> cartItems,
+    List<ApplePayCartSummaryItem> cartItems,
 
     /// The two letter ISO 3166 country code representing the merchant.
-    required String country,
+    String country,
 
     /// The three letter ISO 4217 code for the currency.
-    required String currency,
+    String currency,
 
     /// Fields that will be shown on the required shipping address section. If
     /// empty no fields will be displayed.
-    List<ApplePayContactFieldsType>? requiredShippingAddressFields,
+    List<ApplePayContactFieldsType> requiredShippingAddressFields,
 
     /// Fields that will be shown on the required billing address section. If
     /// empty no fields will be displayed.
-    List<ApplePayContactFieldsType>? requiredBillingContactFields,
+    List<ApplePayContactFieldsType> requiredBillingContactFields,
 
     /// List of available shipping methods for goods.
-    List<ApplePayShippingMethod>? shippingMethods,
+    List<ApplePayShippingMethod> shippingMethods,
   }) = _ApplePayPresentParams;
 
   factory ApplePayPresentParams.fromJson(Map<String, dynamic> json) =>

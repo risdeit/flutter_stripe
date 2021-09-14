@@ -511,15 +511,15 @@ class _$_PaymentIntent implements _PaymentIntent {
 
 abstract class _PaymentIntent implements PaymentIntent {
   const factory _PaymentIntent(
-      {required String id,
-      required num amount,
-      required String created,
-      required String currency,
-      required PaymentIntentsStatus status,
-      required String clientSecret,
-      required bool livemode,
-      required CaptureMethod captureMethod,
-      required ConfirmationMethod confirmationMethod,
+      { String id,
+       num amount,
+       String created,
+       String currency,
+       PaymentIntentsStatus status,
+       String clientSecret,
+       bool livemode,
+       CaptureMethod captureMethod,
+       ConfirmationMethod confirmationMethod,
       String paymentMethodId,
       String description,
       String receiptEmail,
@@ -855,11 +855,11 @@ class _$_ShippingDetails implements _ShippingDetails {
 
 abstract class _ShippingDetails implements ShippingDetails {
   const factory _ShippingDetails(
-      {required Address address,
-      required String name,
-      required String carrier,
-      required String phone,
-      required String trackingNumber}) = _$_ShippingDetails;
+      { Address address,
+       String name,
+       String carrier,
+       String phone,
+       String trackingNumber}) = _$_ShippingDetails;
 
   factory _ShippingDetails.fromJson(Map<String, dynamic> json) =
       _$_ShippingDetails.fromJson;

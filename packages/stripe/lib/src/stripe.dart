@@ -29,7 +29,7 @@ class Stripe {
   static String get publishableKey {
     assert(instance._publishableKey != null,
         'A publishableKey is required and missing');
-    return instance._publishableKey!;
+    return instance._publishableKey;
   }
 
   /// Retrieves the id associate with the Stripe account.
@@ -103,7 +103,7 @@ class Stripe {
       _isApplePaySupported = ValueNotifier(false);
       checkApplePaySupport();
     }
-    return _isApplePaySupported!;
+    return _isApplePaySupported;
   }
 
   ///Checks if Apple pay is supported on this device.
@@ -400,7 +400,7 @@ class Stripe {
   }
 
   Future<void> _initialise({
-    required String publishableKey,
+    String publishableKey,
     String stripeAccountId,
     ThreeDSecureConfigurationParams threeDSecureParams,
     String merchantIdentifier,

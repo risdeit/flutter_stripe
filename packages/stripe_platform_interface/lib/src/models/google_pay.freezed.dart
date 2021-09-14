@@ -214,7 +214,7 @@ class _$_PresentGooglePayParams implements _PresentGooglePayParams {
 
 abstract class _PresentGooglePayParams implements PresentGooglePayParams {
   const factory _PresentGooglePayParams(
-      {required String clientSecret,
+      {String clientSecret,
       bool forSetupIntent,
       String currencyCode}) = _$_PresentGooglePayParams;
 
@@ -545,8 +545,8 @@ class _$_GooglePayInitParams implements _GooglePayInitParams {
 
 abstract class _GooglePayInitParams implements GooglePayInitParams {
   const factory _GooglePayInitParams(
-      {required String merchantName,
-      required String countryCode,
+      { String merchantName,
+       String countryCode,
       bool testEnv,
       BillingAddressConfig? billingAddressConfig,
       bool isEmailRequired,
@@ -998,8 +998,8 @@ class _$_CreateGooglePayPaymentParams implements _CreateGooglePayPaymentParams {
 abstract class _CreateGooglePayPaymentParams
     implements CreateGooglePayPaymentParams {
   const factory _CreateGooglePayPaymentParams(
-      {required String currencyCode,
-      required int amount}) = _$_CreateGooglePayPaymentParams;
+      { String currencyCode,
+       int amount}) = _$_CreateGooglePayPaymentParams;
 
   factory _CreateGooglePayPaymentParams.fromJson(Map<String, dynamic> json) =
       _$_CreateGooglePayPaymentParams.fromJson;

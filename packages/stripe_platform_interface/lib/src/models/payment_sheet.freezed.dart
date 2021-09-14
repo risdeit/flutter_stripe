@@ -711,7 +711,7 @@ class _$_PresentParameters implements _PresentParameters {
 
 abstract class _PresentParameters implements PresentPaymentSheetParameters {
   const factory _PresentParameters(
-      {required String clientSecret,
+      { String clientSecret,
       bool confirmPayment}) = _$_PresentParameters;
 
   factory _PresentParameters.fromJson(Map<String, dynamic> json) =

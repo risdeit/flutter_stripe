@@ -912,7 +912,7 @@ class _$_CardData implements _CardData {
 
 abstract class _CardData implements CardData {
   const factory _CardData(
-      {required String brand,
+      { String brand,
       String country,
       String currency,
       int expYear,
@@ -1266,8 +1266,8 @@ class _$_BankAccount implements _BankAccount {
 
 abstract class _BankAccount implements BankAccount {
   const factory _BankAccount(
-      {required BankAccountHolderType accountHolderType,
-      required BankAccountStatus status,
+      { BankAccountHolderType accountHolderType,
+       BankAccountStatus status,
       String bankName,
       String accountHolderName,
       String country,

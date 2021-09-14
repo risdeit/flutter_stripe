@@ -500,7 +500,7 @@ class _$_ThreeDSecureConfigurationParams
 abstract class _ThreeDSecureConfigurationParams
     implements ThreeDSecureConfigurationParams {
   const factory _ThreeDSecureConfigurationParams(
-          {required ThreeDSecureNavigationBarThemeData navigationBar,
+          { ThreeDSecureNavigationBarThemeData navigationBar,
           int timeout,
           ThreeDSecureLabelThemeData? label,
           ThreeDSecureTextFieldThemeData? textField,
