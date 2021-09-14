@@ -14,8 +14,8 @@ internal class CardChangedEvent constructor(viewTag: Int, private val cardDetail
     rctEventEmitter.receiveEvent(viewTag, getEventName(), serializeEventData())
   }
 
-  private fun getValOr(map: MutableMap<String, Any>, key: String, default: String = null): String {
-    return if ((map[key] as CharSequence).isNotEmpty()) map[key] as String else default
+  private fun getValOr(map: MutableMap<String, Any>, key: String, default: String? = null): String? {
+    return if ((map[key] as CharSequence).isNotEmpty()) map[key] as String? else default
   }
 
   private fun serializeEventData(): WritableMap {
@@ -23,13 +23,13 @@ internal class CardChangedEvent constructor(viewTag: Int, private val cardDetail
     eventData.putString("brand", cardDetails["brand"]?.toString())
     eventData.putString("last4", cardDetails["last4"]?.toString())
 
-    (cardDetails["expiryMonth"] as int)?.let {
+    (cardDetails["expiryMonth"] as Int?)?.let {
       eventData.putInt("expiryMonth", it)
     } ?: run {
       eventData.putNull("expiryMonth")
     }
 
-    (cardDetails["expiryYear"] as int)?.let {
+    (cardDetails["expiryYear"] as Int?)?.let {
       eventData.putInt("expiryYear", it)
     } ?: run {
       eventData.putNull("expiryYear")

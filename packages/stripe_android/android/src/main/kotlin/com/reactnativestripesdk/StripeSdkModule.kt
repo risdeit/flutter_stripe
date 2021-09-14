@@ -32,17 +32,17 @@ class StripeSdkModule(reactContext: ReactApplicationContext) : ReactContextBaseJ
   private lateinit var stripe: Stripe
 
   private lateinit var publishableKey: String
-  private var stripeAccountId: String = null
+  private var stripeAccountId: String? = null
   private var paymentSheetFragment: PaymentSheetFragment? = null
 
-  private var urlScheme: String = null
+  private var urlScheme: String? = null
   private var confirmPromise: Promise? = null
   private var handleCardActionPromise: Promise? = null
   private var confirmSetupIntentPromise: Promise? = null
   private var confirmPaymentSheetPaymentPromise: Promise? = null
   private var presentPaymentSheetPromise: Promise? = null
   private var initPaymentSheetPromise: Promise? = null
-  private var confirmPaymentClientSecret: String = null
+  private var confirmPaymentClientSecret: String? = null
 
   private var googlePayFragment: GooglePayFragment? = null
   private var initGooglePayPromise: Promise? = null

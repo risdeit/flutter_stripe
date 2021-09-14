@@ -20,7 +20,7 @@ class StripeSdkCardViewManager : SimpleViewManager<StripeSdkCardView>() {
       CardChangedEvent.EVENT_NAME, MapBuilder.of("registrationName", "onCardChange"))
   }
 
-  override fun receiveCommand(root: StripeSdkCardView, commandId: String, args: ReadableArray?) {
+  override fun receiveCommand(root: StripeSdkCardView, commandId: String?, args: ReadableArray?) {
     when (commandId) {
       "focus" -> root.requestFocusFromJS()
       "blur" -> root.requestBlurFromJS()

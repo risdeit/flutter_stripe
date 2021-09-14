@@ -18,7 +18,7 @@ class StripeSdkGooglePayButtonPlatformViewFactory(
 
     override fun create(context: Context, viewId: Int, args: Any?): PlatformView {
         val channel = MethodChannel(flutterPluginBinding.binaryMessenger, "flutter.stripe/google_pay_button/${viewId}")
-        val creationParams = args as? Map<String, Any?>?
+        val creationParams = args as? Map<String?, Any?>?
         return StripeSdkGooglePayButtonPlatformView(context, channel, viewId, creationParams, payButtonManager, sdkAccessor)
     }
 

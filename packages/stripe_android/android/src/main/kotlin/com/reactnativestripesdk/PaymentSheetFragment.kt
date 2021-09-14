@@ -22,8 +22,8 @@ import java.io.ByteArrayOutputStream
 class PaymentSheetFragment : Fragment() {
   private var paymentSheet: PaymentSheet? = null
   private var flowController: PaymentSheet.FlowController? = null
-  private var paymentIntentClientSecret: String = null
-  private var setupIntentClientSecret: String = null
+  private var paymentIntentClientSecret: String? = null
+  private var setupIntentClientSecret: String? = null
   private lateinit var paymentSheetConfiguration: PaymentSheet.Configuration
 
   override fun onCreateView(
@@ -160,7 +160,7 @@ fun getBitmapFromVectorDrawable(context: Context?, drawableId: Int): Bitmap? {
   drawable.draw(canvas)
   return bitmap
 }
- fun getBase64FromBitmap(bitmap: Bitmap?): String {
+fun getBase64FromBitmap(bitmap: Bitmap?): String? {
    if (bitmap == null) {
      return null
    }

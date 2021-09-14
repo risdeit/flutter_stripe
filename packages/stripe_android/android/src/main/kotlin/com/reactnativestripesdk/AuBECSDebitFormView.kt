@@ -29,7 +29,7 @@ class AuBECSDebitFormView(private val context: ThemedReactContext) : FrameLayout
   private var mEventDispatcher: EventDispatcher? = context.getNativeModule(UIManagerModule::class.java)?.eventDispatcher
   private var formStyle: ReadableMap? = null
 
-  fun setCompanyName(name: String) {
+  fun setCompanyName(name: String?) {
     becsDebitWidget = BecsDebitWidget(context = context, companyName = name as String);
 
     setFormStyle(this.formStyle)

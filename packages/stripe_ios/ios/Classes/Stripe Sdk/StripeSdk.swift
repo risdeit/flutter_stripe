@@ -6,12 +6,12 @@ class StripeSdk: RCTEventEmitter, STPApplePayContextDelegate, STPBankSelectionVi
     public var cardFieldView: CardFieldView? = nil
     public var cardFormView: CardFormView? = nil
 
-    var merchantIdentifier: String = nil
+    var merchantIdentifier: String? = nil
     
     private var paymentSheet: PaymentSheet?
     private var paymentSheetFlowController: PaymentSheet.FlowController?
     
-    var urlScheme: String = nil
+    var urlScheme: String? = nil
 
     var applePayCompletionCallback: STPIntentClientSecretCompletionBlock? = nil
     var applePayRequestResolver: RCTPromiseResolveBlock? = nil
@@ -20,7 +20,7 @@ class StripeSdk: RCTEventEmitter, STPApplePayContextDelegate, STPBankSelectionVi
     var confirmApplePayPaymentResolver: RCTPromiseResolveBlock? = nil
     var confirmPaymentResolver: RCTPromiseResolveBlock? = nil
     
-    var confirmPaymentClientSecret: String = nil
+    var confirmPaymentClientSecret: String? = nil
     
     var shippingMethodUpdateHandler: ((PKPaymentRequestShippingMethodUpdate) -> Void)? = nil
     var shippingContactUpdateHandler: ((PKPaymentRequestShippingContactUpdate) -> Void)? = nil
@@ -203,7 +203,7 @@ class StripeSdk: RCTEventEmitter, STPApplePayContextDelegate, STPBankSelectionVi
     }
     
     @objc(createTokenForCVCUpdate:resolver:rejecter:)
-    func createTokenForCVCUpdate(cvc: String, resolver resolve: @escaping RCTPromiseResolveBlock, rejecter reject: @escaping RCTPromiseRejectBlock) {
+    func createTokenForCVCUpdate(cvc: String?, resolver resolve: @escaping RCTPromiseResolveBlock, rejecter reject: @escaping RCTPromiseRejectBlock) {
         guard let cvc = cvc else {
             resolve(Errors.createError("Failed", "You must provide CVC"))
             return;
@@ -365,7 +365,7 @@ class StripeSdk: RCTEventEmitter, STPApplePayContextDelegate, STPBankSelectionVi
     }
   
     @objc(handleURLCallback:resolver:rejecter:)
-    func handleURLCallback(url: String, resolver resolve: @escaping RCTPromiseResolveBlock, rejecter reject: @escaping RCTPromiseRejectBlock) {
+    func handleURLCallback(url: String?, resolver resolve: @escaping RCTPromiseResolveBlock, rejecter reject: @escaping RCTPromiseRejectBlock) {
       guard let url = url else {
         resolve(false)
         return;

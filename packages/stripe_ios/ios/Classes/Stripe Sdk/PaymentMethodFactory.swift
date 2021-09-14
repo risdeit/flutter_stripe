@@ -318,7 +318,7 @@ enum PaymentMethodError: Error {
 }
 
 extension PaymentMethodError: LocalizedError {
-    public var errorDescription: String {
+    public var errorDescription: String? {
         switch self {
         case .cardPaymentMissingParams:
             return NSLocalizedString("Card details not complete", comment: "Create payment error")

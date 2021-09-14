@@ -13,7 +13,7 @@ abstract class SimpleViewManager<T: View> {
 
     open fun onDropViewInstance(view: T) {}
 
-    open fun receiveCommand(root: T, commandId: String, args: ReadableArray?) {}
+    open fun receiveCommand(root: T, commandId: String?, args: ReadableArray?) {}
 
     open fun onAfterUpdateTransaction(view: T) {}
 }

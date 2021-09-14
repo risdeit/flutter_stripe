@@ -22,7 +22,7 @@ class CardFormView(private val context: ThemedReactContext) : FrameLayout(contex
   internal var cardForm: CardFormView = CardFormView(context, null, R.style.StripeCardFormView_Borderless)
   private var mEventDispatcher: EventDispatcher? = context.getNativeModule(UIManagerModule::class.java)?.eventDispatcher
   private var dangerouslyGetFullCardDetails: Boolean = false
-  private var currentFocusedField: String = null
+  private var currentFocusedField: String? = null
   var cardParams: PaymentMethodCreateParams.Card? = null
   var cardAddress: Address? = null
   private val cardFormViewBinding = StripeCardFormViewBinding.bind(cardForm)

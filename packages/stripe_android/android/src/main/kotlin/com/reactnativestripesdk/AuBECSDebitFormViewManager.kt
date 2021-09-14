@@ -15,7 +15,7 @@ class AuBECSDebitFormViewManager : SimpleViewManager<AuBECSDebitFormView>() {
   }
 
   @ReactProp(name = "companyName")
-  fun setCompanyName(view: AuBECSDebitFormView, name: String) {
+  fun setCompanyName(view: AuBECSDebitFormView, name: String?) {
     view.setCompanyName(name);
   }
 

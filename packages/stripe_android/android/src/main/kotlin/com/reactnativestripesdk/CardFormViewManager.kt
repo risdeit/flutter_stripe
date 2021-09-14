@@ -18,7 +18,7 @@ class CardFormViewManager : SimpleViewManager<CardFormView>() {
       CardFormCompleteEvent.EVENT_NAME, MapBuilder.of("registrationName", "onFormComplete"))
   }
 
-  override fun receiveCommand(root: CardFormView, commandId: String, args: ReadableArray?) {
+  override fun receiveCommand(root: CardFormView, commandId: String?, args: ReadableArray?) {
     when (commandId) {
       "focus" -> root.requestFocusFromJS()
       "blur" -> root.requestBlurFromJS()

@@ -179,7 +179,7 @@ class StripeSdkCardView(private val context: ThemedReactContext) : FrameLayout(c
     mCardWidget.paymentMethodCard?.let {
       cardParams = it
       cardAddress = Address.Builder()
-        .setPostalCode(cardDetails["postalCode"] as String)
+        .setPostalCode(cardDetails["postalCode"] as String?)
         .build()
     } ?: run {
       cardParams = null
