@@ -40,7 +40,7 @@ Map<String, dynamic> _$_$_SetupParametersToJson(_$_SetupParameters instance) =>
 K _$enumDecode<K, V>(
   Map<K, V> enumValues,
   Object source, {
-  K? unknownValue,
+  K unknownValue,
 }) {
   if (source == null) {
     throw ArgumentError(
@@ -63,10 +63,10 @@ K _$enumDecode<K, V>(
   ).key;
 }
 
-K? _$enumDecodeNullable<K, V>(
+K _$enumDecodeNullable<K, V>(
   Map<K, V> enumValues,
   dynamic source, {
-  K? unknownValue,
+  K unknownValue,
 }) {
   if (source == null) {
     return null;

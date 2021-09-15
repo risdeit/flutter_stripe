@@ -9,13 +9,13 @@ part of 'card_field_input.dart';
 _$_CardStyleConstructor _$_$_CardStyleConstructorFromJson(
     Map<String, dynamic> json) {
   return _$_CardStyleConstructor(
-    borderWidth: (json['borderWidth'] as num?)?.toDouble(),
+    borderWidth: (json['borderWidth'] as num).toDouble(),
     backgroundColor: ColorKey.fromJson(json['backgroundColor']),
     borderColor: ColorKey.fromJson(json['borderColor']),
-    borderRadius: (json['borderRadius'] as num?)?.toDouble(),
+    borderRadius: (json['borderRadius'] as num).toDouble(),
     cursorColor: ColorKey.fromJson(json['cursorColor']),
     textColor: ColorKey.fromJson(json['textColor']),
-    fontSize: (json['fontSize'] as num?)?.toDouble(),
+    fontSize: (json['fontSize'] as num).toDouble(),
     fontFamily: json['fontFamily'] as String,
     textErrorColor: ColorKey.fromJson(json['textErrorColor']),
     placeholderColor: ColorKey.fromJson(json['placeholderColor']),
@@ -100,7 +100,7 @@ Map<String, dynamic> _$_$_CardFieldFocusNameToJson(
 K _$enumDecode<K, V>(
   Map<K, V> enumValues,
   Object source, {
-  K? unknownValue,
+  K unknownValue,
 }) {
   if (source == null) {
     throw ArgumentError(
@@ -123,10 +123,10 @@ K _$enumDecode<K, V>(
   ).key;
 }
 
-K? _$enumDecodeNullable<K, V>(
+K _$enumDecodeNullable<K, V>(
   Map<K, V> enumValues,
   dynamic source, {
-  K? unknownValue,
+  K unknownValue,
 }) {
   if (source == null) {
     return null;

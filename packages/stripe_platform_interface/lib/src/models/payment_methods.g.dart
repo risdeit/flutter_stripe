@@ -57,7 +57,7 @@ _$_BillingDetails _$_$_BillingDetailsFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$_$_BillingDetailsToJson(_$_BillingDetails instance) =>
     <String, dynamic>{
       'email': instance.email,
-      'address': instance.address?.toJson(),
+      'address': instance.address.toJson(),
       'phone': instance.phone,
       'name': instance.name,
     };
@@ -190,13 +190,13 @@ Map<String, dynamic> _$_$_PaymentMethodParamsCardToJson(
     <String, dynamic>{
       'setupFutureUsage':
           _$PaymentIntentsFutureUsageEnumMap[instance.setupFutureUsage],
-      'billingDetails': instance.billingDetails?.toJson(),
+      'billingDetails': instance.billingDetails.toJson(),
     };
 
 K _$enumDecode<K, V>(
   Map<K, V> enumValues,
   Object source, {
-  K? unknownValue,
+  K unknownValue,
 }) {
   if (source == null) {
     throw ArgumentError(
@@ -219,10 +219,10 @@ K _$enumDecode<K, V>(
   ).key;
 }
 
-K? _$enumDecodeNullable<K, V>(
+K _$enumDecodeNullable<K, V>(
   Map<K, V> enumValues,
   dynamic source, {
-  K? unknownValue,
+  K unknownValue,
 }) {
   if (source == null) {
     return null;
@@ -291,7 +291,7 @@ _$_PaymentMethodParamsIdeal _$_$_PaymentMethodParamsIdealFromJson(
 Map<String, dynamic> _$_$_PaymentMethodParamsIdealToJson(
         _$_PaymentMethodParamsIdeal instance) =>
     <String, dynamic>{
-      'billingDetails': instance.billingDetails?.toJson(),
+      'billingDetails': instance.billingDetails.toJson(),
       'bankName': instance.bankName,
     };
 
@@ -308,7 +308,7 @@ _$_PaymentMethodParamsBankContact _$_$_PaymentMethodParamsBankContactFromJson(
 Map<String, dynamic> _$_$_PaymentMethodParamsBankContactToJson(
         _$_PaymentMethodParamsBankContact instance) =>
     <String, dynamic>{
-      'billingDetails': instance.billingDetails?.toJson(),
+      'billingDetails': instance.billingDetails.toJson(),
     };
 
 _$_PaymentMethodParamsGiroPay _$_$_PaymentMethodParamsGiroPayFromJson(
@@ -324,7 +324,7 @@ _$_PaymentMethodParamsGiroPay _$_$_PaymentMethodParamsGiroPayFromJson(
 Map<String, dynamic> _$_$_PaymentMethodParamsGiroPayToJson(
         _$_PaymentMethodParamsGiroPay instance) =>
     <String, dynamic>{
-      'billingDetails': instance.billingDetails?.toJson(),
+      'billingDetails': instance.billingDetails.toJson(),
     };
 
 _$_PaymentMethodParamsEps _$_$_PaymentMethodParamsEpsFromJson(
@@ -340,7 +340,7 @@ _$_PaymentMethodParamsEps _$_$_PaymentMethodParamsEpsFromJson(
 Map<String, dynamic> _$_$_PaymentMethodParamsEpsToJson(
         _$_PaymentMethodParamsEps instance) =>
     <String, dynamic>{
-      'billingDetails': instance.billingDetails?.toJson(),
+      'billingDetails': instance.billingDetails.toJson(),
     };
 
 _$_PaymentMethodParamsPay _$_$_PaymentMethodParamsPayFromJson(
@@ -356,7 +356,7 @@ _$_PaymentMethodParamsPay _$_$_PaymentMethodParamsPayFromJson(
 Map<String, dynamic> _$_$_PaymentMethodParamsPayToJson(
         _$_PaymentMethodParamsPay instance) =>
     <String, dynamic>{
-      'billingDetails': instance.billingDetails?.toJson(),
+      'billingDetails': instance.billingDetails.toJson(),
     };
 
 _$_PaymentMethodParamsP24 _$_$_PaymentMethodParamsP24FromJson(
@@ -372,7 +372,7 @@ _$_PaymentMethodParamsP24 _$_$_PaymentMethodParamsP24FromJson(
 Map<String, dynamic> _$_$_PaymentMethodParamsP24ToJson(
         _$_PaymentMethodParamsP24 instance) =>
     <String, dynamic>{
-      'billingDetails': instance.billingDetails?.toJson(),
+      'billingDetails': instance.billingDetails.toJson(),
     };
 
 _$_PaymentMethodParamsFpx _$_$_PaymentMethodParamsFpxFromJson(
@@ -407,7 +407,7 @@ Map<String, dynamic> _$_$_PaymentMethodParamsSepaDebitToJson(
       'iban': instance.iban,
       'setupFutureUsage':
           _$PaymentIntentsFutureUsageEnumMap[instance.setupFutureUsage],
-      'billingDetails': instance.billingDetails?.toJson(),
+      'billingDetails': instance.billingDetails.toJson(),
     };
 
 _$_PaymentMethodParamsSofort _$_$_PaymentMethodParamsSofortFromJson(
@@ -429,7 +429,7 @@ Map<String, dynamic> _$_$_PaymentMethodParamsSofortToJson(
       'country': instance.country,
       'setupFutureUsage':
           _$PaymentIntentsFutureUsageEnumMap[instance.setupFutureUsage],
-      'billingDetails': instance.billingDetails?.toJson(),
+      'billingDetails': instance.billingDetails.toJson(),
     };
 
 _$_PaymentMethodParamsAfterpayClearpay
@@ -449,7 +449,7 @@ Map<String, dynamic> _$_$_PaymentMethodParamsAfterpayClearpayToJson(
         _$_PaymentMethodParamsAfterpayClearpay instance) =>
     <String, dynamic>{
       'shippingDetails': instance.shippingDetails.toJson(),
-      'billingDetails': instance.billingDetails?.toJson(),
+      'billingDetails': instance.billingDetails.toJson(),
     };
 
 _$_PaymentMethodParamsOxxo _$_$_PaymentMethodParamsOxxoFromJson(
@@ -465,7 +465,7 @@ _$_PaymentMethodParamsOxxo _$_$_PaymentMethodParamsOxxoFromJson(
 Map<String, dynamic> _$_$_PaymentMethodParamsOxxoToJson(
         _$_PaymentMethodParamsOxxo instance) =>
     <String, dynamic>{
-      'billingDetails': instance.billingDetails?.toJson(),
+      'billingDetails': instance.billingDetails.toJson(),
     };
 
 _$_PaymentMethodParamsWechat _$_$_PaymentMethodParamsWechatFromJson(

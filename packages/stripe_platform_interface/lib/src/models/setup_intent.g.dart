@@ -39,13 +39,13 @@ Map<String, dynamic> _$_$_SetupIntentToJson(_$_SetupIntent instance) =>
           .toList(),
       'description': instance.description,
       'created': instance.created,
-      'lastSetupError': instance.lastSetupError?.toJson(),
+      'lastSetupError': instance.lastSetupError.toJson(),
     };
 
 K _$enumDecode<K, V>(
   Map<K, V> enumValues,
   Object source, {
-  K? unknownValue,
+  K unknownValue,
 }) {
   if (source == null) {
     throw ArgumentError(

@@ -31,7 +31,7 @@ Map<String, dynamic> _$_$_ApplePayShippingMethodToJson(
 K _$enumDecode<K, V>(
   Map<K, V> enumValues,
   Object source, {
-  K? unknownValue,
+  K unknownValue,
 }) {
   if (source == null) {
     throw ArgumentError(
@@ -54,10 +54,10 @@ K _$enumDecode<K, V>(
   ).key;
 }
 
-K? _$enumDecodeNullable<K, V>(
+K _$enumDecodeNullable<K, V>(
   Map<K, V> enumValues,
   dynamic source, {
-  K? unknownValue,
+  K unknownValue,
 }) {
   if (source == null) {
     return null;
@@ -94,15 +94,15 @@ _$_ApplePayPresentParams _$_$_ApplePayPresentParamsFromJson(
     country: json['country'] as String,
     currency: json['currency'] as String,
     requiredShippingAddressFields:
-        (json['requiredShippingAddressFields'] as List<dynamic>?)
-            ?.map((e) => _$enumDecode(_$ApplePayContactFieldsTypeEnumMap, e))
+        (json['requiredShippingAddressFields'] as List<dynamic>)
+            .map((e) => _$enumDecode(_$ApplePayContactFieldsTypeEnumMap, e))
             .toList(),
     requiredBillingContactFields:
-        (json['requiredBillingContactFields'] as List<dynamic>?)
-            ?.map((e) => _$enumDecode(_$ApplePayContactFieldsTypeEnumMap, e))
+        (json['requiredBillingContactFields'] as List<dynamic>)
+            .map((e) => _$enumDecode(_$ApplePayContactFieldsTypeEnumMap, e))
             .toList(),
-    shippingMethods: (json['shippingMethods'] as List<dynamic>?)
-        ?.map((e) => ApplePayShippingMethod.fromJson(e as Map<String, dynamic>))
+    shippingMethods: (json['shippingMethods'] as List<dynamic>)
+        .map((e) => ApplePayShippingMethod.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -114,13 +114,13 @@ Map<String, dynamic> _$_$_ApplePayPresentParamsToJson(
       'country': instance.country,
       'currency': instance.currency,
       'requiredShippingAddressFields': instance.requiredShippingAddressFields
-          ?.map((e) => _$ApplePayContactFieldsTypeEnumMap[e])
+          .map((e) => _$ApplePayContactFieldsTypeEnumMap[e])
           .toList(),
       'requiredBillingContactFields': instance.requiredBillingContactFields
-          ?.map((e) => _$ApplePayContactFieldsTypeEnumMap[e])
+          .map((e) => _$ApplePayContactFieldsTypeEnumMap[e])
           .toList(),
       'shippingMethods':
-          instance.shippingMethods?.map((e) => e.toJson()).toList(),
+          instance.shippingMethods.map((e) => e.toJson()).toList(),
     };
 
 const _$ApplePayContactFieldsTypeEnumMap = {

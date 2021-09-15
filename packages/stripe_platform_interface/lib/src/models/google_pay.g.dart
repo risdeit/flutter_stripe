@@ -45,7 +45,7 @@ Map<String, dynamic> _$_$_GooglePayInitParamsToJson(
       'merchantName': instance.merchantName,
       'countryCode': instance.countryCode,
       'testEnv': instance.testEnv,
-      'billingAddressConfig': instance.billingAddressConfig?.toJson(),
+      'billingAddressConfig': instance.billingAddressConfig.toJson(),
       'isEmailRequired': instance.isEmailRequired,
       'existingPaymentMethodRequired': instance.existingPaymentMethodRequired,
     };
@@ -70,7 +70,7 @@ Map<String, dynamic> _$_$_BillingAddressConfigToJson(
 K _$enumDecode<K, V>(
   Map<K, V> enumValues,
   Object source, {
-  K? unknownValue,
+  K unknownValue,
 }) {
   if (source == null) {
     throw ArgumentError(
@@ -93,10 +93,10 @@ K _$enumDecode<K, V>(
   ).key;
 }
 
-K? _$enumDecodeNullable<K, V>(
+K _$enumDecodeNullable<K, V>(
   Map<K, V> enumValues,
   dynamic source, {
-  K? unknownValue,
+  K unknownValue,
 }) {
   if (source == null) {
     return null;

@@ -59,7 +59,7 @@ Map<String, dynamic> _$_$_LocalizedErrorMessageToJson(
 K _$enumDecode<K, V>(
   Map<K, V> enumValues,
   Object source, {
-  K? unknownValue,
+  K unknownValue,
 }) {
   if (source == null) {
     throw ArgumentError(

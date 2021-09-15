@@ -44,13 +44,13 @@ Map<String, dynamic> _$_$_PaymentIntentToJson(_$_PaymentIntent instance) =>
       'description': instance.description,
       'receiptEmail': instance.receiptEmail,
       'canceledAt': instance.canceledAt,
-      'shipping': instance.shipping?.toJson(),
+      'shipping': instance.shipping.toJson(),
     };
 
 K _$enumDecode<K, V>(
   Map<K, V> enumValues,
   Object source, {
-  K? unknownValue,
+  K unknownValue,
 }) {
   if (source == null) {
     throw ArgumentError(

@@ -48,13 +48,13 @@ Map<String, dynamic> _$_$_ThreeDSecureConfigurationParamsToJson(
     <String, dynamic>{
       'navigationBar': instance.navigationBar.toJson(),
       'timeout': instance.timeout,
-      'label': instance.label?.toJson(),
-      'textField': instance.textField?.toJson(),
-      'submitButton': instance.submitButton?.toJson(),
-      'cancelButton': instance.cancelButton?.toJson(),
-      'nextButton': instance.nextButton?.toJson(),
-      'continueButton': instance.continueButton?.toJson(),
-      'resendButton': instance.resendButton?.toJson(),
+      'label': instance.label.toJson(),
+      'textField': instance.textField.toJson(),
+      'submitButton': instance.submitButton.toJson(),
+      'cancelButton': instance.cancelButton.toJson(),
+      'nextButton': instance.nextButton.toJson(),
+      'continueButton': instance.continueButton.toJson(),
+      'resendButton': instance.resendButton.toJson(),
     };
 
 _$_ThreeDSecureNavigationBarThemeData
@@ -65,7 +65,7 @@ _$_ThreeDSecureNavigationBarThemeData
     textColor: json['textColor'] as String,
     statusBarColor: json['statusBarColor'] as String,
     backgroundColor: json['backgroundColor'] as String,
-    textFontSize: (json['textFontSize'] as num?)?.toDouble(),
+    textFontSize: (json['textFontSize'] as num).toDouble(),
   );
 }
 
@@ -85,8 +85,8 @@ _$_ThreeDSecureLabelThemeData _$_$_ThreeDSecureLabelThemeDataFromJson(
   return _$_ThreeDSecureLabelThemeData(
     headingTextColor: json['headingTextColor'] as String,
     textColor: json['textColor'] as String,
-    textFontSize: (json['textFontSize'] as num?)?.toDouble(),
-    headingFontSize: (json['headingFontSize'] as num?)?.toDouble(),
+    textFontSize: (json['textFontSize'] as num).toDouble(),
+    headingFontSize: (json['headingFontSize'] as num).toDouble(),
   );
 }
 
@@ -103,10 +103,10 @@ _$_ThreeDSecureTextFieldThemeData _$_$_ThreeDSecureTextFieldThemeDataFromJson(
     Map<String, dynamic> json) {
   return _$_ThreeDSecureTextFieldThemeData(
     borderColor: json['borderColor'] as String,
-    borderWidth: (json['borderWidth'] as num?)?.toDouble(),
-    cornerRadius: (json['cornerRadius'] as num?)?.toDouble(),
+    borderWidth: (json['borderWidth'] as num).toDouble(),
+    cornerRadius: (json['cornerRadius'] as num).toDouble(),
     textColor: json['textColor'] as String,
-    textFontSize: (json['textFontSize'] as num?)?.toDouble(),
+    textFontSize: (json['textFontSize'] as num).toDouble(),
   );
 }
 
@@ -124,9 +124,9 @@ _$_ThreeDSecureButtonThemeData _$_$_ThreeDSecureButtonThemeDataFromJson(
     Map<String, dynamic> json) {
   return _$_ThreeDSecureButtonThemeData(
     backgroundColor: json['backgroundColor'] as String,
-    cornerRadius: (json['cornerRadius'] as num?)?.toDouble(),
+    cornerRadius: (json['cornerRadius'] as num).toDouble(),
     textColor: json['textColor'] as String,
-    textFontSize: (json['textFontSize'] as num?)?.toDouble(),
+    textFontSize: (json['textFontSize'] as num).toDouble(),
   );
 }
 

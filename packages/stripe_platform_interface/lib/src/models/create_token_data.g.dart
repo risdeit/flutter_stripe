@@ -26,7 +26,7 @@ Map<String, dynamic> _$_$_CreateTokenParamsToJson(
 K _$enumDecode<K, V>(
   Map<K, V> enumValues,
   Object source, {
-  K? unknownValue,
+  K unknownValue,
 }) {
   if (source == null) {
     throw ArgumentError(
@@ -49,10 +49,10 @@ K _$enumDecode<K, V>(
   ).key;
 }
 
-K? _$enumDecodeNullable<K, V>(
+K _$enumDecodeNullable<K, V>(
   Map<K, V> enumValues,
   dynamic source, {
-  K? unknownValue,
+  K unknownValue,
 }) {
   if (source == null) {
     return null;
@@ -115,7 +115,7 @@ Map<String, dynamic> _$_$_CardDataToJson(_$_CardData instance) =>
       'name': instance.name,
       'funding': instance.funding,
       'last4': instance.last4,
-      'address': instance.address?.toJson(),
+      'address': instance.address.toJson(),
     };
 
 _$_BankAccount _$_$_BankAccountFromJson(Map<String, dynamic> json) {
