@@ -83,16 +83,7 @@ class Stripe {
     instance.markNeedsSettings();
   }
 
-  /// Reconfigures the Stripe platform by applying the current values for
-  /// [publishableKey], [merchantIdentifier], [stripeAccountId],
-  /// [threeDSecureParams], [urlScheme]
-  Future<void> applySettings() => _initialise(
-        publishableKey: publishableKey,
-        merchantIdentifier: merchantIdentifier,
-        stripeAccountId: stripeAccountId,
-        threeDSecureParams: threeDSecureParams,
-        urlScheme: urlScheme,
-      );
+
 
   /// Exposes a [ValueListenable] whether or not Apple pay is supported for this
   /// device.
@@ -134,236 +125,6 @@ class Stripe {
     }
   }
 
-  ///Converts payment information defined in [data] into a [PaymentMethod]
-  ///object that can be passed to your server.
-  ///
-  /// [data] specificies the parameters associated with the specific
-  /// paymentmethod. See [PaymentMethodParams] for more details.
-  ///
-  /// Throws an [StripeException] in case creating the payment method fails.
-  Future<PaymentMethod> createPaymentMethod(
-    PaymentMethodParams data, [
-    Map<String, String> options = const {},
-  ]) async {
-    await _awaitForSettings();
-    try {
-      final paymentMethod = await _platform.createPaymentMethod(data, options);
-      return paymentMethod;
-    } on StripeError catch (error) {
-      throw StripeError(message: error.message, code: error.message);
-    }
-  }
-
-  /// Creates a single-use token that represents a credit card’s details.
-  ///
-  /// Tokens are considered legacy, use [PaymentMethod] and [PaymentIntent]
-  /// instead.
-  /// Throws an [StripeError] in case createToken fails.
-
-  Future<TokenData> createToken(CreateTokenParams params) async {
-    await _awaitForSettings();
-    try {
-      final tokenData = await _platform.createToken(params);
-      return tokenData;
-    } on StripeError catch (error) {
-      throw StripeError(message: error.message, code: error.message);
-    }
-  }
-
-  /// Retrieves a [PaymentIntent] using the provided [clientSecret].
-  ///
-  /// Throws a [StripeException] in case retrieving the intent fails.
-  Future<PaymentIntent> retrievePaymentIntent(String clientSecret) async {
-    await _awaitForSettings();
-    try {
-      final paymentMethod = await _platform.retrievePaymentIntent(clientSecret);
-      return paymentMethod;
-    } on StripeError catch (error) {
-      throw StripeError(message: error.message, code: error.message);
-    }
-  }
-
-  /// Presents an Apple payment sheet using [params] for additional
-  /// configuration. See [ApplePayPresentParams] for more details.
-  ///
-  /// Throws an [StripeError] in case presenting the payment sheet fails.
-  Future<void> presentApplePay(
-    ApplePayPresentParams params,
-  ) async {
-    await _awaitForSettings();
-    if (!isApplePaySupported.value) {
-      //throw StripeError<ApplePayError>
-      //(ApplePayError.canceled, 'APPLE_PAY_NOT_SUPPORTED_MESSAGE');
-    }
-    try {
-      await _platform.presentApplePay(params);
-    } on StripeError {
-      rethrow;
-    }
-  }
-
-  /// Confirms the Apple pay payment using the provided [clientSecret].
-  /// Use this method when the form is being submitted.
-  ///
-  /// Throws an [StripeError] in confirming the payment fails.
-  Future<void> confirmApplePayPayment(
-    String clientSecret,
-  ) async {
-    await _awaitForSettings();
-    if (!isApplePaySupported.value) {
-      //throw StripeError<ApplePayError>
-      //(ApplePayError.canceled, 'APPLE_PAY_NOT_SUPPORTED_MESSAGE');
-    }
-    try {
-      await _platform.confirmApplePayPayment(clientSecret);
-    } on StripeError {
-      rethrow;
-    }
-  }
-
-  /// Confirms a payment method, using the provided [paymentIntentClientSecret]
-  /// and [data].
-  ///
-  /// See [PaymentMethodParams] for more details. The method returns a
-  /// [PaymentIntent]. Throws a [StripeException] when confirming the
-  /// paymentmethod fails.
-
-  Future<PaymentIntent> confirmPayment(
-    String paymentIntentClientSecret,
-    PaymentMethodParams data, [
-    Map<String, String> options = const {},
-  ]) async {
-    await _awaitForSettings();
-    try {
-      final paymentMethod = await _platform.confirmPayment(
-          paymentIntentClientSecret, data, options);
-      return paymentMethod;
-    } on StripeError {
-      rethrow;
-    }
-  }
-
-  /// Use this method in case the [PaymentIntent] status is
-  /// [PaymentIntentsStatus.RequiresAction]. Executing this action can take
-  /// several seconds and it is important to not resubmit the form.
-  ///
-  /// Throws a [StripeException] when confirming the handle card action fails.
-  Future<PaymentIntent> handleCardAction(
-    String paymentIntentClientSecret,
-  ) async {
-    await _awaitForSettings();
-    try {
-      final paymentIntent =
-          await _platform.handleCardAction(paymentIntentClientSecret);
-      return paymentIntent;
-    } on StripeError {
-      //throw StripeError<CardActionError>(error.code, error.message);
-      rethrow;
-    }
-  }
-
-  /// Confirm the [SetupIntent] using the [paymentIntentClientSecret]
-  /// and [params].
-  ///
-  /// Use this method when the customer submits the form for SetupIntent.
-  ///
-  /// Throws a [StripeException] when confirming the setupintent fails.
-  Future<SetupIntent> confirmSetupIntent(
-    String paymentIntentClientSecret,
-    PaymentMethodParams params, [
-    Map<String, String> options = const {},
-  ]) async {
-    await _awaitForSettings();
-    try {
-      final setupIntent = await _platform.confirmSetupIntent(
-          paymentIntentClientSecret, params, options);
-      return setupIntent;
-    } on StripeException {
-      rethrow;
-    }
-  }
-
-  /// Creates a token that represents an updated CVC.
-  ///
-  /// Returns a single-use token.
-  ///
-  /// Throws [StripeError] in case creating the token fails.
-  Future<String> createTokenForCVCUpdate(
-    String cvc,
-  ) async {
-    await _awaitForSettings();
-    try {
-      final tokenId = await _platform.createTokenForCVCUpdate(
-        cvc,
-      );
-      return tokenId;
-    } on StripeError {
-      //throw StripeError<CardActionError>(error.code, error.message);
-      rethrow;
-    }
-  }
-
-  /// Initializes the payment by providing a configuration
-  ///
-  /// See [SetupPaymentSheetParameters] for more info. In order to show the
-  /// payment sheet it is required to call [presentPaymentSheet].
-  Future<void> initPaymentSheet({
-    SetupPaymentSheetParameters paymentSheetParameters,
-  }) async {
-    await _awaitForSettings();
-    await _platform.initPaymentSheet(paymentSheetParameters);
-  }
-
-  /// Displays the paymentsheet
-  ///
-  /// See [PresentPaymentSheetPameters] for more details
-  ///
-  /// throws [StripeException] in case of a failure
-  Future<void> presentPaymentSheet({
-    @Deprecated('Params are now inherited from initPaymentSheet so this `parameters` can be removed')
-        dynamic parameters,
-  }) async {
-    await _awaitForSettings();
-    return await _platform.presentPaymentSheet();
-  }
-
-  /// Confirms the paymentsheet payment
-  ///
-  /// throws [StripeException] in case of a failure
-  Future<void> confirmPaymentSheetPayment() async {
-    return await _platform.confirmPaymentSheetPayment();
-  }
-
-  /// Updates the internal card details. This method will not validate the card
-  /// information so you should validate the information yourself.
-  /// WARNING!!! Only do this if you're certain that you fulfill the necessary
-  /// PCI compliance requirements. Make sure that you're not mistakenly logging
-  /// or storing full card details! See the docs for
-  /// details: https://stripe.com/docs/security/guide#validating-pci-compliance
-  Future<void> dangerouslyUpdateCardDetails(CardDetails card) async {
-    return await _platform.dangerouslyUpdateCardDetails(card);
-  }
-
-  /// Inititialise google pay
-  Future<void> initGooglePay(GooglePayInitParams params) async {
-    return await _platform.initGooglePay(params);
-  }
-
-  /// Setup google pay.
-  ///
-  /// Throws a [StripeException] in case it is failing
-  Future<void> presentGooglePay(PresentGooglePayParams params) async {
-    return await _platform.presentGooglePay(params);
-  }
-
-  /// Create a payment method for google pay.
-  ///
-  /// Throws a [StripeException] in case it is failing
-  Future<PaymentMethod> createGooglePayPaymentMethod(
-      CreateGooglePayPaymentParams params) async {
-    return await _platform.createGooglePayPaymentMethod(params);
-  }
-
   FutureOr<void> _awaitForSettings() {
     if (_needsSettings) {
       _settingsFuture = applySettings();
@@ -372,6 +133,34 @@ class Stripe {
       return _settingsFuture;
     }
     return null;
+  }
+
+  /// Reconfigures the Stripe platform by applying the current values for
+  /// [publishableKey], [merchantIdentifier], [stripeAccountId],
+  /// [threeDSecureParams], [urlScheme]
+  Future<void> applySettings() => _initialise(
+    publishableKey: publishableKey,
+    merchantIdentifier: merchantIdentifier,
+    stripeAccountId: stripeAccountId,
+    threeDSecureParams: threeDSecureParams,
+    urlScheme: urlScheme,
+  );
+
+  Future<void> _initialise({
+    String publishableKey,
+    String stripeAccountId,
+    ThreeDSecureConfigurationParams threeDSecureParams,
+    String merchantIdentifier,
+    String urlScheme,
+  }) async {
+    _needsSettings = false;
+    await _platform.initialise(
+      publishableKey: publishableKey,
+      stripeAccountId: stripeAccountId,
+      threeDSecureParams: threeDSecureParams,
+      merchantIdentifier: merchantIdentifier,
+      urlScheme: urlScheme,
+    );
   }
 
   Future<void> _settingsFuture;
@@ -399,22 +188,7 @@ class Stripe {
     _needsSettings = true;
   }
 
-  Future<void> _initialise({
-    String publishableKey,
-    String stripeAccountId,
-    ThreeDSecureConfigurationParams threeDSecureParams,
-    String merchantIdentifier,
-    String urlScheme,
-  }) async {
-    _needsSettings = false;
-    await _platform.initialise(
-      publishableKey: publishableKey,
-      stripeAccountId: stripeAccountId,
-      threeDSecureParams: threeDSecureParams,
-      merchantIdentifier: merchantIdentifier,
-      urlScheme: urlScheme,
-    );
-  }
+
 
   ValueNotifier<bool> _isApplePaySupported;
 }

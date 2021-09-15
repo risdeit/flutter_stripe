@@ -24,13 +24,13 @@ class _$ThreeDSecureConfigurationParamsTearOff {
   _ThreeDSecureConfigurationParams call(
       {required ThreeDSecureNavigationBarThemeData navigationBar,
       int timeout,
-      ThreeDSecureLabelThemeData? label,
-      ThreeDSecureTextFieldThemeData? textField,
-      ThreeDSecureButtonThemeData? submitButton,
-      ThreeDSecureButtonThemeData? cancelButton,
-      ThreeDSecureButtonThemeData? nextButton,
-      ThreeDSecureButtonThemeData? continueButton,
-      ThreeDSecureButtonThemeData? resendButton}) {
+      ThreeDSecureLabelThemeData label,
+      ThreeDSecureTextFieldThemeData textField,
+      ThreeDSecureButtonThemeData submitButton,
+      ThreeDSecureButtonThemeData cancelButton,
+      ThreeDSecureButtonThemeData nextButton,
+      ThreeDSecureButtonThemeData continueButton,
+      ThreeDSecureButtonThemeData resendButton}) {
     return _ThreeDSecureConfigurationParams(
       navigationBar: navigationBar,
       timeout: timeout,
@@ -63,30 +63,30 @@ mixin _$ThreeDSecureConfigurationParams {
   int get timeout => throw _privateConstructorUsedError;
 
   /// Styling for the 3d secure label.
-  ThreeDSecureLabelThemeData? get label => throw _privateConstructorUsedError;
+  ThreeDSecureLabelThemeData get label => throw _privateConstructorUsedError;
 
   /// Styling for the 3d secure textfield.
-  ThreeDSecureTextFieldThemeData? get textField =>
+  ThreeDSecureTextFieldThemeData get textField =>
       throw _privateConstructorUsedError;
 
   /// Styling for the 3d secure confirmation button.
-  ThreeDSecureButtonThemeData? get submitButton =>
+  ThreeDSecureButtonThemeData get submitButton =>
       throw _privateConstructorUsedError;
 
   /// Styling for the 3d secure cancel button.
-  ThreeDSecureButtonThemeData? get cancelButton =>
+  ThreeDSecureButtonThemeData get cancelButton =>
       throw _privateConstructorUsedError;
 
   /// Styling for the 3d secure next button.
-  ThreeDSecureButtonThemeData? get nextButton =>
+  ThreeDSecureButtonThemeData get nextButton =>
       throw _privateConstructorUsedError;
 
   /// Styling for the 3d secure continue button.
-  ThreeDSecureButtonThemeData? get continueButton =>
+  ThreeDSecureButtonThemeData get continueButton =>
       throw _privateConstructorUsedError;
 
   /// Styling for the 3d secure resend button.
-  ThreeDSecureButtonThemeData? get resendButton =>
+  ThreeDSecureButtonThemeData get resendButton =>
       throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -104,22 +104,22 @@ abstract class $ThreeDSecureConfigurationParamsCopyWith<$Res> {
   $Res call(
       {ThreeDSecureNavigationBarThemeData navigationBar,
       int timeout,
-      ThreeDSecureLabelThemeData? label,
-      ThreeDSecureTextFieldThemeData? textField,
-      ThreeDSecureButtonThemeData? submitButton,
-      ThreeDSecureButtonThemeData? cancelButton,
-      ThreeDSecureButtonThemeData? nextButton,
-      ThreeDSecureButtonThemeData? continueButton,
-      ThreeDSecureButtonThemeData? resendButton});
+      ThreeDSecureLabelThemeData label,
+      ThreeDSecureTextFieldThemeData textField,
+      ThreeDSecureButtonThemeData submitButton,
+      ThreeDSecureButtonThemeData cancelButton,
+      ThreeDSecureButtonThemeData nextButton,
+      ThreeDSecureButtonThemeData continueButton,
+      ThreeDSecureButtonThemeData resendButton});
 
   $ThreeDSecureNavigationBarThemeDataCopyWith<$Res> get navigationBar;
-  $ThreeDSecureLabelThemeDataCopyWith<$Res>? get label;
-  $ThreeDSecureTextFieldThemeDataCopyWith<$Res>? get textField;
-  $ThreeDSecureButtonThemeDataCopyWith<$Res>? get submitButton;
-  $ThreeDSecureButtonThemeDataCopyWith<$Res>? get cancelButton;
-  $ThreeDSecureButtonThemeDataCopyWith<$Res>? get nextButton;
-  $ThreeDSecureButtonThemeDataCopyWith<$Res>? get continueButton;
-  $ThreeDSecureButtonThemeDataCopyWith<$Res>? get resendButton;
+  $ThreeDSecureLabelThemeDataCopyWith<$Res> get label;
+  $ThreeDSecureTextFieldThemeDataCopyWith<$Res> get textField;
+  $ThreeDSecureButtonThemeDataCopyWith<$Res> get submitButton;
+  $ThreeDSecureButtonThemeDataCopyWith<$Res> get cancelButton;
+  $ThreeDSecureButtonThemeDataCopyWith<$Res> get nextButton;
+  $ThreeDSecureButtonThemeDataCopyWith<$Res> get continueButton;
+  $ThreeDSecureButtonThemeDataCopyWith<$Res> get resendButton;
 }
 
 /// @nodoc
@@ -155,31 +155,31 @@ class _$ThreeDSecureConfigurationParamsCopyWithImpl<$Res>
       label: label == freezed
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
-              as ThreeDSecureLabelThemeData?,
+              as ThreeDSecureLabelThemeData,
       textField: textField == freezed
           ? _value.textField
           : textField // ignore: cast_nullable_to_non_nullable
-              as ThreeDSecureTextFieldThemeData?,
+              as ThreeDSecureTextFieldThemeData,
       submitButton: submitButton == freezed
           ? _value.submitButton
           : submitButton // ignore: cast_nullable_to_non_nullable
-              as ThreeDSecureButtonThemeData?,
+              as ThreeDSecureButtonThemeData,
       cancelButton: cancelButton == freezed
           ? _value.cancelButton
           : cancelButton // ignore: cast_nullable_to_non_nullable
-              as ThreeDSecureButtonThemeData?,
+              as ThreeDSecureButtonThemeData,
       nextButton: nextButton == freezed
           ? _value.nextButton
           : nextButton // ignore: cast_nullable_to_non_nullable
-              as ThreeDSecureButtonThemeData?,
+              as ThreeDSecureButtonThemeData,
       continueButton: continueButton == freezed
           ? _value.continueButton
           : continueButton // ignore: cast_nullable_to_non_nullable
-              as ThreeDSecureButtonThemeData?,
+              as ThreeDSecureButtonThemeData,
       resendButton: resendButton == freezed
           ? _value.resendButton
           : resendButton // ignore: cast_nullable_to_non_nullable
-              as ThreeDSecureButtonThemeData?,
+              as ThreeDSecureButtonThemeData,
     ));
   }
 
@@ -192,7 +192,7 @@ class _$ThreeDSecureConfigurationParamsCopyWithImpl<$Res>
   }
 
   @override
-  $ThreeDSecureLabelThemeDataCopyWith<$Res>? get label {
+  $ThreeDSecureLabelThemeDataCopyWith<$Res> get label {
     if (_value.label == null) {
       return null;
     }
@@ -203,7 +203,7 @@ class _$ThreeDSecureConfigurationParamsCopyWithImpl<$Res>
   }
 
   @override
-  $ThreeDSecureTextFieldThemeDataCopyWith<$Res>? get textField {
+  $ThreeDSecureTextFieldThemeDataCopyWith<$Res> get textField {
     if (_value.textField == null) {
       return null;
     }
@@ -215,7 +215,7 @@ class _$ThreeDSecureConfigurationParamsCopyWithImpl<$Res>
   }
 
   @override
-  $ThreeDSecureButtonThemeDataCopyWith<$Res>? get submitButton {
+  $ThreeDSecureButtonThemeDataCopyWith<$Res> get submitButton {
     if (_value.submitButton == null) {
       return null;
     }
@@ -227,7 +227,7 @@ class _$ThreeDSecureConfigurationParamsCopyWithImpl<$Res>
   }
 
   @override
-  $ThreeDSecureButtonThemeDataCopyWith<$Res>? get cancelButton {
+  $ThreeDSecureButtonThemeDataCopyWith<$Res> get cancelButton {
     if (_value.cancelButton == null) {
       return null;
     }
@@ -239,7 +239,7 @@ class _$ThreeDSecureConfigurationParamsCopyWithImpl<$Res>
   }
 
   @override
-  $ThreeDSecureButtonThemeDataCopyWith<$Res>? get nextButton {
+  $ThreeDSecureButtonThemeDataCopyWith<$Res> get nextButton {
     if (_value.nextButton == null) {
       return null;
     }
@@ -251,7 +251,7 @@ class _$ThreeDSecureConfigurationParamsCopyWithImpl<$Res>
   }
 
   @override
-  $ThreeDSecureButtonThemeDataCopyWith<$Res>? get continueButton {
+  $ThreeDSecureButtonThemeDataCopyWith<$Res> get continueButton {
     if (_value.continueButton == null) {
       return null;
     }
@@ -263,7 +263,7 @@ class _$ThreeDSecureConfigurationParamsCopyWithImpl<$Res>
   }
 
   @override
-  $ThreeDSecureButtonThemeDataCopyWith<$Res>? get resendButton {
+  $ThreeDSecureButtonThemeDataCopyWith<$Res> get resendButton {
     if (_value.resendButton == null) {
       return null;
     }
@@ -286,30 +286,30 @@ abstract class _$ThreeDSecureConfigurationParamsCopyWith<$Res>
   $Res call(
       {ThreeDSecureNavigationBarThemeData navigationBar,
       int timeout,
-      ThreeDSecureLabelThemeData? label,
-      ThreeDSecureTextFieldThemeData? textField,
-      ThreeDSecureButtonThemeData? submitButton,
-      ThreeDSecureButtonThemeData? cancelButton,
-      ThreeDSecureButtonThemeData? nextButton,
-      ThreeDSecureButtonThemeData? continueButton,
-      ThreeDSecureButtonThemeData? resendButton});
+      ThreeDSecureLabelThemeData label,
+      ThreeDSecureTextFieldThemeData textField,
+      ThreeDSecureButtonThemeData submitButton,
+      ThreeDSecureButtonThemeData cancelButton,
+      ThreeDSecureButtonThemeData nextButton,
+      ThreeDSecureButtonThemeData continueButton,
+      ThreeDSecureButtonThemeData resendButton});
 
   @override
   $ThreeDSecureNavigationBarThemeDataCopyWith<$Res> get navigationBar;
   @override
-  $ThreeDSecureLabelThemeDataCopyWith<$Res>? get label;
+  $ThreeDSecureLabelThemeDataCopyWith<$Res> get label;
   @override
-  $ThreeDSecureTextFieldThemeDataCopyWith<$Res>? get textField;
+  $ThreeDSecureTextFieldThemeDataCopyWith<$Res> get textField;
   @override
-  $ThreeDSecureButtonThemeDataCopyWith<$Res>? get submitButton;
+  $ThreeDSecureButtonThemeDataCopyWith<$Res> get submitButton;
   @override
-  $ThreeDSecureButtonThemeDataCopyWith<$Res>? get cancelButton;
+  $ThreeDSecureButtonThemeDataCopyWith<$Res> get cancelButton;
   @override
-  $ThreeDSecureButtonThemeDataCopyWith<$Res>? get nextButton;
+  $ThreeDSecureButtonThemeDataCopyWith<$Res> get nextButton;
   @override
-  $ThreeDSecureButtonThemeDataCopyWith<$Res>? get continueButton;
+  $ThreeDSecureButtonThemeDataCopyWith<$Res> get continueButton;
   @override
-  $ThreeDSecureButtonThemeDataCopyWith<$Res>? get resendButton;
+  $ThreeDSecureButtonThemeDataCopyWith<$Res> get resendButton;
 }
 
 /// @nodoc
@@ -349,31 +349,31 @@ class __$ThreeDSecureConfigurationParamsCopyWithImpl<$Res>
       label: label == freezed
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
-              as ThreeDSecureLabelThemeData?,
+              as ThreeDSecureLabelThemeData,
       textField: textField == freezed
           ? _value.textField
           : textField // ignore: cast_nullable_to_non_nullable
-              as ThreeDSecureTextFieldThemeData?,
+              as ThreeDSecureTextFieldThemeData,
       submitButton: submitButton == freezed
           ? _value.submitButton
           : submitButton // ignore: cast_nullable_to_non_nullable
-              as ThreeDSecureButtonThemeData?,
+              as ThreeDSecureButtonThemeData,
       cancelButton: cancelButton == freezed
           ? _value.cancelButton
           : cancelButton // ignore: cast_nullable_to_non_nullable
-              as ThreeDSecureButtonThemeData?,
+              as ThreeDSecureButtonThemeData,
       nextButton: nextButton == freezed
           ? _value.nextButton
           : nextButton // ignore: cast_nullable_to_non_nullable
-              as ThreeDSecureButtonThemeData?,
+              as ThreeDSecureButtonThemeData,
       continueButton: continueButton == freezed
           ? _value.continueButton
           : continueButton // ignore: cast_nullable_to_non_nullable
-              as ThreeDSecureButtonThemeData?,
+              as ThreeDSecureButtonThemeData,
       resendButton: resendButton == freezed
           ? _value.resendButton
           : resendButton // ignore: cast_nullable_to_non_nullable
-              as ThreeDSecureButtonThemeData?,
+              as ThreeDSecureButtonThemeData,
     ));
   }
 }
@@ -409,31 +409,31 @@ class _$_ThreeDSecureConfigurationParams
   @override
 
   /// Styling for the 3d secure label.
-  final ThreeDSecureLabelThemeData? label;
+  final ThreeDSecureLabelThemeData label;
   @override
 
   /// Styling for the 3d secure textfield.
-  final ThreeDSecureTextFieldThemeData? textField;
+  final ThreeDSecureTextFieldThemeData textField;
   @override
 
   /// Styling for the 3d secure confirmation button.
-  final ThreeDSecureButtonThemeData? submitButton;
+  final ThreeDSecureButtonThemeData submitButton;
   @override
 
   /// Styling for the 3d secure cancel button.
-  final ThreeDSecureButtonThemeData? cancelButton;
+  final ThreeDSecureButtonThemeData cancelButton;
   @override
 
   /// Styling for the 3d secure next button.
-  final ThreeDSecureButtonThemeData? nextButton;
+  final ThreeDSecureButtonThemeData nextButton;
   @override
 
   /// Styling for the 3d secure continue button.
-  final ThreeDSecureButtonThemeData? continueButton;
+  final ThreeDSecureButtonThemeData continueButton;
   @override
 
   /// Styling for the 3d secure resend button.
-  final ThreeDSecureButtonThemeData? resendButton;
+  final ThreeDSecureButtonThemeData resendButton;
 
   @override
   String toString() {
@@ -502,13 +502,13 @@ abstract class _ThreeDSecureConfigurationParams
   const factory _ThreeDSecureConfigurationParams(
           { ThreeDSecureNavigationBarThemeData navigationBar,
           int timeout,
-          ThreeDSecureLabelThemeData? label,
-          ThreeDSecureTextFieldThemeData? textField,
-          ThreeDSecureButtonThemeData? submitButton,
-          ThreeDSecureButtonThemeData? cancelButton,
-          ThreeDSecureButtonThemeData? nextButton,
-          ThreeDSecureButtonThemeData? continueButton,
-          ThreeDSecureButtonThemeData? resendButton}) =
+          ThreeDSecureLabelThemeData label,
+          ThreeDSecureTextFieldThemeData textField,
+          ThreeDSecureButtonThemeData submitButton,
+          ThreeDSecureButtonThemeData cancelButton,
+          ThreeDSecureButtonThemeData nextButton,
+          ThreeDSecureButtonThemeData continueButton,
+          ThreeDSecureButtonThemeData resendButton}) =
       _$_ThreeDSecureConfigurationParams;
 
   factory _ThreeDSecureConfigurationParams.fromJson(Map<String, dynamic> json) =
@@ -526,36 +526,36 @@ abstract class _ThreeDSecureConfigurationParams
   @override
 
   /// Styling for the 3d secure label.
-  ThreeDSecureLabelThemeData? get label => throw _privateConstructorUsedError;
+  ThreeDSecureLabelThemeData get label => throw _privateConstructorUsedError;
   @override
 
   /// Styling for the 3d secure textfield.
-  ThreeDSecureTextFieldThemeData? get textField =>
+  ThreeDSecureTextFieldThemeData get textField =>
       throw _privateConstructorUsedError;
   @override
 
   /// Styling for the 3d secure confirmation button.
-  ThreeDSecureButtonThemeData? get submitButton =>
+  ThreeDSecureButtonThemeData get submitButton =>
       throw _privateConstructorUsedError;
   @override
 
   /// Styling for the 3d secure cancel button.
-  ThreeDSecureButtonThemeData? get cancelButton =>
+  ThreeDSecureButtonThemeData get cancelButton =>
       throw _privateConstructorUsedError;
   @override
 
   /// Styling for the 3d secure next button.
-  ThreeDSecureButtonThemeData? get nextButton =>
+  ThreeDSecureButtonThemeData get nextButton =>
       throw _privateConstructorUsedError;
   @override
 
   /// Styling for the 3d secure continue button.
-  ThreeDSecureButtonThemeData? get continueButton =>
+  ThreeDSecureButtonThemeData get continueButton =>
       throw _privateConstructorUsedError;
   @override
 
   /// Styling for the 3d secure resend button.
-  ThreeDSecureButtonThemeData? get resendButton =>
+  ThreeDSecureButtonThemeData get resendButton =>
       throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)

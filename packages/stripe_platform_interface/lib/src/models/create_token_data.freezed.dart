@@ -20,7 +20,7 @@ CreateTokenParams _$CreateTokenParamsFromJson(Map<String, dynamic> json) {
 class _$CreateTokenParamsTearOff {
   const _$CreateTokenParamsTearOff();
 
-  _CreateTokenParams call({TokenType type = TokenType.Card, Address? address}) {
+  _CreateTokenParams call({TokenType type = TokenType.Card, Address address}) {
     return _CreateTokenParams(
       type: type,
       address: address,
@@ -41,7 +41,7 @@ mixin _$CreateTokenParams {
   TokenType get type => throw _privateConstructorUsedError;
 
   /// Additional address details
-  Address? get address => throw _privateConstructorUsedError;
+  Address get address => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -54,9 +54,9 @@ abstract class $CreateTokenParamsCopyWith<$Res> {
   factory $CreateTokenParamsCopyWith(
           CreateTokenParams value, $Res Function(CreateTokenParams) then) =
       _$CreateTokenParamsCopyWithImpl<$Res>;
-  $Res call({TokenType type, Address? address});
+  $Res call({TokenType type, Address address});
 
-  $AddressCopyWith<$Res>? get address;
+  $AddressCopyWith<$Res> get address;
 }
 
 /// @nodoc
@@ -81,12 +81,12 @@ class _$CreateTokenParamsCopyWithImpl<$Res>
       address: address == freezed
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
-              as Address?,
+              as Address,
     ));
   }
 
   @override
-  $AddressCopyWith<$Res>? get address {
+  $AddressCopyWith<$Res> get address {
     if (_value.address == null) {
       return null;
     }
@@ -104,10 +104,10 @@ abstract class _$CreateTokenParamsCopyWith<$Res>
           _CreateTokenParams value, $Res Function(_CreateTokenParams) then) =
       __$CreateTokenParamsCopyWithImpl<$Res>;
   @override
-  $Res call({TokenType type, Address? address});
+  $Res call({TokenType type, Address address});
 
   @override
-  $AddressCopyWith<$Res>? get address;
+  $AddressCopyWith<$Res> get address;
 }
 
 /// @nodoc
@@ -134,7 +134,7 @@ class __$CreateTokenParamsCopyWithImpl<$Res>
       address: address == freezed
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
-              as Address?,
+              as Address,
     ));
   }
 }
@@ -155,7 +155,7 @@ class _$_CreateTokenParams implements _CreateTokenParams {
   @override
 
   /// Additional address details
-  final Address? address;
+  final Address address;
 
   @override
   String toString() {
@@ -190,7 +190,7 @@ class _$_CreateTokenParams implements _CreateTokenParams {
 }
 
 abstract class _CreateTokenParams implements CreateTokenParams {
-  const factory _CreateTokenParams({TokenType type, Address? address}) =
+  const factory _CreateTokenParams({TokenType type, Address address}) =
       _$_CreateTokenParams;
 
   factory _CreateTokenParams.fromJson(Map<String, dynamic> json) =
@@ -203,7 +203,7 @@ abstract class _CreateTokenParams implements CreateTokenParams {
   @override
 
   /// Additional address details
-  Address? get address => throw _privateConstructorUsedError;
+  Address get address => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CreateTokenParamsCopyWith<_CreateTokenParams> get copyWith =>
@@ -223,8 +223,8 @@ class _$TokenDataTearOff {
       @JsonKey(name: 'created')  String createdDateTime,
        TokenType type,
        bool livemode,
-      BankAccount? bankAccount,
-      CardData? card}) {
+      BankAccount bankAccount,
+      CardData card}) {
     return _TokenData(
       id: id,
       createdDateTime: createdDateTime,
@@ -259,10 +259,10 @@ mixin _$TokenData {
   bool get livemode => throw _privateConstructorUsedError;
 
   /// Bank account data
-  BankAccount? get bankAccount => throw _privateConstructorUsedError;
+  BankAccount get bankAccount => throw _privateConstructorUsedError;
 
   /// Card data
-  CardData? get card => throw _privateConstructorUsedError;
+  CardData get card => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -279,11 +279,11 @@ abstract class $TokenDataCopyWith<$Res> {
       @JsonKey(name: 'created') String createdDateTime,
       TokenType type,
       bool livemode,
-      BankAccount? bankAccount,
-      CardData? card});
+      BankAccount bankAccount,
+      CardData card});
 
-  $BankAccountCopyWith<$Res>? get bankAccount;
-  $CardDataCopyWith<$Res>? get card;
+  $BankAccountCopyWith<$Res> get bankAccount;
+  $CardDataCopyWith<$Res> get card;
 }
 
 /// @nodoc
@@ -323,16 +323,16 @@ class _$TokenDataCopyWithImpl<$Res> implements $TokenDataCopyWith<$Res> {
       bankAccount: bankAccount == freezed
           ? _value.bankAccount
           : bankAccount // ignore: cast_nullable_to_non_nullable
-              as BankAccount?,
+              as BankAccount,
       card: card == freezed
           ? _value.card
           : card // ignore: cast_nullable_to_non_nullable
-              as CardData?,
+              as CardData,
     ));
   }
 
   @override
-  $BankAccountCopyWith<$Res>? get bankAccount {
+  $BankAccountCopyWith<$Res> get bankAccount {
     if (_value.bankAccount == null) {
       return null;
     }
@@ -343,7 +343,7 @@ class _$TokenDataCopyWithImpl<$Res> implements $TokenDataCopyWith<$Res> {
   }
 
   @override
-  $CardDataCopyWith<$Res>? get card {
+  $CardDataCopyWith<$Res> get card {
     if (_value.card == null) {
       return null;
     }
@@ -365,13 +365,13 @@ abstract class _$TokenDataCopyWith<$Res> implements $TokenDataCopyWith<$Res> {
       @JsonKey(name: 'created') String createdDateTime,
       TokenType type,
       bool livemode,
-      BankAccount? bankAccount,
-      CardData? card});
+      BankAccount bankAccount,
+      CardData card});
 
   @override
-  $BankAccountCopyWith<$Res>? get bankAccount;
+  $BankAccountCopyWith<$Res> get bankAccount;
   @override
-  $CardDataCopyWith<$Res>? get card;
+  $CardDataCopyWith<$Res> get card;
 }
 
 /// @nodoc
@@ -412,11 +412,11 @@ class __$TokenDataCopyWithImpl<$Res> extends _$TokenDataCopyWithImpl<$Res>
       bankAccount: bankAccount == freezed
           ? _value.bankAccount
           : bankAccount // ignore: cast_nullable_to_non_nullable
-              as BankAccount?,
+              as BankAccount,
       card: card == freezed
           ? _value.card
           : card // ignore: cast_nullable_to_non_nullable
-              as CardData?,
+              as CardData,
     ));
   }
 }
@@ -455,11 +455,11 @@ class _$_TokenData implements _TokenData {
   @override
 
   /// Bank account data
-  final BankAccount? bankAccount;
+  final BankAccount bankAccount;
   @override
 
   /// Card data
-  final CardData? card;
+  final CardData card;
 
   @override
   String toString() {
@@ -514,8 +514,8 @@ abstract class _TokenData implements TokenData {
       @JsonKey(name: 'created')  String createdDateTime,
        TokenType type,
        bool livemode,
-      BankAccount? bankAccount,
-      CardData? card}) = _$_TokenData;
+      BankAccount bankAccount,
+      CardData card}) = _$_TokenData;
 
   factory _TokenData.fromJson(Map<String, dynamic> json) =
       _$_TokenData.fromJson;
@@ -540,11 +540,11 @@ abstract class _TokenData implements TokenData {
   @override
 
   /// Bank account data
-  BankAccount? get bankAccount => throw _privateConstructorUsedError;
+  BankAccount get bankAccount => throw _privateConstructorUsedError;
   @override
 
   /// Card data
-  CardData? get card => throw _privateConstructorUsedError;
+  CardData get card => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$TokenDataCopyWith<_TokenData> get copyWith =>
@@ -568,7 +568,7 @@ class _$CardDataTearOff {
       String name,
       String funding,
       String last4,
-      Address? address}) {
+      Address address}) {
     return _CardData(
       brand: brand,
       country: country,
@@ -617,7 +617,7 @@ mixin _$CardData {
   String get last4 => throw _privateConstructorUsedError;
 
   /// Address of the cardholder
-  Address? get address => throw _privateConstructorUsedError;
+  Address get address => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -638,9 +638,9 @@ abstract class $CardDataCopyWith<$Res> {
       String name,
       String funding,
       String last4,
-      Address? address});
+      Address address});
 
-  $AddressCopyWith<$Res>? get address;
+  $AddressCopyWith<$Res> get address;
 }
 
 /// @nodoc
@@ -699,12 +699,12 @@ class _$CardDataCopyWithImpl<$Res> implements $CardDataCopyWith<$Res> {
       address: address == freezed
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
-              as Address?,
+              as Address,
     ));
   }
 
   @override
-  $AddressCopyWith<$Res>? get address {
+  $AddressCopyWith<$Res> get address {
     if (_value.address == null) {
       return null;
     }
@@ -729,10 +729,10 @@ abstract class _$CardDataCopyWith<$Res> implements $CardDataCopyWith<$Res> {
       String name,
       String funding,
       String last4,
-      Address? address});
+      Address address});
 
   @override
-  $AddressCopyWith<$Res>? get address;
+  $AddressCopyWith<$Res> get address;
 }
 
 /// @nodoc
@@ -792,7 +792,7 @@ class __$CardDataCopyWithImpl<$Res> extends _$CardDataCopyWithImpl<$Res>
       address: address == freezed
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
-              as Address?,
+              as Address,
     ));
   }
 }
@@ -850,7 +850,7 @@ class _$_CardData implements _CardData {
   @override
 
   /// Address of the cardholder
-  final Address? address;
+  final Address address;
 
   @override
   String toString() {
@@ -920,7 +920,7 @@ abstract class _CardData implements CardData {
       String name,
       String funding,
       String last4,
-      Address? address}) = _$_CardData;
+      Address address}) = _$_CardData;
 
   factory _CardData.fromJson(Map<String, dynamic> json) = _$_CardData.fromJson;
 
@@ -959,7 +959,7 @@ abstract class _CardData implements CardData {
   @override
 
   /// Address of the cardholder
-  Address? get address => throw _privateConstructorUsedError;
+  Address get address => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CardDataCopyWith<_CardData> get copyWith =>
