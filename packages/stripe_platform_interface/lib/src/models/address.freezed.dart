@@ -21,12 +21,12 @@ class _$AddressTearOff {
   const _$AddressTearOff();
 
   _Address call(
-      {required String city,
-      required String country,
-      required String line1,
-      required String line2,
-      required String postalCode,
-      required String state}) {
+      { String city,
+       String country,
+       String line1,
+       String line2,
+       String postalCode,
+       String state}) {
     return _Address(
       city: city,
       country: country,

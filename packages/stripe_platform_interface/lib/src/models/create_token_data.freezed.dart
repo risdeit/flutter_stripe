@@ -91,7 +91,7 @@ class _$CreateTokenParamsCopyWithImpl<$Res>
       return null;
     }
 
-    return $AddressCopyWith<$Res>(_value.address!, (value) {
+    return $AddressCopyWith<$Res>(_value.address, (value) {
       return _then(_value.copyWith(address: value));
     });
   }
@@ -337,7 +337,7 @@ class _$TokenDataCopyWithImpl<$Res> implements $TokenDataCopyWith<$Res> {
       return null;
     }
 
-    return $BankAccountCopyWith<$Res>(_value.bankAccount!, (value) {
+    return $BankAccountCopyWith<$Res>(_value.bankAccount, (value) {
       return _then(_value.copyWith(bankAccount: value));
     });
   }
@@ -348,7 +348,7 @@ class _$TokenDataCopyWithImpl<$Res> implements $TokenDataCopyWith<$Res> {
       return null;
     }
 
-    return $CardDataCopyWith<$Res>(_value.card!, (value) {
+    return $CardDataCopyWith<$Res>(_value.card, (value) {
       return _then(_value.copyWith(card: value));
     });
   }
@@ -709,7 +709,7 @@ class _$CardDataCopyWithImpl<$Res> implements $CardDataCopyWith<$Res> {
       return null;
     }
 
-    return $AddressCopyWith<$Res>(_value.address!, (value) {
+    return $AddressCopyWith<$Res>(_value.address, (value) {
       return _then(_value.copyWith(address: value));
     });
   }
@@ -802,7 +802,7 @@ class __$CardDataCopyWithImpl<$Res> extends _$CardDataCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_CardData implements _CardData {
   const _$_CardData(
-      {required this.brand,
+      { this.brand,
       this.country,
       this.currency,
       this.expYear,
@@ -975,8 +975,8 @@ class _$BankAccountTearOff {
   const _$BankAccountTearOff();
 
   _BankAccount call(
-      {required BankAccountHolderType accountHolderType,
-      required BankAccountStatus status,
+      { BankAccountHolderType accountHolderType,
+       BankAccountStatus status,
       String bankName,
       String accountHolderName,
       String country,
@@ -1171,8 +1171,8 @@ class __$BankAccountCopyWithImpl<$Res> extends _$BankAccountCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_BankAccount implements _BankAccount {
   const _$_BankAccount(
-      {required this.accountHolderType,
-      required this.status,
+      { this.accountHolderType,
+       this.status,
       this.bankName,
       this.accountHolderName,
       this.country,

@@ -22,7 +22,7 @@ class _$ThreeDSecureConfigurationParamsTearOff {
   const _$ThreeDSecureConfigurationParamsTearOff();
 
   _ThreeDSecureConfigurationParams call(
-      {required ThreeDSecureNavigationBarThemeData navigationBar,
+      { ThreeDSecureNavigationBarThemeData navigationBar,
       int timeout,
       ThreeDSecureLabelThemeData label,
       ThreeDSecureTextFieldThemeData textField,
@@ -197,7 +197,7 @@ class _$ThreeDSecureConfigurationParamsCopyWithImpl<$Res>
       return null;
     }
 
-    return $ThreeDSecureLabelThemeDataCopyWith<$Res>(_value.label!, (value) {
+    return $ThreeDSecureLabelThemeDataCopyWith<$Res>(_value.label, (value) {
       return _then(_value.copyWith(label: value));
     });
   }
@@ -208,7 +208,7 @@ class _$ThreeDSecureConfigurationParamsCopyWithImpl<$Res>
       return null;
     }
 
-    return $ThreeDSecureTextFieldThemeDataCopyWith<$Res>(_value.textField!,
+    return $ThreeDSecureTextFieldThemeDataCopyWith<$Res>(_value.textField,
         (value) {
       return _then(_value.copyWith(textField: value));
     });
@@ -220,7 +220,7 @@ class _$ThreeDSecureConfigurationParamsCopyWithImpl<$Res>
       return null;
     }
 
-    return $ThreeDSecureButtonThemeDataCopyWith<$Res>(_value.submitButton!,
+    return $ThreeDSecureButtonThemeDataCopyWith<$Res>(_value.submitButton,
         (value) {
       return _then(_value.copyWith(submitButton: value));
     });
@@ -232,7 +232,7 @@ class _$ThreeDSecureConfigurationParamsCopyWithImpl<$Res>
       return null;
     }
 
-    return $ThreeDSecureButtonThemeDataCopyWith<$Res>(_value.cancelButton!,
+    return $ThreeDSecureButtonThemeDataCopyWith<$Res>(_value.cancelButton,
         (value) {
       return _then(_value.copyWith(cancelButton: value));
     });
@@ -244,7 +244,7 @@ class _$ThreeDSecureConfigurationParamsCopyWithImpl<$Res>
       return null;
     }
 
-    return $ThreeDSecureButtonThemeDataCopyWith<$Res>(_value.nextButton!,
+    return $ThreeDSecureButtonThemeDataCopyWith<$Res>(_value.nextButton,
         (value) {
       return _then(_value.copyWith(nextButton: value));
     });
@@ -256,7 +256,7 @@ class _$ThreeDSecureConfigurationParamsCopyWithImpl<$Res>
       return null;
     }
 
-    return $ThreeDSecureButtonThemeDataCopyWith<$Res>(_value.continueButton!,
+    return $ThreeDSecureButtonThemeDataCopyWith<$Res>(_value.continueButton,
         (value) {
       return _then(_value.copyWith(continueButton: value));
     });
@@ -268,7 +268,7 @@ class _$ThreeDSecureConfigurationParamsCopyWithImpl<$Res>
       return null;
     }
 
-    return $ThreeDSecureButtonThemeDataCopyWith<$Res>(_value.resendButton!,
+    return $ThreeDSecureButtonThemeDataCopyWith<$Res>(_value.resendButton,
         (value) {
       return _then(_value.copyWith(resendButton: value));
     });
@@ -384,7 +384,7 @@ class __$ThreeDSecureConfigurationParamsCopyWithImpl<$Res>
 class _$_ThreeDSecureConfigurationParams
     implements _ThreeDSecureConfigurationParams {
   const _$_ThreeDSecureConfigurationParams(
-      {required this.navigationBar,
+      { this.navigationBar,
       this.timeout,
       this.label,
       this.textField,
