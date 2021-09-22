@@ -12,11 +12,11 @@ dependencies:
   flutter:
     sdk: flutter
 
-  stripe_android:
-    git:
-      url: git://github.com/risdeit/flutter_stripe.git
-      path: packages/stripe_android
-      ref: create-apple-pay-token
+#  stripe_android:
+#    git:
+#      url: git://github.com/risdeit/flutter_stripe.git
+#      path: packages/stripe_android
+#      ref: create-apple-pay-token
 
   stripe_ios:
     git:
