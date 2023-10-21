@@ -14,19 +14,19 @@ dependencies:
 
   stripe_android:
     git:
-      url: git://github.com/risdeit/flutter_stripe.git
+      url: https://github.com/risdeit/flutter_stripe.git
       path: packages/stripe_android
       ref: main
 
   stripe_ios:
     git:
-      url: git://github.com/risdeit/flutter_stripe.git
+      url: https://github.com/risdeit/flutter_stripe.git
       path: packages/stripe_ios
       ref: main
 
   stripe_platform_interface:
     git:
-      url: git://github.com/risdeit/flutter_stripe.git
+      url: https://github.com/risdeit/flutter_stripe.git
       path: packages/stripe_platform_interface
       ref: main
 
